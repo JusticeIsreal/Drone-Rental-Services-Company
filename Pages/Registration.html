@@ -23,8 +23,6 @@
   </head>
   <body>
     <section class="contact" id="contact">
-     
-
       <div class="form-div">
         <form
           name="contact"
@@ -123,11 +121,17 @@
           <!-- LOCATION -->
           <div class="input-group">
             <label>Location</label>
-            <select name="location" id="userlocation"  onkeyup="validatelocation()">
+            <select
+              name="location"
+              id="userlocation"
+              onkeyup="validatelocation()"
+            >
               <option value="">What's Your Location ?</option>
               <option value="Lagos">Lagos</option>
               <option value="Abuja">Abuja</option>
-              <option  id="userlocation"  value="Port Harcourt">Port Harcourt</option>
+              <option id="userlocation" value="Port Harcourt">
+                Port Harcourt
+              </option>
             </select>
             <span id="location-error"></span>
             <i
@@ -140,8 +144,10 @@
             <a href="" onclick="return validateform()" class="link-btn">SEND</a>
           </button>
 
-          <span id="error-fix"></span>
+          <span id="error-fix"></span> 
+          <p class="regLogInLink">If you already have an Account <a id="regLogInLink"  href="#">CLICK HERE</a> to logIn</p>
         </form>
+       
       </div>
     </section>
 

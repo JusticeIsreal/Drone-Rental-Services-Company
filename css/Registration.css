@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
 
 :root {
-  --blue: #00b8b8;
-  --black: rgb(0, 0, 0);
-  --white: #fff;
-  --light-color: rgb(73, 73, 248);
-  --light-bg: rgb(17, 17, 17);
-  --border: 0.2rem solid rgba(0, 0, 0, 0.1);
+  --text: #666;
+  --whitetext: white;
+  --bgColor: linear-gradient(0deg, black, rgb(73, 73, 248) 1100% 10%);
+  --button: rgb(73, 73, 248);
+  --card: rgb(17, 17, 17);
+  --bordershadow: -8px 8px 30px rgba(73, 73, 248, 0.205);
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
@@ -41,22 +41,39 @@ html {
 }
 
 body {
-  background-image: linear-gradient(0deg, black, rgb(73, 73, 248) 1100% 10%);
+  background-image: var(--bgColor);
   height: 100vh;
 }
 .form-div form {
   margin: 0 auto;
   margin-top: 50px;
   width: 80%;
-
   max-width: 450px;
   padding: 50px 30px 20px;
   border-radius: 15px;
-  box-shadow: -8px 8px 30px rgba(73, 73, 248, 0.205);
+  box-shadow: var(--bordershadow);
   position: relative;
-  background-color: var(--light-bg);
+  background-color: var(--card);
   border: 3px solid rgba(255, 255, 255, 0.329);
 }
+/* .form-div form {
+  animation: dd 10s infinite backwards linear;
+}
+@keyframes dd {
+  0% {
+       transform: translateX(-50px);
+    transform: rotate(180deg);
+  }
+
+  20% {
+
+ 
+  }
+  100% {
+
+ 
+  }
+} */
 
 .fa-paper-plane {
   position: absolute;
@@ -66,11 +83,10 @@ body {
   background: rgb(73, 73, 248);
   font-size: 26px;
   padding: 20px;
-  border: 4px solid white;
+  border: 4px solid rgba(255, 255, 255, 0.63);
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-
 .input-group {
   width: 100%;
   display: block;
@@ -107,12 +123,11 @@ body {
 .input-group label {
   flex-basis: 28%;
   font-size: 12px;
-  color: #666;
+  color: var(--text);
 }
 ::placeholder {
   font-size: 14px;
 }
-
 .input-group span {
   position: absolute;
   bottom: -40px;
@@ -132,7 +147,6 @@ body {
   font-size: 14px;
   color: rgb(73, 73, 248) !important;
 }
-
 .gender {
   display: flex;
   align-items: center;
@@ -145,7 +159,7 @@ body {
   bottom: -5px;
   text-align: center;
   width: 30%;
-  color: rgba(255, 255, 255, 0.445);
+  color: var(--text);
 }
 .gender-container {
   width: 30%;
@@ -153,12 +167,10 @@ body {
 .gender-container input {
   height: 20px;
 }
-
 .gender-icon {
   bottom: 5px !important;
   left: 90%;
 }
-
 .form span {
   font-weight: 500;
   padding: 20px;
@@ -170,12 +182,17 @@ body {
 button {
   width: 100%;
   border-radius: 12px;
-  padding: 10px;
-  background-color: var(--light-color);
+  padding: 8px;
+  background-color: var(--button);
 }
 button a {
-  font-size: 10px;
+  font-size: 15px;
   font-weight: 900;
-  color: var(--white);
+  color: var(--whitetext);
   padding: 5px;
+}
+.regLogInLink {
+  font-size: 12px;
+  padding-top: 20px;
+  color: var(--text);
 }

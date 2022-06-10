@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drone Rental Services</title>
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <!-- bootstrap cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="/css/Registration.css" />
+  </head>
+  <body>
+    <section class="contact" id="contact">
+     
+
+      <div class="form-div">
+        <form
+          name="contact"
+          class="form"
+          method="POST"
+          data-netlify="true"
+          id="form"
+          action="https://formsubmit.co/el/xijoku"
+        >
+          <i class="fas fa-paper-plane"></i>
+
+          <!-- NAME  -->
+          <div class="input-group">
+            <label>Full Name</label>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              id="username"
+              onkeyup="validatename()"
+            />
+            <span id="name-error"></span>
+            <i class="fa-solid fa-circle-check" id="name-check"></i>
+          </div>
+
+          <!-- GENDER -->
+          <div class="input-group">
+            <label>Gender</label>
+            <div class="gender">
+              <div class="gender-container">
+                <p>Male</p>
+                <input
+                  type="radio"
+                  name="gender"
+                  value="male"
+                  id="gendermale"
+                  onkeyup="validategender()"
+                />
+              </div>
+
+              <div class="gender-container">
+                <p>Female</p>
+                <input
+                  type="radio"
+                  name="gender"
+                  value="female"
+                  id="genderfemale"
+                  onkeyup="validategender()"
+                />
+              </div>
+
+              <div class="gender-container">
+                <p>Non Binary</p>
+                <input
+                  type="radio"
+                  name="gender"
+                  value="binary"
+                  id="genderbinary"
+                  onkeyup="validategender()"
+                />
+              </div>
+
+              <span id="gender-error"></span>
+              <i
+                class="fa-solid fa-circle-check gender-icon"
+                id="gender-check"
+              ></i>
+            </div>
+          </div>
+
+          <!-- PHONE NO -->
+          <div class="input-group">
+            <label>Phone No.</label>
+            <input
+              type="tel"
+              placeholder="123 456 7890"
+              id="userphone"
+              onkeyup="validatephone()"
+            />
+            <span id="phone-error"></span>
+            <i class="fa-solid fa-circle-check" id="phone-check"></i>
+          </div>
+
+          <!-- EMAIL -->
+          <div class="input-group">
+            <label>Email Id</label>
+            <input
+              type="email"
+              placeholder="Enter Email"
+              id="useremail"
+              onkeyup="validateemail()"
+            />
+            <span id="email-error"></span>
+            <i class="fa-solid fa-circle-check" id="email-check"></i>
+          </div>
+
+          <!-- LOCATION -->
+          <div class="input-group">
+            <label>Location</label>
+            <select name="location" id="userlocation"  onkeyup="validatelocation()">
+              <option value="">What's Your Location ?</option>
+              <option value="Lagos">Lagos</option>
+              <option value="Abuja">Abuja</option>
+              <option  id="userlocation"  value="Port Harcourt">Port Harcourt</option>
+            </select>
+            <span id="location-error"></span>
+            <i
+              class="fa-solid fa-circle-check location-icon"
+              id="location-check"
+            ></i>
+          </div>
+
+          <button>
+            <a href="" onclick="return validateform()" class="link-btn">SEND</a>
+          </button>
+
+          <span id="error-fix"></span>
+        </form>
+      </div>
+    </section>
+
+    <script src="/js/Registration.js"></script>
+  </body>
+</html>

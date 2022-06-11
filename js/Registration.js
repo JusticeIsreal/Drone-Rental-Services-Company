@@ -23,11 +23,11 @@ loginLink.addEventListener("click", () => {
 // FOROM VALIDATION
 // LOGIN PAGE VALIDATION
 let loginEmailError = document.getElementById("loginemail-error");
-let passwordError = document.getElementById("password-error");
+let loginPasswordError = document.getElementById("loginpassword-error");
 
 // DOM FOR GREEN TICK CONFORMATION
 let loginEmailcheck = document.getElementById("loginemail-check");
-let passwordcheck = document.getElementById("password-check");
+let loginPasswordcheck = document.getElementById("loginpassword-check");
 
 // user login email validation
 function validateloginemail() {
@@ -47,25 +47,14 @@ function validateloginemail() {
     return true;
   }
 }
-// user login password validation
-function validateLoginPassword() {
-  let loginPasswordValue = document.getElementById("loginpassword").value;
-  letloginPassword = document.getElementById("userloginemail");
-  let passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
 
-  if (!loginEmailValue.match(correct)) {
-    loginEmailError.innerHTML = "Input a valid Email Address";
-    loginEmail.style.border = "2px solid red";
-    loginEmailcheck.style.visibility = "hidden";
+// SUBMIT FUNCTION
+function validateLoginForm() {
+  if (!validateloginemail()) {
     return false;
-  } else {
-    loginEmailError.innerHTML = "";
-    loginEmailcheck.style.visibility = "visible";
-    loginEmail.style.border = "2px solid  rgb(73, 73, 248)";
-    return true;
   }
+  return true;
 }
-
 // REGISTRATION PAGE VALIDATION
 // DO FOR ERROR MESSAGES
 let nameError = document.getElementById("name-error");

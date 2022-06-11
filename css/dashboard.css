@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+:root {
+  --text: #666;
+  --whitetext: white;
+  --bgColor: linear-gradient(0deg, black, rgb(73, 73, 248) 1100% 10%);
+  --button: rgb(73, 73, 248);
+  --card: rgb(17, 17, 17);
+  --bordershadow: -8px 8px 30px rgba(73, 73, 248, 0.205);
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none !important;
+}
+
+*::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--blue);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6.5rem;
+}
+
+body {
+  background-image: var(--bgColor);
+}
+section {
+  border: 10px solid blue;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* container housing the drone section */
+.page-con {
+  width: 90%;
+  border: 5px solid green;
+}
+
+/* side bar menu */
+.sidebar {
+  position: absolute;
+  border: 2px solid white;
+  width: 20%;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+}
+
+/* drone section container cards */
+.drone-section {
+  width: 100%;
+}
+
+/* container for uper and lower cards */
+.select-drone {
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  padding: 80px 0;
+}
+/* lower cards */
+.select-drone2 {
+  padding-top: 0;
+}
+/* container for drone details, maps and forms  */
+.drone-spec,
+.drone-bank,
+.customers-form,
+.drone-map {
+  border: 2px solid yellow;
+  width: 80%;
+  height: 450px;
+}
+
+.drone-bank {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 25px;
+}
+.drone-bank .drone {
+  border: 2px solid red;
+  width: 40%;
+  
+  height: 50px;
+}
+
+/* DISPLAY FOR TABLET AND DESKTOP SCREEN  */
+@media screen and (min-width: 760px) {
+  .page-con {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  .sidebar {
+    position: absolute;
+    border: 2px solid yellow;
+    width: 10%;
+    position: fixed;
+    top: 0;
+  }
+
+  .drone-spec,
+  .drone-bank,
+  .customers-form,
+  .drone-map {
+    border: 2px solid blue;
+    width: 40%;
+    height: 450px;
+  }
+}

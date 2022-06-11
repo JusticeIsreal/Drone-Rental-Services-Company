@@ -106,9 +106,14 @@ section {
 }
 .drone-bank .drone {
   border: 2px solid red;
-  width: 40%;
-  
-  height: 50px;
+  width: 30%;
+
+  height: 20%;
+}
+.drone img{
+    border: 2px solid blue;
+    width: 100%;
+    height:100%;
 }
 
 /* DISPLAY FOR TABLET AND DESKTOP SCREEN  */

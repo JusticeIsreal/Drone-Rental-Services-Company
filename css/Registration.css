@@ -43,37 +43,49 @@ html {
 body {
   background-image: var(--bgColor);
   height: 100vh;
+  
+}
+.form-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 .form-div form {
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 40px;
   width: 80%;
   max-width: 450px;
-  padding: 50px 30px 20px;
+  padding: 30px 30px 20px;
   border-radius: 15px;
   box-shadow: var(--bordershadow);
   position: relative;
   background-color: var(--card);
   border: 3px solid rgba(255, 255, 255, 0.329);
+  transition: 1s linear;
 }
-/* .form-div form {
-  animation: dd 10s infinite backwards linear;
+#loginForm {
+  position: absolute;
 }
-@keyframes dd {
-  0% {
-       transform: translateX(-50px);
-    transform: rotate(180deg);
-  }
+#form {
+  transform: translateX(150vw);
 
-  20% {
+}
 
- 
-  }
-  100% {
+#form.deactivate {
+  transform: translateX(150vw);
+}
 
- 
-  }
-} */
+#form.activate {
+  transform: translateX(0);
+}
+#loginForm.deactivate {
+  transform: translateX(-150vw);
+}
+
+#loginForm.activate {
+  transform: translateX(0);
+}
 
 .fa-paper-plane {
   position: absolute;
@@ -90,7 +102,7 @@ body {
 .input-group {
   width: 100%;
   display: block;
-  margin: 10px 0;
+  margin: 7px 0;
   position: relative;
 }
 .input-group input {
@@ -191,7 +203,8 @@ button a {
   color: var(--whitetext);
   padding: 5px;
 }
-.regLogInLink {
+.regLogInLink,
+.LogInLink {
   font-size: 12px;
   padding-top: 20px;
   color: var(--text);

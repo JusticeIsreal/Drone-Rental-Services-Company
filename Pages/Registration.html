@@ -24,14 +24,49 @@
   <body>
     <section class="contact" id="contact">
       <div class="form-div">
-        <form
-          name="contact"
-          class="form"
-          method="POST"
-          data-netlify="true"
-          id="form"
-          action="https://formsubmit.co/el/xijoku"
-        >
+        <!-- lOGIN FORM -->
+        <form name="contact" id="loginForm">
+          <i class="fas fa-paper-plane"></i>
+
+          <!-- EMAIL -->
+          <div class="input-group">
+            <label>Email Id</label>
+            <input
+              type="email"
+              placeholder="Enter Email"
+              id="useremail"
+              onkeyup="validateemail()"
+            />
+            <span id="email-error"></span>
+            <i class="fa-solid fa-circle-check" id="email-check"></i>
+          </div>
+
+          <!-- PHONE NO -->
+          <div class="input-group">
+            <label>Password</label>
+            <input
+              type="password"
+              placeholder="Enter Password"
+              id="userpassword"
+              onkeyup="validatepassword()"
+            />
+            <span id="password-error"></span>
+            <i class="fa-solid fa-circle-check" id="password-check"></i>
+          </div>
+
+          <button>
+            <a href="" onclick="return validateLoginForm()" class="link-btn"
+              >LOGIN</a
+            >
+          </button>
+
+          <p class="LogInLink">
+            <a id="logInLinkreg" href="#">CLICK HERE</a> If you DONT have an
+            account
+          </p>
+        </form>
+
+        <form name="contact" id="form">
           <i class="fas fa-paper-plane"></i>
 
           <!-- NAME  -->
@@ -118,6 +153,25 @@
             <i class="fa-solid fa-circle-check" id="email-check"></i>
           </div>
 
+          <!-- PHONE NO -->
+          <div class="input-group">
+            <label>Password</label>
+            <input
+              type="password"
+              placeholder="Enter Password"
+              id="userpassword"
+              onkeyup="validatepassword()"
+            />
+            <input
+              type="password"
+              placeholder="Enter Password"
+              id="userpassword"
+              onkeyup="validatepassword()"
+            />
+            <span id="password-error"></span>
+            <i class="fa-solid fa-circle-check" id="password-check"></i>
+          </div>
+
           <!-- LOCATION -->
           <div class="input-group">
             <label>Location</label>
@@ -141,13 +195,17 @@
           </div>
 
           <button>
-            <a href="" onclick="return validateform()" class="link-btn">SEND</a>
+            <a href="" onclick="return validateform()" class="link-btn"
+              >SUBMIT</a
+            >
           </button>
 
-          <span id="error-fix"></span> 
-          <p class="regLogInLink">If you already have an Account <a id="regLogInLink"  href="#">CLICK HERE</a> to logIn</p>
+          <span id="error-fix"></span>
+          <p class="regLogInLink">
+            <a id="regLogInLink" href="#">CLICK HERE</a> If you already have an
+            account
+          </p>
         </form>
-       
       </div>
     </section>
 

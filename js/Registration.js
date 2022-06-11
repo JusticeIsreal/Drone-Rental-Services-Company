@@ -1,3 +1,26 @@
+// login page and registration page animation
+let loginForm = document.getElementById("loginForm");
+let loginLink = document.getElementById("logInLinkreg");
+
+let regForm = document.getElementById("form");
+let regLink = document.getElementById("regLogInLink");
+
+// registration form animation
+regLink.addEventListener("click", () => {
+  regForm.classList.remove("activate");
+  regForm.classList.add("deactivate");
+  loginForm.classList.remove("deactivate");
+  loginForm.classList.add("activate");
+});
+// login form animaion
+loginLink.addEventListener("click", () => {
+  regForm.classList.remove("deactivate");
+  regForm.classList.add("activate");
+  loginForm.classList.add("deactivate");
+  loginForm.classList.remove("activate");
+});
+
+// FOROM VALIDATION
 // DO FOR ERROR MESSAGES
 let nameError = document.getElementById("name-error");
 let genderError = document.getElementById("gender-error");
@@ -114,26 +137,3 @@ function validateform() {
   messageError.style.border = "3px solid green";
   return true;
 }
-
-// login form
-let loginForm = document.getElementById("loginForm");
-let loginLink = document.getElementById("logInLinkreg");
-
-let regForm = document.getElementById("form");
-let regLink = document.getElementById("regLogInLink");
-
-regLink.addEventListener("click", () => {
-  regForm.classList.remove("activate");
-  regForm.classList.add("deactivate");
-  loginForm.classList.remove("deactivate");
-  loginForm.classList.add("activate");
-});
-
-loginLink.addEventListener("click", () => {
-  regForm.classList.remove("deactivate");
-  regForm.classList.add("activate");
-  loginForm.classList.add("deactivate");
-  loginForm.classList.remove("activate");
-});
-
-// registration form

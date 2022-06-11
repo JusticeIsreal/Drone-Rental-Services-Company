@@ -116,6 +116,7 @@ section {
 .drone-bank .drone {
   width: 100px;
   height: 100px;
+  margin-top: 10px;
   box-shadow: -5px 6px 6px 0px rgba(248, 248, 248, 0.74);
   -webkit-box-shadow: -1px 2px 2px 0px rgba(255, 255, 255, 0.74);
   -moz-box-shadow: -5px 6px 6px 0px rgba(253, 198, 198, 0.74);

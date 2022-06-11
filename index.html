@@ -34,31 +34,29 @@
             <input
               type="email"
               placeholder="Enter Email"
-              id="useremail"
-              onkeyup="validateemail()"
+              id="userloginemail"
+              onkeyup="validateloginemail()"
             />
-            <span id="email-error"></span>
-            <i class="fa-solid fa-circle-check" id="email-check"></i>
+            <span id="loginemail-error"></span>
+            <i class="fa-solid fa-circle-check" id="loginemail-check"></i>
           </div>
 
-          <!-- PHONE NO -->
+          <!-- LOGIN PASSWORD -->
           <div class="input-group">
             <label>Password</label>
             <input
               type="password"
               placeholder="Enter Password"
-              id="userpassword"
-              onkeyup="validatepassword()"
+              id="loginpassword"
+              onkeyup="validateLoginPassword()"
             />
-            <span id="password-error"></span>
-            <i class="fa-solid fa-circle-check" id="password-check"></i>
+            <span id="loginpassword-error"></span>
+            <i class="fa-solid fa-circle-check" id="loginpassword-check"></i>
           </div>
 
-        
-            <a href="" onclick="return validateLoginForm()" class="link-btn"
-              > <button>LOGIN</button></a
-            >
-          
+          <a href="" onclick="return validateLoginForm()" class="link-btn">
+            <button>LOGIN</button></a
+          >
 
           <p class="LogInLink">
             <a id="logInLinkreg" href="#">CLICK HERE</a> If you DONT have an
@@ -67,14 +65,13 @@
         </form>
         <!-- LOGIN FORM ENDS -->
 
-
         <!-- REGISTRATION FORM -->
         <form name="contact" id="form">
           <i class="fas fa-paper-plane"></i>
 
           <!-- NAME  -->
           <div class="input-group">
-            <label>Full Name</label>
+            <label>First and LastName</label>
             <input
               type="text"
               placeholder="Enter your name"

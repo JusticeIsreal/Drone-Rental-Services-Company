@@ -21,6 +21,52 @@ loginLink.addEventListener("click", () => {
 });
 
 // FOROM VALIDATION
+// LOGIN PAGE VALIDATION
+let loginEmailError = document.getElementById("loginemail-error");
+let passwordError = document.getElementById("password-error");
+
+// DOM FOR GREEN TICK CONFORMATION
+let loginEmailcheck = document.getElementById("loginemail-check");
+let passwordcheck = document.getElementById("password-check");
+
+// user login email validation
+function validateloginemail() {
+  let loginEmailValue = document.getElementById("userloginemail").value;
+  let loginEmail = document.getElementById("userloginemail");
+  let correct = /^[^ ]+@[^ ]+\.[a-z]{1,3}$/;
+
+  if (!loginEmailValue.match(correct)) {
+    loginEmailError.innerHTML = "Input a valid Email Address";
+    loginEmail.style.border = "2px solid red";
+    loginEmailcheck.style.visibility = "hidden";
+    return false;
+  } else {
+    loginEmailError.innerHTML = "";
+    loginEmailcheck.style.visibility = "visible";
+    loginEmail.style.border = "2px solid  rgb(73, 73, 248)";
+    return true;
+  }
+}
+// user login password validation
+function validateLoginPassword() {
+  let loginPasswordValue = document.getElementById("loginpassword").value;
+  letloginPassword = document.getElementById("userloginemail");
+  let passw = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+
+  if (!loginEmailValue.match(correct)) {
+    loginEmailError.innerHTML = "Input a valid Email Address";
+    loginEmail.style.border = "2px solid red";
+    loginEmailcheck.style.visibility = "hidden";
+    return false;
+  } else {
+    loginEmailError.innerHTML = "";
+    loginEmailcheck.style.visibility = "visible";
+    loginEmail.style.border = "2px solid  rgb(73, 73, 248)";
+    return true;
+  }
+}
+
+// REGISTRATION PAGE VALIDATION
 // DO FOR ERROR MESSAGES
 let nameError = document.getElementById("name-error");
 let genderError = document.getElementById("gender-error");

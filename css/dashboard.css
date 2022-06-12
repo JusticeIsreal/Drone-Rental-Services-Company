@@ -101,6 +101,8 @@ section {
   width: 90%;
   padding: 10px 15px;
   border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.253);
+  margin-top: 20px;
 }
 
 /* drone bank container */
@@ -234,7 +236,23 @@ section {
   padding-top: 20px;
   color: var(--text);
 }
+/* DRONE SPEC */
+.drone-spec p {
+  border-bottom: 1px solid rgba(253, 253, 253, 0.185);
+  margin-top: 5px;
+  font-size: 13px;
+}
 
+.drone-spec .selected-drone-pic-and-battery {
+  display: flex;
+  height: 110px;
+}
+.drone-spec .selected-drone-img {
+  width: 90%;
+}
+.drone-spec .battery-bar {
+  background-color: green;
+}
 /* MAP */
 
 iframe {
@@ -266,5 +284,11 @@ iframe {
   .drone-map {
     /* border: 2px solid blue; */
     width: 40%;
+  }
+
+  /* drone image container */
+  .drone-bank .drone {
+    width: 100px;
+    height: 100px;
   }
 }

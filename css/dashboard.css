@@ -101,7 +101,6 @@ section {
   width: 90%;
   padding: 10px 15px;
   border-radius: 10px;
-
 }
 
 /* drone bank container */
@@ -227,6 +226,7 @@ section {
   font-weight: 900;
   padding: 5px 0;
   width: 90%;
+  margin-top: 15px;
 }
 .regLogInLink,
 .LogInLink {

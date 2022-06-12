@@ -73,67 +73,91 @@
               <form name="contact" id="loginForm">
                 <i class="fas fa-paper-plane"></i>
 
-                <!-- EMAIL -->
+                <!-- licensed merchants -->
                 <div class="input-group">
-                  <label>Item Purchased</label>
+                  <label>Licensed Merchants</label>
+                  <select
+                    name="merchants"
+                    id="merchants"
+                    onkeyup="validatemerchants()"
+                  >
+                    <option value="">Pick a merchant</option>
+                    <option value="A-Z-Pharmacy">A-Z Pharmacy</option>
+                    <option value="Shalom-Hospital">Shalom Hospital</option>
+                    <option value="ZEC-pharmciticals">ZEC pharmciticals</option>
+                    <option value="Redditon-Hospital">Redditon Hospital</option>
+                  </select>
+                  <span id="merchant-error"></span>
+                  <i
+                    class="fa-solid fa-circle-check location-icon"
+                    id="merchant-check"
+                  ></i>
+                </div>
+
+                <!-- items purchased -->
+                <div class="input-group">
+                  <label>Items Purchased</label>
                   <input
                     type="text"
                     placeholder="what item are you purchasing"
-                    id="itempurchased"
+                    id="itemspurchased"
                     onkeyup="validateItemPurchased()"
                   />
                   <span id="purchase error-error"></span>
-                  <i class="fa-solid fa-circle-check"    id="purchase-check"></i>
+                  <i class="fa-solid fa-circle-check" id="purchase-check"></i>
                 </div>
 
-                <!-- LOGIN PASSWORD -->
+                <!-- weigh and CODE -->
                 <div class="input-group">
-                  <label>Weight (g)</label>
+                  <div class="weigh-and-code">
+                    <!-- item weigh -->
+                    <div>
+                      <label>Weight (g)</label>
+                      <input
+                        type="number"
+                        placeholder="Item Weigh"
+                        id="itemweigh"
+                        onkeyup="validateItemWeigh()"
+                      />
+                    </div>
+                    <!-- item release code -->
+                    <div>
+                      <label>Release Code</label>
+                      <input
+                        type="text"
+                        placeholder="Release Code"
+                        id="releasecode"
+                        onkeyup="validateReleaseCode()"
+                      />
+                    </div>
+                  </div>
+                  <span id="itemweigh-error"></span>
+                  <i class="fa-solid fa-circle-check" id="itemwweigh-check"></i>
+                </div>
+
+                <!-- DELIVERY ADRESS -->
+                <div class="input-group">
+                  <label>Delivery Address</label>
                   <input
-                    type="number"
-                    placeholder="Item Weigh"
-                    id="itemweigh"
-                    onkeyup="validateItemWeigh()"
+                    type="text"
+                    placeholder="Where should we deliver item"
+                    id="deliveryaddress"
+                    onkeyup="validatedeliveryaddress()"
                   />
-                  <span id="l-error"></span>
+                  <span id="deliveryaddress-error"></span>
                   <i
                     class="fa-solid fa-circle-check"
-                    id="loginpassword-check"
+                    id="deliveryaddress-check"
                   ></i>
                 </div>
-                <!-- LOCATION -->
-                <div class="input-group">
-                  <label>Location</label>
-                  <select
-                    name="location"
-                    id="userlocation"
-                    onkeyup="validatelocation()"
-                  >
-                    <option value="">What's Your Location ?</option>
-                    <option value="Lagos">Lagos</option>
-                    <option value="Abuja">Abuja</option>
-                    <option id="userlocation" value="Port Harcourt">
-                      Port Harcourt
-                    </option>
-                  </select>
-                  <span id="location-error"></span>
-                  <i
-                    class="fa-solid fa-circle-check location-icon"
-                    id="location-check"
-                  ></i>
-                </div>
+                <!-- button -->
                 <a
                   href=""
                   onclick="return validateLoginForm()"
                   class="link-btn"
                 >
-                  <button>LOGIN</button></a
+                  <button>ORDER ITEM</button></a
                 >
-
-                <p class="LogInLink">
-                  <a id="logInLinkreg" href="#">CLICK HERE</a> If you DONT have
-                  an account <a href="/Pages/Dashboard.html">..... Dashboard</a>
-                </p>
               </form>
             </div>
             <!-- drone  map -->

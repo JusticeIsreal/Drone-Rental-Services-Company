@@ -22,11 +22,9 @@
     <link rel="stylesheet" href="/css/dashboard.css" />
   </head>
   <body>
-    
     <section>
-     
       <main class="page-con">
-        <div class="sidebar">    <a href="/index.html">fjhgjkha</a></div>
+        <div class="sidebar"><a href="/index.html">fjhgjkha</a></div>
         <div class="drone-section">
           <!-- drone op0tions and details -->
 
@@ -77,27 +75,27 @@
 
                 <!-- EMAIL -->
                 <div class="input-group">
-                  <label>Email Id</label>
+                  <label>Item Purchased</label>
                   <input
-                    type="email"
-                    placeholder="Enter Email"
-                    id="userloginemail"
-                    onkeyup="validateloginemail()"
+                    type="text"
+                    placeholder="what item are you purchasing"
+                    id="itempurchased"
+                    onkeyup="validateItemPurchased()"
                   />
-                  <span id="loginemail-error"></span>
-                  <i class="fa-solid fa-circle-check" id="loginemail-check"></i>
+                  <span id="purchase error-error"></span>
+                  <i class="fa-solid fa-circle-check"    id="purchase-check"></i>
                 </div>
 
                 <!-- LOGIN PASSWORD -->
                 <div class="input-group">
-                  <label>Password</label>
+                  <label>Weight (g)</label>
                   <input
-                    type="password"
-                    placeholder="Enter Password"
-                    id="loginpassword"
-                    onkeyup="validateLoginPassword()"
+                    type="number"
+                    placeholder="Item Weigh"
+                    id="itemweigh"
+                    onkeyup="validateItemWeigh()"
                   />
-                  <span id="loginpassword-error"></span>
+                  <span id="l-error"></span>
                   <i
                     class="fa-solid fa-circle-check"
                     id="loginpassword-check"
@@ -156,7 +154,6 @@
           </div>
         </div>
       </main>
-   
     </section>
 
     <script src="/js/Registration.js"></script>

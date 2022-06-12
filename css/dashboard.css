@@ -102,7 +102,6 @@ section {
   padding: 10px 15px;
   border-radius: 10px;
 
-  /* height: 450px; */
 }
 
 /* drone bank container */
@@ -110,15 +109,14 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 15px;
+  gap: 13px;
   padding-top: 10px;
   padding-bottom: 15px;
 }
 /* drone image container */
 .drone-bank .drone {
-  width: 100%;
-  max-width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
   margin-top: 10px;
   box-shadow: -5px 6px 6px 0px rgba(248, 248, 248, 0.74);
   -webkit-box-shadow: -1px 2px 2px 0px rgba(255, 255, 255, 0.74);

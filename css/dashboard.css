@@ -54,7 +54,8 @@ section {
 /* container housing the drone section */
 .page-con {
   width: 100vw;
-  /* border: 5px solid green; */
+  margin-top: 50px;
+  position: relative;
 }
 
 /* side bar menu */

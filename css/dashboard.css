@@ -197,14 +197,13 @@ section {
 
 .weigh-and-code {
   display: flex;
+  justify-content: space-between;
   gap: 3px;
 }
 .weigh-and-code::placeholder {
   font-size: 5px;
 }
-.weigh-and-code div {
-  width: 100%;
-}
+
 .weigh-and-code div input::placeholder {
   font-size: 12px;
 }

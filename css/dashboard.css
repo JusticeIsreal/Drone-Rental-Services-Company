@@ -53,7 +53,7 @@ section {
 
 /* container housing the drone section */
 .page-con {
-  width: 100%;
+  width: 100vw ;
   border: 5px solid green;
 }
 
@@ -109,7 +109,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 12px;
+  gap: 15px;
   padding-top: 10px;
   padding-bottom: 15px;
 }
@@ -125,8 +125,8 @@ section {
   border-radius: 5px;
 }
 .drone img {
-  width: 100%;
-  height: 100%;
+  width: 99%;
+  height: 99%;
   cursor: pointer;
   transition: 0.5s ease;
 }
@@ -171,53 +171,6 @@ iframe {
   }
 }
 
-
-/* hdfjkgkoejgkldjgkldjklpg */
-
-
-/* .form-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-} */
-/* .form-div form {
-  margin: 0 auto;
-  margin-top: 40px;
-  width: 80%;
-  max-width: 450px;
-  padding: 30px 30px 20px;
-  border-radius: 15px;
-  box-shadow: var(--bordershadow);
-  position: relative;
-  background-color: var(--card);
-  border: 3px solid rgba(255, 255, 255, 0.329);
-  transition: 0.5s ease;
-} */
-/* #loginForm {
-  position: absolute;
-}
-#form {
-  transform: translateX(150vw);
-}
-
-#form.deactivate {
-  transform: scale(0.1);
-
-  z-index: -2;
-}
-
-#form.activate {
-  transform: translateX(0);
-}
-#loginForm.deactivate {
-  transform: scale(0.1);
-  z-index: -2;
-}
-
-#loginForm.activate {
-  transform: translateX(0);
-} */
 .input-group {
   width: 100%;
   display: block;
@@ -282,7 +235,6 @@ iframe {
 }
 #error-fix {
   color: red;
-  
 }
 .input-group .fa-circle-check {
   visibility: hidden;

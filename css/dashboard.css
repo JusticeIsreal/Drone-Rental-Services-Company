@@ -60,24 +60,62 @@ body {
 .navbar-con .logo {
   width: 100px;
   height: 100%;
+
+  animation: logo 20s linear infinite;
 }
-.navbar-con .fa-bars{
+@keyframes logo {
+  0% {
+    transform: translateY(0);
+    margin-left: 0vw;
+  }
+
+  20% {
+    transform: translateY(-5px);
+    margin-left: 30vw;
+  }
+  30% {
+    transform: translateY(5px);
+    margin-left: 30vw;
+  }
+
+  40% {
+    transform: translateY(-5px);
+    margin-left: 50vw;
+  }
+  50% {
+    transform: translateY(5px);
+    margin-left: 65vw;
+  }
+  60% {
+    transform: translateY(-5px);
+    margin-left: 65vw;
+  }
+  70% {
+    transform: translateY(5px);
+    margin-left: 50vw;
+  }
+  80% {
+    transform: translateY(5px);
+    margin-left: 40vw;
+  }
+
+  100% {
+    transform: translateY(0);
+    margin-left: 0vw;
+  }
+}
+
+.navbar-con .fa-bars {
   align-self: center;
   margin-right: 20px;
   color: white;
   font-size: 30px;
+  transition: 1s ease;
 }
 .navbar-con .fa-bars.active {
   color: blue;
-  transform: rotate(90deg);
-  /* animation: menu 1s ease forwards; */
+  transform: rotate(-90deg);
 }
-
-/* @keyframes menu {
-  0% {
-    transform: translate(180deg);
-  }
-} */
 
 section {
   position: relative;
@@ -98,7 +136,7 @@ section {
 .sidebar {
   position: absolute;
   width: 30%;
-  left: -100vw;
+  left: -50vw;
   top: 60px;
   height: 100%;
   z-index: 2;
@@ -107,6 +145,7 @@ section {
   border-top: 1px solid rgba(255, 255, 255, 0.384);
   border-right: 1px solid rgba(255, 255, 255, 0.384);
   background-color: rgb(17, 15, 44);
+  transition: 1s ease;
 }
 .sidebar.active {
   left: 0;
@@ -360,5 +399,55 @@ iframe {
   .drone-bank .drone {
     width: 100px;
     height: 100px;
+  }
+
+  @keyframes logo {
+    0% {
+      transform: translateY(0);
+      margin-left: 0vw;
+    }
+
+    20% {
+      transform: translateY(-5px);
+      margin-left: 30vw;
+    }
+    30% {
+      transform: translateY(5px);
+      margin-left: 30vw;
+    }
+
+    40% {
+      transform: translateY(-5px);
+      margin-left: 60vw;
+    }
+    50% {
+      transform: translateY(5px);
+      margin-left: 60vw;
+    }
+    60% {
+      transform: translateY(-5px);
+      margin-left: 90vw;
+    }
+    70% {
+      transform: translateY(5px);
+      margin-left: 90vw;
+    }
+    80% {
+      transform: translateY(-5px);
+      margin-left: 60vw;
+    }
+    90% {
+      transform: translateY(5px);
+      margin-left: 40vw;
+    }
+    95% {
+      transform: translateY(5px);
+      margin-left: 20vw;
+    }
+
+    100% {
+      transform: translateY(0);
+      margin-left: 0vw;
+    }
   }
 }

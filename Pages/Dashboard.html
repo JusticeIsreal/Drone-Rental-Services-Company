@@ -33,7 +33,148 @@
       <main class="page-con">
         <!-- <i class="fas fa-paper-plane"></i> -->
         <div class="sidebar">
-          <div>
+          <div class="sidebar-right">
+            <!-- REGISTRATION FORM -->
+            <form name="contact" id="form">
+              <i class="fas fa-paper-plane"></i>
+
+              <!-- NAME  -->
+              <div class="input-group">
+                <label>First and LastName</label>
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  id="username"
+                  onkeyup="validatename()"
+                />
+                <span id="name-error"></span>
+                <i class="fa-solid fa-circle-check" id="name-check"></i>
+              </div>
+
+              <!-- GENDER -->
+              <div class="input-group">
+                <label>Gender</label>
+                <div class="gender">
+                  <div class="gender-container">
+                    <p>Male</p>
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="male"
+                      id="gendermale"
+                      onkeyup="validategender()"
+                    />
+                  </div>
+
+                  <div class="gender-container">
+                    <p>Female</p>
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="female"
+                      id="genderfemale"
+                      onkeyup="validategender()"
+                    />
+                  </div>
+
+                  <div class="gender-container">
+                    <p>Non Binary</p>
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="binary"
+                      id="genderbinary"
+                      onkeyup="validategender()"
+                    />
+                  </div>
+
+                  <span id="gender-error"></span>
+                  <i
+                    class="fa-solid fa-circle-check gender-icon"
+                    id="gender-check"
+                  ></i>
+                </div>
+              </div>
+
+              <!-- PHONE NO -->
+              <div class="input-group">
+                <label>Phone No.</label>
+                <input
+                  type="tel"
+                  placeholder="123 456 7890"
+                  id="userphone"
+                  onkeyup="validatephone()"
+                />
+                <span id="phone-error"></span>
+                <i class="fa-solid fa-circle-check" id="phone-check"></i>
+              </div>
+
+              <!-- EMAIL -->
+              <div class="input-group">
+                <label>Email Id</label>
+                <input
+                  type="email"
+                  placeholder="Enter Email"
+                  id="useremail"
+                  onkeyup="validateemail()"
+                />
+                <span id="email-error"></span>
+                <i class="fa-solid fa-circle-check" id="email-check"></i>
+              </div>
+
+              <!-- PHONE NO -->
+              <div class="input-group">
+                <label>Password</label>
+                <input
+                  type="password"
+                  placeholder="Enter Password"
+                  id="userpassword"
+                  onkeyup="validatepassword()"
+                />
+                <input
+                  type="password"
+                  placeholder="Enter Password"
+                  id="userpassword"
+                  onkeyup="validatepassword()"
+                />
+                <span id="password-error"></span>
+                <i class="fa-solid fa-circle-check" id="password-check"></i>
+              </div>
+
+              <!-- LOCATION -->
+              <div class="input-group">
+                <label>Location</label>
+                <select
+                  name="location"
+                  id="userlocation"
+                  onkeyup="validatelocation()"
+                >
+                  <option value="">What's Your Location ?</option>
+                  <option value="Lagos">Lagos</option>
+                  <option value="Abuja">Abuja</option>
+                  <option id="userlocation" value="Port Harcourt">
+                    Port Harcourt
+                  </option>
+                </select>
+                <span id="location-error"></span>
+                <i
+                  class="fa-solid fa-circle-check location-icon"
+                  id="location-check"
+                ></i>
+              </div>
+
+              <a href="" onclick="return validateform()" class="link-btn"
+                ><button>SUBMIT DETAILS</button>
+              </a>
+
+              <span id="error-fix"></span>
+              <p class="regLogInLink">
+                <a id="regLogInLink" href="#">CLICK HERE</a> If you already have
+                an account
+              </p>
+            </form>
+          </div>
+          <div class="sidebar-left">
             <img src="/images/profile pic.jpg" alt="profilepic" />
             <div class="profile-name">
               <p>Justice Isreal</p>
@@ -132,7 +273,14 @@
               </form>
               <!-- button -->
               <a href="" onclick="return validateLoginForm()" class="link-btn">
-                <button>SEARCH AVALIABLE DRONE</button></a
+                <!-- button -->
+                <button class="button-82-pushable" role="button">
+                  <span class="button-82-shadow"></span>
+                  <span class="button-82-edge"></span>
+                  <span class="button-82-front text">
+                    SEARCH AVALIBLE DRONE
+                  </span>
+                </button></a
               >
             </div>
             <!-- container for drone spec  -->
@@ -146,10 +294,13 @@
               <p class="model">Model :</p>
               <p class="weight-limit">Weight Limit :</p>
               <p class="state">State:</p>
+
               <!-- button -->
-              <a href="" onclick="return validateLoginForm()" class="link-btn">
-                <button>MAKE PAYMENT</button></a
-              >
+              <button class="button-82-pushable" role="button">
+                <span class="button-82-shadow"></span>
+                <span class="button-82-edge"></span>
+                <span class="button-82-front text"> CONFIRM SELECTION </span>
+              </button>
             </div>
           </div>
           <!-- END OF FIRST CONTAINER -->
@@ -190,7 +341,6 @@
               <div class="drone drone9">
                 <img src="/images/drone3-removebg-preview.png" alt="" />
               </div>
-              
             </div>
             <!-- container for drone  map -->
             <div class="drone-map">
@@ -205,14 +355,17 @@
                   referrerpolicy="no-referrer-when-downgrade"
                 ></iframe>
               </p>
-              <!-- button -->
-              <a href="" onclick="return validateLoginForm()" class="link-btn">
-                <button>ITEM RECEIVED</button></a
-              >
             </div>
 
             <!-- end of drone details -->
           </div>
+          <!-- button -->
+          <!-- button -->
+          <button class="button-82-pushable" role="button">
+            <span class="button-82-shadow"></span>
+            <span class="button-82-edge"></span>
+            <span class="button-82-front text"> TRACK ITEM </span>
+          </button>
           <!-- end of second drone -->
         </div>
         <!-- END OF ENTIRE PAGE DETAILS -->

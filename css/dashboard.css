@@ -3,11 +3,13 @@
 :root {
   --text: #666;
   --whitetext: white;
-  --bgColor: linear-gradient(0deg, black, rgb(73, 73, 248) 1100% 10%);
-  --button: rgb(73, 73, 248);
-  --card: rgb(17, 17, 17);
-  --bordershadow: -8px 8px 30px rgba(73, 73, 248, 0.205);
-  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  --bgColor: rgb(17, 15, 44);
+  --button: rgb(9, 9, 48);
+  --card: rgb(26, 26, 26);
+  --card-con: rgba(5, 5, 5, 0.911);
+  --border-line: 2px solid rgba(255, 255, 255, 0.267);
+  --bordershadow: -8px 8px 30px rgba(253, 253, 253, 0.205);
+  --box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.1);
 }
 
 * {
@@ -41,7 +43,7 @@ html {
 }
 
 body {
-  background-image: var(--bgColor);
+  background-color: var(--bgColor);
 }
 /* NAV BAR CONTAINER */
 .navbar-con {
@@ -50,17 +52,17 @@ body {
   width: 100vw;
   height: 6rem;
   position: fixed;
-  background-color: rgb(17, 15, 44);
+  background-color: var(--bgColor);
 }
 .navbar-con nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
+/* navbar drone animation */
 .navbar-con .logo {
   width: 100px;
   height: 100%;
-
   animation: logo 20s linear infinite;
 }
 @keyframes logo {
@@ -104,7 +106,7 @@ body {
     margin-left: 0vw;
   }
 }
-
+/* menu bar */
 .navbar-con .fa-bars {
   align-self: center;
   margin-right: 20px;
@@ -121,6 +123,7 @@ section {
   position: relative;
   display: flex;
   justify-content: center;
+  padding-bottom: 60px;
   align-items: center;
 }
 
@@ -129,46 +132,50 @@ section {
   width: 100vw;
   margin-top: 60px;
   position: relative;
-  border: 2px solid white;
+  border: var(--border-line);
+  border-radius: 20px;
+  background-color: var(--card-con);
 }
 
 /* side bar menu */
 .sidebar {
   position: absolute;
-  width: 30%;
-  left: -50vw;
+  width: 100vw;
+  display: flex;
+  /* left: -50vw; */
   top: 60px;
   height: 100%;
   z-index: 2;
   position: fixed;
   color: white;
-  border-top: 1px solid rgba(255, 255, 255, 0.384);
-  border-right: 1px solid rgba(255, 255, 255, 0.384);
+  border: var(--border-line);
   background-color: rgb(17, 15, 44);
-  transition: 1s ease;
+  transition: 0.5s ease-in-out;
 }
-.sidebar.active {
-  left: 0;
+.sidebar-left {
+  order: 1;
+  z-index: 3;
+  width: 30%;
+  background-color: chocolate;
+  font-size: 10px;
+  border: var(--border-line);
 }
-.sidebar img {
-  border: 3px solid white;
-  margin-left: 5%;
+.sidebar-left img {
+  order: 1;
+  border-right: 3px solid white;
+  margin-left: 10%;
   margin-top: 30px;
-  width: 90%;
+  width: 80%;
   border-radius: 100%;
+  cursor: pointer;
 }
-
 .profile-name {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.profile-name p {
-  font-size: 13px;
-  padding-top: 10px;
-}
 .sidebar-icon {
-  display: flex;
+  border: 2px solid red;
   width: 100%;
 }
 .sidebar-icon i {
@@ -176,10 +183,19 @@ section {
 }
 
 .sidebar i {
-  margin-left: 20%;
+
 
   width: 90%;
   border-radius: 100%;
+}
+.sidebar-right {
+  order: 2;
+  width: 70%;
+  right: 0;
+  position: absolute;
+}
+.sidebar.active {
+  left: 0;
 }
 
 /* drone section container cards */
@@ -215,6 +231,7 @@ section {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.253);
   margin-top: 20px;
+  background-color: var(--card);
 }
 
 /* drone bank container */
@@ -317,13 +334,73 @@ section {
   color: rgb(73, 73, 248) !important;
 }
 
-.link-btn button {
+/* djhgjkdhgjklsnklfg */
+
+/* CSS */
+.button-82-pushable {
+  margin-top: 20px;
   width: 100%;
-  border-radius: 12px;
-  padding: 8px;
-  background-color: var(--button);
-  color: var(--whitetext);
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
 }
+
+.button-82-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.button-82-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+    to left,
+    hsl(340deg 100% 16%) 0%,
+    hsl(340deg 100% 32%) 8%,
+    hsl(340deg 100% 32%) 92%,
+    hsl(340deg 100% 16%) 100%
+  );
+}
+
+.button-82-front {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.8rem;
+  color: white;
+  background: hsl(345deg 100% 47%);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.button-82-pushable:hover .button-82-front {
+  transform: translateY(-4px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.button-82-pushable:active .button-82-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+/* hdjgkhsfjkhsjkgv */
 .link-btn {
   font-size: 15px;
   font-weight: 900;

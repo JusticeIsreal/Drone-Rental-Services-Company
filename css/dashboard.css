@@ -48,9 +48,9 @@ body {
   position: relative;
   z-index: 5;
   width: 100vw;
-  height: 8rem;
+  height: 6rem;
   position: fixed;
-  background-color: chocolate;
+  background-color: rgb(17, 15, 44);
 }
 .navbar-con nav {
   width: 100%;
@@ -58,26 +58,26 @@ body {
   justify-content: space-between;
 }
 .navbar-con .logo {
-  border: 2px solid red;
   width: 100px;
   height: 100%;
 }
-.navbar-con i {
+.navbar-con .fa-bars{
   align-self: center;
   margin-right: 20px;
   color: white;
   font-size: 30px;
 }
-.navbar-con i.active:hover {
+.navbar-con .fa-bars.active {
   color: blue;
-  animation: menu 1s ease forwards;
+  transform: rotate(90deg);
+  /* animation: menu 1s ease forwards; */
 }
 
-@keyframes menu {
+/* @keyframes menu {
   0% {
     transform: translate(180deg);
   }
-}
+} */
 
 section {
   position: relative;
@@ -86,23 +86,10 @@ section {
   align-items: center;
 }
 
-.fa-paper-plane {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  z-index: 6;
-  transform: translate(-50%, -50%);
-  background: rgb(73, 73, 248);
-  font-size: 26px;
-  padding: 20px;
-  border: 4px solid rgba(255, 255, 255, 0.63);
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-} /* container housing the drone section */
-
+/* container housing the drone section */
 .page-con {
   width: 100vw;
-  margin-top: 8rem;
+  margin-top: 60px;
   position: relative;
   border: 2px solid white;
 }
@@ -110,13 +97,50 @@ section {
 /* side bar menu */
 .sidebar {
   position: absolute;
-  border: 2px solid white;
-  width: 20%;
-  left: 0;
-  top: 0;
-  height: 100vh;
+  width: 30%;
+  left: -100vw;
+  top: 60px;
+  height: 100%;
+  z-index: 2;
   position: fixed;
-  top: 0;
+  color: white;
+  border-top: 1px solid rgba(255, 255, 255, 0.384);
+  border-right: 1px solid rgba(255, 255, 255, 0.384);
+  background-color: rgb(17, 15, 44);
+}
+.sidebar.active {
+  left: 0;
+}
+.sidebar img {
+  border: 3px solid white;
+  margin-left: 5%;
+  margin-top: 30px;
+  width: 90%;
+  border-radius: 100%;
+}
+
+.profile-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-name p {
+  font-size: 13px;
+  padding-top: 10px;
+}
+.sidebar-icon {
+  display: flex;
+  width: 100%;
+}
+.sidebar-icon i {
+  font-size: 20px;
+}
+
+.sidebar i {
+  margin-left: 20%;
+
+  width: 90%;
+  border-radius: 100%;
 }
 
 /* drone section container cards */
@@ -300,10 +324,13 @@ iframe {
 }
 /* DISPLAY FOR TABLET AND DESKTOP SCREEN  */
 @media screen and (min-width: 760px) {
+  .navbar-con i {
+    display: none;
+  }
   .page-con {
     display: flex;
     width: 80%;
-    margin-top: 50px;
+    margin-top: 10%;
     justify-content: space-between;
     position: relative;
   }

@@ -140,7 +140,7 @@ section {
 /* side bar menu */
 .sidebar {
   position: absolute;
-  width: 100vw;
+  /* width: 100vw; */
   display: flex;
   left: -100vw;
   top: 60px;
@@ -152,6 +152,10 @@ section {
   background-color: rgb(17, 15, 44);
   transition: 0.5s ease-in-out;
 }
+.sidebar.active {
+  left: 0;
+}
+
 .sidebar-left {
   order: 1;
   z-index: 3;
@@ -176,13 +180,11 @@ section {
   border-bottom: 2px solid var(--border-line);
 }
 .profile-name p {
- 
   margin-top: -8px;
 }
 .sidebar-icon {
   width: 100%;
   /* margin-top: 52vh; */
- 
   font-size: 110%;
 }
 .setting {
@@ -197,15 +199,31 @@ section {
   padding: 0 10px 0 5px;
 }
 
-.sidebar-right {
+.sidebar-right1 {
+  background-color: black;
   order: 2;
-  width: 70%;
+  width: 100%;
   right: 0;
   position: absolute;
+  z-index: 5;
 }
-.sidebar.active {
+.Edit-profile-img {
+  border: 2px solid red;
+  position: relative;
+}
+.Edit-profile-img img {
+  border: 2px solid red;
+  width: 100%;
+  position: relative;
+}
+.Edit-profile-img .fa-circle-plus {
+  border: 2px solid red;
+  font-size: 40px;
+  position: absolute;
   left: 0;
-}
+
+  color: rgb(53, 53, 252);
+ }
 
 /* drone section container cards */
 .drone-section {

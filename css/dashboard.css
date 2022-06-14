@@ -202,29 +202,62 @@ section {
 .sidebar-right1 {
   background-color: black;
   order: 2;
-  width: 100%;
-  right: 0;
+  width: 100vw;
+
   position: absolute;
   z-index: 5;
 }
 .Edit-profile-img {
-  border: 2px solid red;
+  padding: 10px;
   position: relative;
 }
 .Edit-profile-img img {
-  border: 2px solid red;
+  border: 3px solid rgb(255, 255, 255);
   width: 100%;
   position: relative;
+  border-radius: 100%;
 }
-.Edit-profile-img .fa-circle-plus {
-  border: 2px solid red;
-  font-size: 40px;
+.Edit-profile-img .add-pic {
+  font-size: 35px;
   position: absolute;
-  left: 0;
+  right: 20%;
+  top: 5%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  color: rgb(18, 32, 224);
+}
+.Edit-profile-img .add-pic:hover {
+  background-color: rgb(13, 13, 201);
+  color: rgb(255, 255, 255);
+}
+.profile-details {
+  margin-top: 10px;
+  text-align: center;
+  position: relative;
+}
+.profile-details span {
+  padding: 2px 0;
+  display: block;
+}
+.profile-details .edit-details {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 15px;
+}
 
-  color: rgb(53, 53, 252);
- }
+.edit-add-profile-img {
+  border: 2px solid red;
+  position: absolute;
+  background-color: blueviolet;
+  width: 100%;
+  top: 20%;
+}
+.edit-add-profile-img i , p ,a , form {
+  border: 2px solid red;
 
+  
+}
 /* drone section container cards */
 .drone-section {
   width: 100%;

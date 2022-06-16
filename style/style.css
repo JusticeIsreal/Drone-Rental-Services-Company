@@ -181,4 +181,10 @@ body {
 }
 .app .sidebar-right .top-card .top:nth-child(3) {
   background-image: linear-gradient(to top, #444444, #4d4d4d, #575757, #616161, #6b6b6b);
+}
+
+@media screen and (min-width: 760px) {
+  body {
+    background-color: green;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:wght@300&family=Source+Code+Pro:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: poppins;
+}
+
+*::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--blue);
+}
+
+body {
+  height: 100;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.app nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: whitesmoke;
+  width: 300px;
+  max-width: 300px;
+  min-width: 300px;
+  min-height: 100vh;
+  padding-top: 30px;
+}
+.app nav ul {
+  width: 100%;
+  padding: 0 15px;
+}
+.app nav ul li {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  height: 40px;
+  border-radius: 5px;
+  position: relative;
+  transition: 0.3s ease-out;
+}
+.app nav ul li.active {
+  background-color: rgb(238, 238, 238);
+  border: 1px solid rgb(221, 221, 221);
+}
+.app nav ul li.active::before {
+  content: "";
+  position: absolute;
+  top: -25%;
+  transform: translateY(50%);
+  left: -3px;
+  width: 6px;
+  height: 75%;
+  border-radius: 10px;
+  background-color: royalblue;
+}
+.app nav ul li:hover {
+  background-color: rgb(214, 214, 214);
+}
+.app nav ul li a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  color: rgb(88, 88, 88);
+  width: 100%;
+  height: 100%;
+}
+.app nav ul li a h3 {
+  font-weight: 500;
+  font-size: 15px;
+}
+.app nav ul li a i {
+  padding: 0 10px 0 0;
+}
+.app .sidebar-right {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgb(253, 253, 253);
+}
+.app .sidebar-right .navbarTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 70px;
+  padding: 0 20px;
+}
+.app .sidebar-right .navbarTop h3 {
+  font-size: 30px;
+}
+.app .sidebar-right .navbarTop .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: whitesmoke;
+  width: 400px;
+  padding: 0 5px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid rgb(221, 221, 221);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+}
+.app .sidebar-right .navbarTop .search input {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 0 10px;
+  background-color: transparent;
+}
+.app .sidebar-right .navbarTop .search i {
+  font-size: 22px;
+}
+.app .sidebar-right .navbarTop .profile-img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.app .sidebar-right .navbarTop .profile-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.app .sidebar-right .navbarTop .profile-img i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-size: 18px;
+  border-radius: 100%;
+  background-color: whitesmoke;
+  width: 50px;
+  height: 50px;
+}
+.app .sidebar-right .top-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 0 20px;
+  gap: 25px;
+  margin-top: 30px;
+}
+.app .sidebar-right .top-card .top {
+  width: 33.3%;
+  height: 200px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.138);
+}
+.app .sidebar-right .top-card .top:nth-child(1) {
+  background-image: linear-gradient(to top, #ffa600, #ffb002, #ffb908, #ffc310, #ffcc19);
+}
+.app .sidebar-right .top-card .top:nth-child(2) {
+  background-image: linear-gradient(to top, #9cff00, #84ff37, #6aff52, #4cff69, #19ff7d);
+}
+.app .sidebar-right .top-card .top:nth-child(3) {
+  background-image: linear-gradient(to top, #444444, #4d4d4d, #575757, #616161, #6b6b6b);
+}/*# sourceMappingURL=style.css.map */

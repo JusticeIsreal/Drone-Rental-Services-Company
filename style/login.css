@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
 
-:root {
+/* :root {
   --text: #666;
   --whitetext: white;
-  --bgColor: linear-gradient(0deg, black, rgb(73, 73, 248) 1100% 10%);
+  --bgColor:;
   --button: rgb(73, 73, 248);
   --card: rgb(17, 17, 17);
   --bordershadow: -8px 8px 30px rgba(73, 73, 248, 0.205);
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-}
+} */
 
 * {
   font-family: "Poppins", sans-serif;
@@ -41,9 +41,11 @@ html {
 }
 
 body {
-  background-image: var(--bgColor);
-  height: 100vh;
+  height: 100;
+  width: 100%;
+  min-height: 100vh;
 }
+
 .form-div {
   display: flex;
   justify-content: center;
@@ -51,17 +53,16 @@ body {
   overflow: hidden;
 }
 .form-div form {
-  margin: 0 auto;
-  margin-top: 40px;
+  margin: 40px auto;
   width: 80%;
   max-width: 450px;
   padding: 30px 30px 20px;
   border-radius: 15px;
-  box-shadow: var(--bordershadow);
   position: relative;
-  background-color: var(--card);
-  border: 3px solid rgba(255, 255, 255, 0.329);
   transition: 0.5s ease;
+  background-color: rgb(238, 238, 238);
+  border: 1px solid rgb(221, 221, 221);
+  box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.178);
 }
 #loginForm {
   position: absolute;
@@ -72,7 +73,6 @@ body {
 
 #form.deactivate {
   transform: scale(0.1);
-
   z-index: -2;
 }
 
@@ -89,16 +89,43 @@ body {
 }
 
 .fa-paper-plane {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgb(73, 73, 248);
-  font-size: 26px;
-  padding: 20px;
-  border: 4px solid rgba(255, 255, 255, 0.63);
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  transition: 2s ease;
+  animation: drone 4s linear infinite;
+}
+@keyframes drone {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.drone-shadow {
+  background-color: rgba(0, 0, 0, 0.178);
+  margin: 0 auto;
+  width: 50px;
+  height: 10px;
+  border-radius: 100px;
+  transform: skewX(50deg);
+  animation: shadow 4s ease infinite;
+}
+@keyframes shadow {
+  0% {
+    width: 100px;
+  }
+
+  50% {
+    background-color: rgba(0, 0, 0, 0.062);
+    width: 50px;
+  }
+  100% {
+    width: 100px;
+  }
 }
 .input-group {
   width: 100%;
@@ -106,37 +133,24 @@ body {
   margin: 7px 0;
   position: relative;
 }
-.input-group input {
+.input-group input,
+select {
   display: block;
   width: 100%;
   height: 35px;
-  border-radius: 50px;
-  flex-basis: 68%;
-  background: rgb(255, 255, 255);
-  border: 1px solid black;
-  padding: 10px 10px;
-  font-size: 15px;
-  margin-bottom: 20px;
-}
-.input-group select {
-  display: block;
-  width: 100%;
-  height: 35px;
-  border-radius: 10px;
-  flex-basis: 68%;
-  border: 1px solid black;
   padding: 5px 10px;
-  font-size: 15px;
+  font-size: 12px;
   margin-bottom: 20px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  border: 1px solid rgb(221, 221, 221);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
 }
-.input-group select option {
-  padding: 50px 10px;
-  font-size: 15px;
-}
+
 .input-group label {
   flex-basis: 28%;
   font-size: 12px;
-  color: var(--text);
+  color: rgb(88, 88, 88);
 }
 ::placeholder {
   font-size: 14px;
@@ -151,7 +165,6 @@ body {
 }
 #error-fix {
   color: red;
-  
 }
 .input-group .fa-circle-check {
   visibility: hidden;
@@ -170,11 +183,10 @@ body {
 .gender p {
   font-size: 12px;
   position: absolute;
-  bottom: -5px;
   text-align: center;
   width: 30%;
-  bottom: -10px;
-  color: var(--text);
+  bottom: 0px;
+  color: rgb(88, 88, 88);
 }
 .gender-container {
   width: 30%;
@@ -196,19 +208,18 @@ body {
 }
 .link-btn button {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 10px;
   padding: 8px;
-  background-color: var(--button);
-  color: var(--whitetext);
+  color: white;
+  background-color: rgb(148, 148, 148);
+  border: 1px solid rgb(221, 221, 221);
 }
-.link-btn {
-  font-size: 15px;
-  font-weight: 900;
-  padding: 5px;
+.link-btn button:hover {
+  background-color: rgb(94, 94, 94);
 }
+
 .regLogInLink,
 .LogInLink {
   font-size: 12px;
   padding-top: 20px;
-  color: var(--text);
 }

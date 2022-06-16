@@ -19,15 +19,20 @@
     />
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="/css/login.css" />
+    <link rel="stylesheet" href="/style/login.css" />
   </head>
   <body>
     <section class="contact" id="contact">
+      <a href="/pages/dashboard.html">..... Dashboard</a>
       <div class="form-div">
         <!-- lOGIN FORM -->
         <form name="contact" id="loginForm">
-          <i class="fas fa-paper-plane"></i>
-
+          <img
+            class="fas fa-paper-plane"
+            src="/img/drone2-removebg-preview.png"
+            alt=""
+          />
+          <div class="drone-shadow"></div>
           <!-- EMAIL -->
           <div class="input-group">
             <label>Email Id</label>
@@ -59,8 +64,8 @@
           >
 
           <p class="LogInLink">
-            <a id="logInLinkreg" href="#">CLICK HERE</a> If you DONT have an
-            account <a href="/Pages/Dashboard.html">..... Dashboard</a>
+            If you dont have an account
+            <a id="logInLinkreg" href="#"><b>CLICK HERE</b> </a> to register
           </p>
         </form>
         <!-- LOGIN FORM ENDS -->
@@ -74,7 +79,7 @@
             <label>First and LastName</label>
             <input
               type="text"
-              placeholder="Enter your name"
+              placeholder="Enter Name"
               id="username"
               onkeyup="validatename()"
             />
@@ -164,7 +169,7 @@
             />
             <input
               type="password"
-              placeholder="Enter Password"
+              placeholder="Confirm Password"
               id="userpassword"
               onkeyup="validatepassword()"
             />
@@ -200,13 +205,13 @@
 
           <span id="error-fix"></span>
           <p class="regLogInLink">
-            <a id="regLogInLink" href="#">CLICK HERE</a> If you already have an
-            account
+            If you already have an account
+            <a id="regLogInLink" href="#"><b>CLICK HERE</b> </a> to logIn
           </p>
         </form>
       </div>
     </section>
 
-    <script src="/js/login.js"></script>
+    <script src="/app/login.js"></script>
   </body>
 </html>

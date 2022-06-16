@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:wght@300&family=Source+Code+Pro:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: poppins;
+}
+*::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--blue);
+}
+
+body {
+  height: 100;
+  width: 100%;
+  min-height: 100vh;
+}
+@mixin flexDisplay($justifyProp, $alignProp, $flexDirection) {
+  display: flex;
+  justify-content: $justifyProp;
+  align-items: $alignProp;
+  flex-direction: $flexDirection;
+}
+
+.app {
+  @include flexDisplay(space-between, center, row);
+
+  nav {
+    @include flexDisplay(space-between, center, column);
+    background-color: whitesmoke;
+    width: 300px;
+    max-width: 300px;
+    min-width: 300px;
+    min-height: 100vh;
+    padding-top: 30px;
+
+    ul {
+      width: 100%;
+      padding: 0 15px;
+
+      li {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 0 10px;
+        height: 40px;
+        border-radius: 5px;
+        position: relative;
+        transition: 0.3s ease-out;
+        &.active {
+          background-color: rgb(238, 238, 238);
+          border: 1px solid rgb(221, 221, 221);
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: -25%;
+            transform: translateY(50%);
+            left: -3px;
+            width: 6px;
+            height: 75%;
+            border-radius: 10px;
+            background-color: royalblue;
+          }
+        }
+        &:hover {
+          background-color: rgb(214, 214, 214);
+        }
+
+        a {
+          @include flexDisplay(flex-start, center, row);
+          color: rgb(88, 88, 88);
+          width: 100%;
+          height: 100%;
+
+          h3 {
+            font-weight: 500;
+            font-size: 15px;
+          }
+
+          i {
+            padding: 0 10px 0 0;
+          }
+        }
+      }
+    }
+  }
+  .sidebar-right {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(253, 253, 253);
+
+    .navbarTop {
+      @include flexDisplay(space-between, center, row);
+      width: 100%;
+      height: 70px;
+      padding: 0 20px;
+
+      h3 {
+        font-size: 30px;
+      }
+
+      .search {
+        @include flexDisplay(center, center, row);
+        background-color: whitesmoke;
+        width: 400px;
+        padding: 0 5px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid rgb(221, 221, 221);
+        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+
+        input {
+          border: none;
+          outline: none;
+          width: 100%;
+          padding: 0 10px;
+          background-color: transparent;
+        }
+
+        i {
+          font-size: 22px;
+        }
+      }
+
+      .profile-img {
+        @include flexDisplay(space-between, center, row);
+
+        img {
+          object-fit: cover;
+          border-radius: 100%;
+          width: 50px;
+          height: 50px;
+          margin-right: 10px;
+        }
+        i {
+          @include flexDisplay(center, center, row);
+
+          font-size: 18px;
+          border-radius: 100%;
+          background-color: whitesmoke;
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+
+    .top-card {
+      @include flexDisplay(space-between, center, row);
+
+      padding: 0 20px;
+      gap: 25px;
+      margin-top: 30px;
+
+      .top {
+        width: 33.3%;
+        height: 200px;
+        border-radius: 10px;
+        position: relative;
+        box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.138);
+
+        &:nth-child(1) {
+          background-image: linear-gradient(
+            to top,
+            #ffa600,
+            #ffb002,
+            #ffb908,
+            #ffc310,
+            #ffcc19
+          );
+        }
+        &:nth-child(2) {
+          background-image: linear-gradient(
+            to top,
+            #9cff00,
+            #84ff37,
+            #6aff52,
+            #4cff69,
+            #19ff7d
+          );
+        }
+        &:nth-child(3) {
+          background-image: linear-gradient(
+            to top,
+            #444444,
+            #4d4d4d,
+            #575757,
+            #616161,
+            #6b6b6b
+          );
+        }
+      }
+    }
+  }
+}

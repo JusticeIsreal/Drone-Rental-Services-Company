@@ -33,6 +33,11 @@ body {
   flex-direction: $flexDirection;
 }
 @mixin responsive($breakpoint) {
+  @if $breakpoint == smallPhone {
+    @media only screen and (max-width: 300px) {
+      @content;
+    }
+  }
   @if $breakpoint == tablet {
     @media only screen and (min-width: 850px) {
       @content;
@@ -56,9 +61,8 @@ body {
     min-width: 35%;
     min-height: 100vh;
     padding-top: 30px;
-    top: 0;
     z-index: 2;
-    transition: .5s ease;
+    transition: 0.5s ease;
     margin-left: -100vw;
 
     &.open {
@@ -75,7 +79,6 @@ body {
 
     ul {
       width: 100%;
-    
 
       @include responsive(tablet) {
         padding: 0 15px;
@@ -121,7 +124,9 @@ body {
           h3 {
             font-weight: 400;
             font-size: 12px;
-
+            @include responsive(smallPhone) {
+              font-size: 10px;
+            }
             @include responsive(tablet) {
               font-weight: 500;
               font-size: 15px;
@@ -230,10 +235,11 @@ body {
           }
         }
         .bx-menu {
-          font-size: 50px;
-          transition: .3s linear;
+          font-size: 40px;
+          transition: 0.3s linear;
           &.rotate {
             transform: rotate(-90deg);
+            color: royalblue;
           }
           @include responsive(tablet) {
             display: none;
@@ -244,16 +250,25 @@ body {
 
     .top-card {
       @include flexDisplay(space-between, center, row);
-      padding: 0 20px;
-      gap: 25px;
+      padding: 0 10px;
+      gap: 15px;
       margin-top: 30px;
 
+      @include responsive(tablet) {
+        padding: 0 20px;
+        gap: 25px;
+      }
       .top {
-        width: 33.3%;
-        height: 200px;
+        width: 80px;
+        height: 80px;
         border-radius: 10px;
         position: relative;
         box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.138);
+
+        @include responsive(tablet) {
+          width: 33.3%;
+          height: 200px;
+        }
 
         &:nth-child(1) {
           background-image: linear-gradient(

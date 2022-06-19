@@ -255,7 +255,7 @@ body {
   align-items: center;
   flex-direction: row;
   padding: 0 10px;
-  gap: 15px;
+  gap: 10px;
   margin-top: 30px;
 }
 @media only screen and (min-width: 850px) {
@@ -265,8 +265,8 @@ body {
   }
 }
 .app .sidebar-right .top-card .top {
-  width: 33vw;
-  height: 33vw;
+  width: 28vw;
+  height: 28vw;
   border-radius: 10px;
   position: relative;
   box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.138);
@@ -274,7 +274,7 @@ body {
 @media only screen and (min-width: 850px) {
   .app .sidebar-right .top-card .top {
     width: 33.3%;
-    height: 200px;
+    height: 20vw;
   }
 }
 .app .sidebar-right .top-card .top:nth-child(1) {

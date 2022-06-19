@@ -251,7 +251,7 @@ body {
     .top-card {
       @include flexDisplay(space-between, center, row);
       padding: 0 10px;
-      gap: 15px;
+      gap: 10px;
       margin-top: 30px;
 
       @include responsive(tablet) {
@@ -259,15 +259,15 @@ body {
         gap: 25px;
       }
       .top {
-        width: 33vw;
-        height: 33vw;
+        width: 28vw;
+        height: 28vw;
         border-radius: 10px;
         position: relative;
         box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.138);
 
         @include responsive(tablet) {
           width: 33.3%;
-          height: 200px;
+          height: 20vw;
         }
 
         &:nth-child(1) {

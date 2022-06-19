@@ -9,7 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/style/style.css" />
-    <title>Dash Board</title>
+    <title></title>
   </head>
   <body>
     <div class="app">
@@ -18,7 +18,7 @@
           <li class="active">
             <a href="/pages/dashboard.html"
               ><i class="bx bx-grid-alt"></i>
-              <h3>Dashboard</h3></a
+              <h3 class="jj">Dashboard</h3></a
             >
           </li>
           <li>
@@ -26,6 +26,12 @@
               ><i class="bx bx-wallet"></i>
               <h3>Wallet</h3></a
             >
+          </li>
+          <li>
+            <a href="/pages/Transaction.html"
+              ><i class="bx bx-chart"></i>
+              <h3>Transactions</h3>
+            </a>
           </li>
           <li>
             <a href="/pages/notification.html"
@@ -65,7 +71,8 @@
           </div>
           <div class="profile-img">
             <a href=""><img src="/img/img1.png" alt="profile-img" /> </a>
-            <a href=""><i class="bx bx-bell"></i></a>
+            <a  class="notification-bell" href=""><i class="bx bx-bell">0</i></a>
+            <i class="bx bx-menu"></i>
           </div>
         </div>
         <main class="top-card">
@@ -75,5 +82,7 @@
         </main>
       </section>
     </div>
+
+    <script src="/app/app.js"></script>
   </body>
 </html>

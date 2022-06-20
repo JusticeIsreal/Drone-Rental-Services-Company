@@ -300,6 +300,7 @@ body {
 .app .sidebar-right .top-card .top div img {
   width: 100%;
   transition: all 10s ease;
+  transform: scale(1);
 }
 .app .sidebar-right .top-card .top div img.drone-ani {
   -webkit-animation: bounce 3s ease infinite;

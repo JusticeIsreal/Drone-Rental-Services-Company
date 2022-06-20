@@ -291,6 +291,7 @@ body {
           img {
             width: 100%;
             transition: all 10s ease;
+            transform: scale(1);
 
             &.drone-ani {
               animation: bounce 3s ease infinite;

@@ -150,6 +150,8 @@ body {
   width: 100%;
   height: 70px;
   padding: 0 10px;
+  border-bottom: 1px solid rgb(221, 221, 221);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
 }
 @media only screen and (min-width: 850px) {
   .app .sidebar-right .navbarTop {
@@ -287,7 +289,6 @@ body {
   transition: all 10s ease;
 }
 .app .sidebar-right .top-card .top div h2 {
-  color: whitesmoke;
   font-weight: 900;
   font-size: 12px;
   padding-top: 5px;
@@ -301,11 +302,11 @@ body {
 .app .sidebar-right .top-card .top div img {
   width: 100%;
   transition: all 10s ease;
-  transform: scale(1);
+  transform: scale();
 }
 .app .sidebar-right .top-card .top div img.drone-ani {
-  -webkit-animation: bounce 3s ease infinite;
-          animation: bounce 3s ease infinite;
+  -webkit-animation: bounce 3s linear infinite;
+          animation: bounce 3s linear infinite;
   z-index: 5;
 }
 @-webkit-keyframes bounce {
@@ -331,10 +332,10 @@ body {
   }
 }
 .app .sidebar-right .top-card .top:nth-child(1) {
-  background-image: linear-gradient(to top, #444444, #4d4d4d, #575757, #616161, #6b6b6b);
+  background-image: linear-gradient(to top, #ffa600, #ffb002, #ffb908, #ffc310, #ffcc19);
 }
 .app .sidebar-right .top-card .top:nth-child(2) {
-  background-image: linear-gradient(to top, #444444, #4d4d4d, #575757, #616161, #6b6b6b);
+  background-image: linear-gradient(to top, #9cff00, #84ff37, #6aff52, #4cff69, #19ff7d);
 }
 .app .sidebar-right .top-card .top:nth-child(3) {
   background-image: linear-gradient(to top, #444444, #4d4d4d, #575757, #616161, #6b6b6b);

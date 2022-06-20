@@ -277,6 +277,57 @@ body {
     height: 20vw;
   }
 }
+.app .sidebar-right .top-card .top div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  transition: all 10s ease;
+}
+.app .sidebar-right .top-card .top div h2 {
+  font-weight: 900;
+  font-size: 12px;
+  padding-top: 5px;
+  transform: scale(0.7);
+  transition: all 0.5s ease;
+}
+.app .sidebar-right .top-card .top div h2.grade-txt {
+  margin-top: 18%;
+  transform: scale(1.8);
+}
+.app .sidebar-right .top-card .top div img {
+  width: 100%;
+  transition: all 10s ease;
+}
+.app .sidebar-right .top-card .top div img.drone-ani {
+  -webkit-animation: bounce 3s ease infinite;
+          animation: bounce 3s ease infinite;
+  z-index: 5;
+}
+@-webkit-keyframes bounce {
+  0% {
+    transform: scale(1.3) translateY(0);
+  }
+  40% {
+    transform: scale(1.3) translateY(-10px);
+  }
+  100% {
+    transform: scale(1.3) translateY(0);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1.3) translateY(0);
+  }
+  40% {
+    transform: scale(1.3) translateY(-10px);
+  }
+  100% {
+    transform: scale(1.3) translateY(0);
+  }
+}
 .app .sidebar-right .top-card .top:nth-child(1) {
   background-image: linear-gradient(to top, #ffa600, #ffb002, #ffb908, #ffc310, #ffcc19);
 }

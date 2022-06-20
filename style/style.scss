@@ -293,22 +293,20 @@ body {
           img {
             width: 100%;
             transition: all 10s ease;
-            transform: scale();
 
             &.drone-ani {
               animation: bounce 3s linear infinite;
               z-index: 5;
-              transform: scale(1.3);
 
               @keyframes bounce {
                 0% {
-                  transform: translateY(0);
+                  transform: scale(1.3) translateY(0);
                 }
                 40% {
-                  transform: translateY(-10px);
+                  transform: scale(1.3) translateY(-10px);
                 }
                 100% {
-                  transform: translateY(0);
+                  transform: scale(1.3) translateY(0);
                 }
               }
             }
@@ -357,17 +355,18 @@ body {
 
       .drone-spec {
         @include flexDisplay(space-between, center, column);
-        border: 2px solid blue;
 
         .spec-top {
           @include flexDisplay(space-between, flex-start, column);
-          border: 5px solid red;
           width: 100%;
           border-radius: 10px;
           padding: 10px;
+          border: 1px solid rgb(221, 221, 221);
+          box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
         }
         .spec-down {
-          border: 5px solid yellow;
+          border: 1px solid rgb(221, 221, 221);
+          box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
           margin-top: 20px;
           border-radius: 10px;
           padding: 10px;
@@ -408,10 +407,9 @@ body {
             .drone-spin2 {
               width: 270px;
               height: 270px;
-
               margin: 0 auto;
-              border-top-color: orange;
-              border-bottom-color: pink;
+              border-top-color: rgb(0, 174, 255);
+              border-bottom-color: rgb(218, 0, 36);
               animation-duration: 5s;
 
               @keyframes roll {
@@ -427,23 +425,54 @@ body {
               }
             }
           }
-          // div {
-          //   border: 2px solid red;
-          //   padding: 0 10px;
-          //   @include flexDisplay(space-between, center, row);
+          .name-battery-con {
+            @include flexDisplay(space-around, flex-start, row);
+            border: 1px solid rgb(221, 221, 221);
+            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+            padding: 5px 0;
+            margin-top: 20px;
+            border-radius: 10px;
+            .name-con {
+              margin-top: auto;
 
-          //   i {
-          //     font-size: 40px;
-          //   }
-          //   div {
-          //     @include flexDisplay(center, center, row);
-          //     margin-top: 20px;
+              h3 {
+                font-size: 18px;
+              }
+              h4 {
+                font-size: 10px;
+                color: rgba(0, 0, 0, 0.678);
+              }
+            }
+            .battery-con {
+              position: relative;
+              border: 2px solid rgb(190, 190, 190);
+              box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+              width: 10%;
+              height: 55px;
+              margin-top: auto;
 
-          //     div {
-          //       @include flexDisplay(space-between, center, column);
-          //     }
-          //   }
-          // }
+              div {
+                background-color: green;
+                position: absolute;
+                bottom: 0;
+                height: 70%;
+                width: 100%;
+                font-size: 12px;
+                font-weight: 900;
+                text-align: center;
+              }
+            }
+          }
+          .flight-type-time {
+            @include flexDisplay(space-between, center, row);
+            margin-top: 10px;
+            div {
+              border: 2px solid red;
+              border-radius: 10px;
+              border: 1px solid rgb(221, 221, 221);
+              box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+            }
+          }
         }
       }
       .map {

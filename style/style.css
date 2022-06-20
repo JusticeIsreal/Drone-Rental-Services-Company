@@ -302,34 +302,32 @@ body {
 .app .sidebar-right .top-card .top div img {
   width: 100%;
   transition: all 10s ease;
-  transform: scale();
 }
 .app .sidebar-right .top-card .top div img.drone-ani {
   -webkit-animation: bounce 3s linear infinite;
           animation: bounce 3s linear infinite;
   z-index: 5;
-  transform: scale(1.3);
 }
 @-webkit-keyframes bounce {
   0% {
-    transform: translateY(0);
+    transform: scale(1.3) translateY(0);
   }
   40% {
-    transform: translateY(-10px);
+    transform: scale(1.3) translateY(-10px);
   }
   100% {
-    transform: translateY(0);
+    transform: scale(1.3) translateY(0);
   }
 }
 @keyframes bounce {
   0% {
-    transform: translateY(0);
+    transform: scale(1.3) translateY(0);
   }
   40% {
-    transform: translateY(-10px);
+    transform: scale(1.3) translateY(-10px);
   }
   100% {
-    transform: translateY(0);
+    transform: scale(1.3) translateY(0);
   }
 }
 .app .sidebar-right .top-card .top:nth-child(1) {
@@ -356,20 +354,21 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  border: 2px solid blue;
 }
 .app .sidebar-right .lower-card .drone-spec .spec-top {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
-  border: 5px solid red;
   width: 100%;
   border-radius: 10px;
   padding: 10px;
+  border: 1px solid rgb(221, 221, 221);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
 }
 .app .sidebar-right .lower-card .drone-spec .spec-down {
-  border: 5px solid yellow;
+  border: 1px solid rgb(221, 221, 221);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
   margin-top: 20px;
   border-radius: 10px;
   padding: 10px;
@@ -426,8 +425,8 @@ body {
   width: 270px;
   height: 270px;
   margin: 0 auto;
-  border-top-color: orange;
-  border-bottom-color: pink;
+  border-top-color: rgb(0, 174, 255);
+  border-bottom-color: rgb(218, 0, 36);
   -webkit-animation-duration: 5s;
           animation-duration: 5s;
 }
@@ -452,6 +451,58 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+.app .sidebar-right .lower-card .drone-spec .spec-down .name-battery-con {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: row;
+  border: 1px solid rgb(221, 221, 221);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+  padding: 5px 0;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+.app .sidebar-right .lower-card .drone-spec .spec-down .name-battery-con .name-con {
+  margin-top: auto;
+}
+.app .sidebar-right .lower-card .drone-spec .spec-down .name-battery-con .name-con h3 {
+  font-size: 18px;
+}
+.app .sidebar-right .lower-card .drone-spec .spec-down .name-battery-con .name-con h4 {
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.678);
+}
+.app .sidebar-right .lower-card .drone-spec .spec-down .name-battery-con .battery-con {
+  position: relative;
+  border: 2px solid rgb(190, 190, 190);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+  width: 10%;
+  height: 55px;
+  margin-top: auto;
+}
+.app .sidebar-right .lower-card .drone-spec .spec-down .name-battery-con .battery-con div {
+  background-color: green;
+  position: absolute;
+  bottom: 0;
+  height: 70%;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 900;
+  text-align: center;
+}
+.app .sidebar-right .lower-card .drone-spec .spec-down .flight-type-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 10px;
+}
+.app .sidebar-right .lower-card .drone-spec .spec-down .flight-type-time div {
+  border: 2px solid red;
+  border-radius: 10px;
+  border: 1px solid rgb(221, 221, 221);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
 }
 .app .sidebar-right .lower-card .map {
   border: 2px solid green;

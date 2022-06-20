@@ -45,6 +45,9 @@ body {
   min-height: 100vh;
   padding-top: 30px;
   z-index: 2;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
   transition: 0.5s ease;
   margin-left: -100vw;
 }
@@ -150,8 +153,13 @@ body {
   width: 100%;
   height: 70px;
   padding: 0 10px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: rgb(253, 253, 253);
   border-bottom: 1px solid rgb(221, 221, 221);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+  z-index: 10;
 }
 @media only screen and (min-width: 850px) {
   .app .sidebar-right .navbarTop {
@@ -258,10 +266,16 @@ body {
   flex-direction: row;
   padding: 0 10px;
   gap: 10px;
-  margin-top: 30px;
+  margin-top: 40px;
+  padding: 10px 10px;
 }
 @media only screen and (min-width: 850px) {
   .app .sidebar-right .top-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 30px;
     padding: 0 20px;
     gap: 25px;
   }
@@ -269,14 +283,14 @@ body {
 .app .sidebar-right .top-card .top {
   width: 28vw;
   height: 28vw;
-  border-radius: 10px;
+  border-radius: 50%;
   position: relative;
   box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.138);
 }
 @media only screen and (min-width: 850px) {
   .app .sidebar-right .top-card .top {
-    width: 33.3%;
-    height: 20vw;
+    width: 15vw;
+    height: 15vw;
   }
 }
 .app .sidebar-right .top-card .top div {
@@ -343,169 +357,186 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   margin-top: 20px;
-  border: 2px solid red;
   flex-wrap: wrap;
-  padding: 10px;
+  padding: 0 10px;
+}
+@media only screen and (min-width: 800px) {
+  .app .sidebar-right .lower-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 850px) {
+  .app .sidebar-right .lower-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
 }
 .app .sidebar-right .lower-card .drone-spec {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+@media only screen and (min-width: 800px) {
+  .app .sidebar-right .lower-card .drone-spec {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 850px) {
+  .app .sidebar-right .lower-card .drone-spec {
+    width: 500px;
+  }
+}
+.app .sidebar-right .lower-card .drone-spec img {
+  width: 170px;
+  position: absolute;
+  top: 140px;
+  margin-left: 25%;
+  -webkit-animation: drone-display 5s linear infinite;
+          animation: drone-display 5s linear infinite;
+}
+@media only screen and (min-width: 800px) {
+  .app .sidebar-right .lower-card .drone-spec img {
+    margin-left: 28%;
+  }
+}
+@media only screen and (min-width: 850px) {
+  .app .sidebar-right .lower-card .drone-spec img {
+    margin-left: 33%;
+  }
+}
+@-webkit-keyframes drone-display {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  0% {
+    transform: translateY(0);
+  }
+}
+@keyframes drone-display {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  0% {
+    transform: translateY(0);
+  }
 }
 .app .sidebar-right .lower-card .drone-spec .spec-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: column;
-  width: 100%;
-  border-radius: 10px;
   padding: 10px;
+  border-radius: 10px;
   border: 1px solid rgb(221, 221, 221);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
 }
-.app .sidebar-right .lower-card .drone-spec .spec-down {
-  border: 1px solid rgb(221, 221, 221);
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
-  margin-top: 20px;
-  border-radius: 10px;
-  padding: 10px;
-  position: relative;
+.app .sidebar-right .lower-card .drone-spec .drone-details {
+  margin-top: 10px;
 }
-.app .sidebar-right .lower-card .drone-spec .spec-down img {
-  position: absolute;
-  width: 70%;
-  top: 150px;
-  margin-left: 12%;
-  -webkit-animation: drone-spin 4s linear infinite;
-          animation: drone-spin 4s linear infinite;
-}
-@-webkit-keyframes drone-spin {
-  0% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(0);
+@media only screen and (min-width: 850px) {
+  .app .sidebar-right .lower-card .drone-spec .drone-details {
+    margin-top: 20px;
   }
 }
-@keyframes drone-spin {
-  0% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-15px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-.app .sidebar-right .lower-card .drone-spec .spec-down .drone-spin,
-.app .sidebar-right .lower-card .drone-spec .spec-down .drone-spin2 {
+.app .sidebar-right .lower-card .drone-spec .drone-details .spin {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  border: 15px solid rgba(255, 0, 0, 0);
-  border-top-color: green;
-  border-bottom-color: blue;
-  border-radius: 50%;
-  -webkit-animation: roll 15s linear infinite;
-          animation: roll 15s linear infinite;
-}
-.app .sidebar-right .lower-card .drone-spec .spec-down .drone-spin .drone-spin2,
-.app .sidebar-right .lower-card .drone-spec .spec-down .drone-spin2 .drone-spin2 {
-  width: 270px;
-  height: 270px;
-  margin: 0 auto;
-  border-top-color: rgb(0, 174, 255);
-  border-bottom-color: rgb(218, 0, 36);
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
-}
-@-webkit-keyframes roll {
-  0% {
-    transform: rotate(360deg);
-  }
-  50% {
-    transform: rotate(-360deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes roll {
-  0% {
-    transform: rotate(360deg);
-  }
-  50% {
-    transform: rotate(-360deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.app .sidebar-right .lower-card .drone-spec .spec-down .name-battery-con {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
   flex-direction: row;
-  border: 1px solid rgb(221, 221, 221);
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
-  padding: 5px 0;
-  margin-top: 20px;
-  border-radius: 10px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 210px;
+  height: 210px;
+  border: 8px solid rgba(0, 0, 0, 0);
+  border-bottom-color: #4cf9ff;
+  border-top-color: #4c5eff;
+  border-radius: 50%;
+  -webkit-animation: spin 8s linear infinite;
+          animation: spin 8s linear infinite;
 }
-.app .sidebar-right .lower-card .drone-spec .spec-down .name-battery-con .name-con {
-  margin-top: auto;
+.app .sidebar-right .lower-card .drone-spec .drone-details .spin .spinner2 {
+  width: 185px;
+  height: 185px;
+  border-bottom-color: #4c67ff;
+  border-top-color: #4cfff0;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
 }
-.app .sidebar-right .lower-card .drone-spec .spec-down .name-battery-con .name-con h3 {
-  font-size: 18px;
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(-360deg);
+  }
+  0% {
+    transform: rotate(360deg);
+  }
 }
-.app .sidebar-right .lower-card .drone-spec .spec-down .name-battery-con .name-con h4 {
-  font-size: 10px;
-  color: rgba(0, 0, 0, 0.678);
+@keyframes spin {
+  0% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(-360deg);
+  }
+  0% {
+    transform: rotate(360deg);
+  }
 }
-.app .sidebar-right .lower-card .drone-spec .spec-down .name-battery-con .battery-con {
-  position: relative;
-  border: 2px solid rgb(190, 190, 190);
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
-  width: 10%;
-  height: 55px;
-  margin-top: auto;
-}
-.app .sidebar-right .lower-card .drone-spec .spec-down .name-battery-con .battery-con div {
-  background-color: green;
-  position: absolute;
-  bottom: 0;
-  height: 70%;
-  width: 100%;
-  font-size: 12px;
-  font-weight: 900;
-  text-align: center;
-}
-.app .sidebar-right .lower-card .drone-spec .spec-down .flight-type-time {
+.app .sidebar-right .lower-card .drone-spec .name-battery-con {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  margin-top: 10px;
-}
-.app .sidebar-right .lower-card .drone-spec .spec-down .flight-type-time div {
-  border: 2px solid red;
   border-radius: 10px;
   border: 1px solid rgb(221, 221, 221);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+  padding: 10px;
+  margin-top: 20px;
+}
+.app .sidebar-right .lower-card .drone-spec .name-battery-con .name-con {
+  padding-right: 10px;
+}
+.app .sidebar-right .lower-card .drone-spec .name-battery-con .name-con h3 {
+  text-transform: uppercase;
+}
+.app .sidebar-right .lower-card .drone-spec .name-battery-con .name-con h4 {
+  font-size: 13px;
+  color: #272727;
+}
+.app .sidebar-right .lower-card .drone-spec .name-battery-con .name-con h5 {
+  font-size: 12px;
+  color: rgba(197, 0, 0, 0.9725490196);
+}
+.app .sidebar-right .lower-card .drone-spec .name-battery-con .battery-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid rgb(161, 161, 161);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+  height: 80px;
+  width: 40px;
+  margin-top: auto;
+}
+.app .sidebar-right .lower-card .drone-spec .name-battery-con .battery-con div {
+  margin-top: auto;
+  font-weight: 700;
+  text-align: center;
+  background-color: rgb(25, 214, 0);
+  height: 70%;
 }
 .app .sidebar-right .lower-card .map {
   border: 2px solid green;
-  width: 300px;
+  width: 200px;
   height: 80px;
 }/*# sourceMappingURL=style.css.map */

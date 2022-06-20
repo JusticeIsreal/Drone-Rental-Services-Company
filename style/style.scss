@@ -298,16 +298,17 @@ body {
             &.drone-ani {
               animation: bounce 3s linear infinite;
               z-index: 5;
+              transform: scale(1.3);
 
               @keyframes bounce {
                 0% {
-                  transform: scale(1.3) translateY(0);
+                  transform: translateY(0);
                 }
                 40% {
-                  transform: scale(1.3) translateY(-10px);
+                  transform: translateY(-10px);
                 }
                 100% {
-                  transform: scale(1.3) translateY(0);
+                  transform: translateY(0);
                 }
               }
             }
@@ -357,37 +358,92 @@ body {
       .drone-spec {
         @include flexDisplay(space-between, center, column);
         border: 2px solid blue;
-        
 
         .spec-top {
-          border: 5px solid orange;
+          @include flexDisplay(space-between, flex-start, column);
+          border: 5px solid red;
+          width: 100%;
+          border-radius: 10px;
+          padding: 10px;
         }
         .spec-down {
           border: 5px solid yellow;
           margin-top: 20px;
+          border-radius: 10px;
           padding: 10px;
+          position: relative;
           img {
+            position: absolute;
+            width: 70%;
+            top: 150px;
+            margin-left: 12%;
+            animation: drone-spin 4s linear infinite;
+
+            @keyframes drone-spin {
+              0% {
+                transform: translateY(0);
+              }
+              40% {
+                transform: translateY(-15px);
+              }
+
+              100% {
+                transform: translateY(0);
+              }
+            }
+          }
+          .drone-spin,
+          .drone-spin2 {
+            @include flexDisplay(center, center, column);
+            box-sizing: border-box;
+
             width: 100%;
-          }
+            height: 100%;
+            border: 15px solid rgba(255, 0, 0, 0);
+            border-top-color: green;
+            border-bottom-color: blue;
+            border-radius: 50%;
+            animation: roll 15s linear infinite;
 
-          div{
-            border: 2px solid red;
-            padding: 0 10px;
-            @include flexDisplay(space-between, center, row);
+            .drone-spin2 {
+              width: 270px;
+              height: 270px;
 
-            i{
-              font-size: 40px;
+              margin: 0 auto;
+              border-top-color: orange;
+              border-bottom-color: pink;
+              animation-duration: 5s;
+
+              @keyframes roll {
+                0% {
+                  transform: rotate(360deg);
+                }
+                50% {
+                  transform: rotate(-360deg);
+                }
+                100% {
+                  transform: rotate(360deg);
+                }
+              }
             }
-            div{
-               @include flexDisplay(center, center, row);
-               margin-top: 20px;
-
-               div{
-                 @include flexDisplay(space-between, center, row);
-                 
-               }
-            }
           }
+          // div {
+          //   border: 2px solid red;
+          //   padding: 0 10px;
+          //   @include flexDisplay(space-between, center, row);
+
+          //   i {
+          //     font-size: 40px;
+          //   }
+          //   div {
+          //     @include flexDisplay(center, center, row);
+          //     margin-top: 20px;
+
+          //     div {
+          //       @include flexDisplay(space-between, center, column);
+          //     }
+          //   }
+          // }
         }
       }
       .map {

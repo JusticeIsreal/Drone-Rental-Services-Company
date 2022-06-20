@@ -308,27 +308,28 @@ body {
   -webkit-animation: bounce 3s linear infinite;
           animation: bounce 3s linear infinite;
   z-index: 5;
+  transform: scale(1.3);
 }
 @-webkit-keyframes bounce {
   0% {
-    transform: scale(1.3) translateY(0);
+    transform: translateY(0);
   }
   40% {
-    transform: scale(1.3) translateY(-10px);
+    transform: translateY(-10px);
   }
   100% {
-    transform: scale(1.3) translateY(0);
+    transform: translateY(0);
   }
 }
 @keyframes bounce {
   0% {
-    transform: scale(1.3) translateY(0);
+    transform: translateY(0);
   }
   40% {
-    transform: scale(1.3) translateY(-10px);
+    transform: translateY(-10px);
   }
   100% {
-    transform: scale(1.3) translateY(0);
+    transform: translateY(0);
   }
 }
 .app .sidebar-right .top-card .top:nth-child(1) {
@@ -358,39 +359,99 @@ body {
   border: 2px solid blue;
 }
 .app .sidebar-right .lower-card .drone-spec .spec-top {
-  border: 5px solid orange;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  border: 5px solid red;
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
 }
 .app .sidebar-right .lower-card .drone-spec .spec-down {
   border: 5px solid yellow;
   margin-top: 20px;
+  border-radius: 10px;
   padding: 10px;
+  position: relative;
 }
 .app .sidebar-right .lower-card .drone-spec .spec-down img {
-  width: 100%;
+  position: absolute;
+  width: 70%;
+  top: 150px;
+  margin-left: 12%;
+  -webkit-animation: drone-spin 4s linear infinite;
+          animation: drone-spin 4s linear infinite;
 }
-.app .sidebar-right .lower-card .drone-spec .spec-down div {
-  border: 2px solid red;
-  padding: 0 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
+@-webkit-keyframes drone-spin {
+  0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
-.app .sidebar-right .lower-card .drone-spec .spec-down div i {
-  font-size: 40px;
+@keyframes drone-spin {
+  0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
-.app .sidebar-right .lower-card .drone-spec .spec-down div div {
+.app .sidebar-right .lower-card .drone-spec .spec-down .drone-spin,
+.app .sidebar-right .lower-card .drone-spec .spec-down .drone-spin2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  margin-top: 20px;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border: 15px solid rgba(255, 0, 0, 0);
+  border-top-color: green;
+  border-bottom-color: blue;
+  border-radius: 50%;
+  -webkit-animation: roll 15s linear infinite;
+          animation: roll 15s linear infinite;
 }
-.app .sidebar-right .lower-card .drone-spec .spec-down div div div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
+.app .sidebar-right .lower-card .drone-spec .spec-down .drone-spin .drone-spin2,
+.app .sidebar-right .lower-card .drone-spec .spec-down .drone-spin2 .drone-spin2 {
+  width: 270px;
+  height: 270px;
+  margin: 0 auto;
+  border-top-color: orange;
+  border-bottom-color: pink;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+@-webkit-keyframes roll {
+  0% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes roll {
+  0% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .app .sidebar-right .lower-card .map {
   border: 2px solid green;

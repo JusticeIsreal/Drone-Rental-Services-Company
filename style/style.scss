@@ -276,6 +276,7 @@ body {
           transition: all 10s ease;
 
           h2 {
+            color: whitesmoke;
             font-weight: 900;
             font-size: 12px;
             padding-top: 5px;
@@ -314,23 +315,23 @@ body {
         }
 
         &:nth-child(1) {
-          background-image: linear-gradient(
+           background-image: linear-gradient(
             to top,
-            #ffa600,
-            #ffb002,
-            #ffb908,
-            #ffc310,
-            #ffcc19
+            #444444,
+            #4d4d4d,
+            #575757,
+            #616161,
+            #6b6b6b
           );
         }
         &:nth-child(2) {
-          background-image: linear-gradient(
+           background-image: linear-gradient(
             to top,
-            #9cff00,
-            #84ff37,
-            #6aff52,
-            #4cff69,
-            #19ff7d
+            #444444,
+            #4d4d4d,
+            #575757,
+            #616161,
+            #6b6b6b
           );
         }
         &:nth-child(3) {

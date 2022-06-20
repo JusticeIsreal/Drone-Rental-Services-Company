@@ -339,4 +339,61 @@ body {
 }
 .app .sidebar-right .top-card .top:nth-child(3) {
   background-image: linear-gradient(to top, #444444, #4d4d4d, #575757, #616161, #6b6b6b);
+}
+.app .sidebar-right .lower-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 20px;
+  border: 2px solid red;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.app .sidebar-right .lower-card .drone-spec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  border: 2px solid blue;
+}
+.app .sidebar-right .lower-card .drone-spec .spec-top {
+  border: 5px solid orange;
+}
+.app .sidebar-right .lower-card .drone-spec .spec-down {
+  border: 5px solid yellow;
+  margin-top: 20px;
+  padding: 10px;
+}
+.app .sidebar-right .lower-card .drone-spec .spec-down img {
+  width: 100%;
+}
+.app .sidebar-right .lower-card .drone-spec .spec-down div {
+  border: 2px solid red;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.app .sidebar-right .lower-card .drone-spec .spec-down div i {
+  font-size: 40px;
+}
+.app .sidebar-right .lower-card .drone-spec .spec-down div div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 20px;
+}
+.app .sidebar-right .lower-card .drone-spec .spec-down div div div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.app .sidebar-right .lower-card .map {
+  border: 2px solid green;
+  width: 300px;
+  height: 80px;
 }/*# sourceMappingURL=style.css.map */

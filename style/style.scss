@@ -271,15 +271,17 @@ body {
     .top-card {
       @include flexDisplay(space-around, center, row);
       padding: 0 10px;
-      // gap: 10px;
       margin-top: 40px;
+      width: 80%;
+      margin: 0 auto;
       padding: 10px 10px;
 
       @include responsive(tablet) {
         @include flexDisplay(space-around, center, row);
-        margin-top: 30px;
+        width: 48%;
         padding: 0 20px;
-        gap: 25px;
+        margin: 0 0;
+        margin-top: 30px;
       }
       .top {
         width: 20vw;
@@ -289,8 +291,8 @@ body {
         box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.138);
 
         @include responsive(tablet) {
-          width: 10vw;
-          height: 10vw;
+          width: 8vw;
+          height: 8vw;
         }
         div {
           @include flexDisplay(space-between, center, column);
@@ -372,6 +374,18 @@ body {
       margin-top: 20px;
       flex-wrap: wrap;
       padding: 20px 10px;
+      position: relative;
+
+      .chat {
+        z-index: 20;
+        font-weight: 700;
+        font-size: 50px;
+        margin-right: auto;
+        position: absolute;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+      }
 
       @include responsive(bigphone) {
         @include flexDisplay(space-between, center, row);
@@ -435,9 +449,15 @@ body {
 
         .drone-details {
           margin-top: 10px;
+
+          #chart_div {
+            
+            @include flexDisplay(space-around, center, row);
+          }
           @include responsive(tablet) {
             margin-top: 20px;
           }
+
           .spin {
             @include flexDisplay(center, center, row);
             box-sizing: border-box;
@@ -649,10 +669,15 @@ body {
           width: 93%;
           z-index: 3;
           bottom: 10px;
-          transition: all 0.5s ease;
+          transition: 0.5s linear;
           transform: scale(0);
 
+          @include responsive(tablet) {
+            width: 95%;
+          }
+
           &.ope {
+            transition: 0.5s linear;
             transform: scale(1);
           }
           .bx-x {
@@ -668,12 +693,19 @@ body {
 
             label {
               margin-right: auto;
+
+              i {
+                font-size: 15px;
+                color: #c50000f8;
+                padding: 0 5px;
+              }
             }
             select {
               width: 100%;
               height: 35px;
               border-radius: 10px;
               border: 1px solid rgb(221, 221, 221);
+              margin-bottom: 10px;
               box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
             }
             input {
@@ -683,6 +715,7 @@ body {
               border-radius: 10px;
               border: 1px solid rgb(221, 221, 221);
               box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+              margin-bottom: 10px;
             }
 
             .payment {
@@ -720,8 +753,6 @@ body {
 
       .map {
         border: 2px solid green;
-        width: 200px;
-        height: 80px;
       }
     }
   }

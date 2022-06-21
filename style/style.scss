@@ -637,7 +637,7 @@ body {
               }
             }
           }
-        } 
+        }
 
         .form-con {
           border-radius: 10px;
@@ -649,13 +649,20 @@ body {
           width: 93%;
           z-index: 3;
           bottom: 10px;
-          transition: all .5s ease;
+          transition: all 0.5s ease;
           transform: scale(0);
 
           &.ope {
             transform: scale(1);
           }
+          .bx-x {
+            font-size: 50px;
+            margin-left: 85%;
 
+            &.hover {
+              color: gray;
+            }
+          }
           form {
             @include flexDisplay(space-between, center, column);
 

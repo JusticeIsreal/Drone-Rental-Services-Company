@@ -713,6 +713,13 @@ body {
 .app .sidebar-right .lower-card .drone-spec .form-con.ope {
   transform: scale(1);
 }
+.app .sidebar-right .lower-card .drone-spec .form-con .bx-x {
+  font-size: 50px;
+  margin-left: 85%;
+}
+.app .sidebar-right .lower-card .drone-spec .form-con .bx-x.hover {
+  color: gray;
+}
 .app .sidebar-right .lower-card .drone-spec .form-con form {
   display: flex;
   justify-content: space-between;

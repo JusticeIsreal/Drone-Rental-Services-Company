@@ -48,9 +48,13 @@ box3.addEventListener("click", () => {
 });
 // show form
 
-let orderBtn = document.querySelector('.select-drone');
+let orderBtn = document.querySelector(".select-drone");
 let formContainer = document.querySelector(".form-con");
+let formContainerRemove = document.querySelector(".bx-x");
 
-orderBtn.addEventListener('click', () => {
-  formContainer.classList.toggle('ope')
-})
+orderBtn.addEventListener("click", () => {
+  formContainer.classList.toggle("ope");
+});
+formContainerRemove.addEventListener("click", () => {
+  formContainer.classList.toggle("ope");
+});

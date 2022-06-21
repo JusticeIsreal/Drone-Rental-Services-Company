@@ -43,7 +43,7 @@ body {
   max-width: 35%;
   min-width: 35%;
   height: 100vh;
-  padding-top: 30px;
+  padding: 30px 10px;
   z-index: 20;
   top: 0;
   position: absolute;
@@ -444,35 +444,15 @@ body {
   background-color: whitesmoke;
 }
 .app .sidebar-right .lower-card .drone-spec .spec-top .top-spec-name {
-  width: 60%;
+  width: 100%;
 }
-.app .sidebar-right .lower-card .drone-spec .spec-top .top-spec-name span {
+.app .sidebar-right .lower-card .drone-spec .spec-top .top-spec-name h4 {
+  width: 50%;
+  margin-left: auto;
+}
+.app .sidebar-right .lower-card .drone-spec .spec-top .top-spec-name h4 span {
   font-size: 15px;
   color: rgba(197, 0, 0, 0.9725490196);
-}
-.app .sidebar-right .lower-card .drone-spec .spec-top .select-drone {
-  width: 150px;
-  height: 45px;
-}
-.app .sidebar-right .lower-card .drone-spec .spec-top .select-drone a {
-  border-radius: 5px;
-  background-color: royalblue;
-  border: 1px solid rgb(221, 221, 221);
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
-}
-.app .sidebar-right .lower-card .drone-spec .spec-top .select-drone a button {
-  color: whitesmoke;
-  font-size: 15px;
-  font-weight: 500;
-  border-radius: 5px;
-  background-color: royalblue;
-  border: 1px solid rgb(221, 221, 221);
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
-  width: 100%;
-  height: 100%;
-}
-.app .sidebar-right .lower-card .drone-spec .spec-top .select-drone a button:hover {
-  background-color: rgb(19, 43, 114);
 }
 .app .sidebar-right .lower-card .drone-spec .drone-details {
   margin-top: 10px;
@@ -492,8 +472,8 @@ body {
   width: 210px;
   height: 210px;
   border: 8px solid rgba(0, 0, 0, 0);
-  border-bottom-color: #4c5eff;
-  border-top-color: #4c5eff;
+  border-bottom-color: rgba(76, 94, 255, 0.4941176471);
+  border-top-color: rgba(76, 94, 255, 0.4941176471);
   border-radius: 50%;
   -webkit-animation: spin 8s linear infinite;
           animation: spin 8s linear infinite;
@@ -501,8 +481,8 @@ body {
 .app .sidebar-right .lower-card .drone-spec .drone-details .spin .spinner2 {
   width: 185px;
   height: 185px;
-  border-bottom-color: #4c67ff;
-  border-top-color: #4c67ff;
+  border-bottom-color: rgba(76, 94, 255, 0.2196078431);
+  border-top-color: rgba(76, 94, 255, 0.2196078431);
   -webkit-animation-duration: 4s;
           animation-duration: 4s;
 }
@@ -564,11 +544,29 @@ body {
   height: 80px;
   width: 40px;
   margin-top: auto;
+  padding: 0 2px 2px 2px;
+  position: relative;
+}
+.app .sidebar-right .lower-card .drone-spec .name-battery-con .battery-con::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  border: 3px solid gray;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+  top: -7px;
 }
 .app .sidebar-right .lower-card .drone-spec .name-battery-con .battery-con div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
   margin-top: auto;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
+  width: 100%;
+  padding: 0 2px;
   background-color: rgb(25, 214, 0);
   height: 70%;
 }
@@ -578,9 +576,13 @@ body {
   align-items: center;
   flex-direction: row;
   margin-top: 10px;
-  height: 160px;
+  height: 180px;
 }
 .app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex;
+  flex-direction: column;
   border-radius: 10px;
   border: 1px solid rgb(221, 221, 221);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
@@ -589,6 +591,7 @@ body {
   padding: 5px;
 }
 .app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec h3 {
+  font-size: 18px;
   padding: 0 0 10px 0;
 }
 .app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec h3 i {
@@ -641,48 +644,7 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  margin-top: 10px;
   height: 100px;
-}
-.app .sidebar-right .lower-card .drone-spec .pay-state .pay {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  border-radius: 10px;
-  border: 1px solid rgb(221, 221, 221);
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
-  width: 48%;
-  height: 100%;
-  padding: 5px;
-}
-.app .sidebar-right .lower-card .drone-spec .pay-state .pay h3 {
-  padding: 0 0 10px 0;
-}
-.app .sidebar-right .lower-card .drone-spec .pay-state .pay h3 i {
-  padding: 5px 5px;
-}
-.app .sidebar-right .lower-card .drone-spec .pay-state .pay a {
-  border-radius: 5px;
-  background-color: royalblue;
-  border: 1px solid rgb(221, 221, 221);
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
-  width: 90%;
-  height: 50px;
-}
-.app .sidebar-right .lower-card .drone-spec .pay-state .pay a button {
-  color: whitesmoke;
-  font-size: 20px;
-  font-weight: 500;
-  border-radius: 5px;
-  background-color: royalblue;
-  border: 1px solid rgb(221, 221, 221);
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
-  width: 100%;
-  height: 100%;
-}
-.app .sidebar-right .lower-card .drone-spec .pay-state .pay a button:hover {
-  background-color: rgb(19, 43, 114);
 }
 .app .sidebar-right .lower-card .drone-spec .pay-state .state {
   display: flex;
@@ -692,17 +654,19 @@ body {
   border-radius: 10px;
   border: 1px solid rgb(221, 221, 221);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
-  width: 48%;
-  height: 100%;
+  width: 100%;
   padding: 5px;
 }
-.app .sidebar-right .lower-card .drone-spec .pay-state .state h3 {
-  padding: 0 0 10px 0;
+.app .sidebar-right .lower-card .drone-spec .pay-state .state div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex;
+  flex-direction: row;
 }
-.app .sidebar-right .lower-card .drone-spec .pay-state .state h3 i {
+.app .sidebar-right .lower-card .drone-spec .pay-state .state div h3 i {
   padding: 5px 5px;
 }
-.app .sidebar-right .lower-card .drone-spec .pay-state .state p {
+.app .sidebar-right .lower-card .drone-spec .pay-state .state div p {
   font-weight: 500;
   padding: 0 5px;
   display: flex;
@@ -710,9 +674,36 @@ body {
   align-items: center;
   flex-direction: row;
 }
-.app .sidebar-right .lower-card .drone-spec .pay-state .state p span {
+.app .sidebar-right .lower-card .drone-spec .pay-state .state div p span {
   font-size: 15px;
   color: rgba(197, 0, 0, 0.9725490196);
+}
+.app .sidebar-right .lower-card .drone-spec .pay-state .state .select-drone {
+  width: 100%;
+  height: 45px;
+  margin-top: 10px;
+}
+.app .sidebar-right .lower-card .drone-spec .pay-state .state .select-drone a {
+  border-radius: 5px;
+  background-color: royalblue;
+  border: 1px solid rgb(221, 221, 221);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+  width: 100%;
+  height: 100%;
+}
+.app .sidebar-right .lower-card .drone-spec .pay-state .state .select-drone a button {
+  color: whitesmoke;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 5px;
+  background-color: royalblue;
+  border: 1px solid rgb(221, 221, 221);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+  width: 100%;
+  height: 100%;
+}
+.app .sidebar-right .lower-card .drone-spec .pay-state .state .select-drone a button:hover {
+  background-color: rgb(19, 43, 114);
 }
 .app .sidebar-right .lower-card .map {
   border: 2px solid green;

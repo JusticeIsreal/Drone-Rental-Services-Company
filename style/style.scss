@@ -65,7 +65,7 @@ body {
     max-width: 35%;
     min-width: 35%;
     height: 100vh;
-    padding-top: 30px;
+    padding: 30px 10px;
     z-index: 20;
     top: 0;
     position: absolute;
@@ -280,7 +280,6 @@ body {
         margin-top: 30px;
         padding: 0 20px;
         gap: 25px;
-       
       }
       .top {
         width: 20vw;
@@ -381,22 +380,6 @@ body {
         @include flexDisplay(space-between, center, row);
       }
       .drone-spec {
-        // overflow: scroll;
-
-        // &::-webkit-scrollbar {
-        //   height: 0.5rem;
-        //   width: 5px;
-        // }
-
-        // &::-webkit-scrollbar-track {
-        //   background-color: whitesmoke;
-        // }
-
-        // &::-webkit-scrollbar-thumb {
-        //   background-color: gray;
-        // }
-
-        
         position: relative;
         width: 100%;
         padding: 0 20px 10px 10px;
@@ -439,36 +422,14 @@ body {
           // top: 0;
           // z-index: 2;
           .top-spec-name {
-            width: 60%;
+            width: 100%;
 
-            span {
-              font-size: 15px;
-              color: #c50000f8;
-            }
-          }
-          .select-drone {
-            width: 150px;
-            height: 45px;
-            a {
-              border-radius: 5px;
-              background-color: royalblue;
-              border: 1px solid rgb(221, 221, 221);
-              box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
-
-              button {
-                color: whitesmoke;
+            h4 {
+              width: 50%;
+              margin-left: auto;
+              span {
                 font-size: 15px;
-                font-weight: 500;
-                border-radius: 5px;
-                background-color: royalblue;
-                border: 1px solid rgb(221, 221, 221);
-                box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
-                width: 100%;
-                height: 100%;
-
-                &:hover {
-                  background-color: rgb(19, 43, 114);
-                }
+                color: #c50000f8;
               }
             }
           }
@@ -486,16 +447,16 @@ body {
             width: 210px;
             height: 210px;
             border: 8px solid rgba(0, 0, 0, 0);
-            border-bottom-color: #4c5eff;
-            border-top-color: #4c5eff;
+            border-bottom-color: #4c5eff7e;
+            border-top-color: #4c5eff7e;
             border-radius: 50%;
             animation: spin 8s linear infinite;
 
             .spinner2 {
               width: 185px;
               height: 185px;
-              border-bottom-color: #4c67ff;
-              border-top-color: #4c67ff;
+              border-bottom-color: #4c5eff38;
+              border-top-color: #4c5eff38;
               animation-duration: 4s;
 
               @keyframes spin {
@@ -542,11 +503,27 @@ body {
             height: 80px;
             width: 40px;
             margin-top: auto;
+            padding: 0 2px 2px 2px;
+            position: relative;
+
+            &::before {
+              content: "";
+              position: absolute;
+              width: 4px;
+              border: 3px solid gray;
+              margin: 0 auto;
+              right: 0;
+              left: 0;
+              top: -7px;
+            }
 
             div {
+              @include flexDisplay(space-between, center, column);
               margin-top: auto;
-              font-weight: 700;
+              font-weight: 600;
               text-align: center;
+              width: 100%;
+              padding: 0 2px;
               background-color: rgb(25, 214, 0);
               height: 70%;
             }
@@ -556,9 +533,10 @@ body {
         .drone-camera-time {
           @include flexDisplay(space-between, center, row);
           margin-top: 10px;
-          height: 160px;
+          height: 180px;
 
           .camera-spec {
+            @include flexDisplay(space-between, flex, column);
             border-radius: 10px;
             border: 1px solid rgb(221, 221, 221);
             box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
@@ -566,6 +544,7 @@ body {
             height: 100%;
             padding: 5px;
             h3 {
+              font-size: 18px;
               padding: 0 0 10px 0;
               i {
                 padding: 5px 5px;
@@ -611,72 +590,61 @@ body {
 
         .pay-state {
           @include flexDisplay(space-between, center, row);
-          margin-top: 10px;
           height: 100px;
 
-          .pay {
-            @include flexDisplay(space-between, center, column);
+          .state {
+            @include flexDisplay(space-between, flex, column);
             border-radius: 10px;
             border: 1px solid rgb(221, 221, 221);
             box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
-            width: 48%;
-            height: 100%;
+            width: 100%;
             padding: 5px;
+            div {
+              @include flexDisplay(space-between, flex, row);
+              h3 {
+                // padding: 0 0 10px 0;
+                i {
+                  padding: 5px 5px;
+                }
+              }
+              p {
+                font-weight: 500;
+                padding: 0 5px;
+                @include flexDisplay(space-between, center, row);
 
-            h3 {
-              padding: 0 0 10px 0;
-              i {
-                padding: 5px 5px;
+                span {
+                  font-size: 15px;
+                  color: #c50000f8;
+                }
               }
             }
-            a {
-              border-radius: 5px;
-              background-color: royalblue;
-              border: 1px solid rgb(221, 221, 221);
-              box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
-              width: 90%;
-              height: 50px;
 
-              button {
-                color: whitesmoke;
-                font-size: 20px;
-                font-weight: 500;
+            .select-drone {
+              width: 100%;
+              height: 45px;
+              margin-top: 10px;
+              a {
                 border-radius: 5px;
                 background-color: royalblue;
                 border: 1px solid rgb(221, 221, 221);
                 box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
                 width: 100%;
                 height: 100%;
+                button {
+                  color: whitesmoke;
+                  font-size: 15px;
+                  font-weight: 500;
+                  border-radius: 5px;
+                  background-color: royalblue;
+                  border: 1px solid rgb(221, 221, 221);
+                  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+                  width: 100%;
+                  height: 100%;
 
-                &:hover {
-                  background-color: rgb(19, 43, 114);
+                  &:hover {
+                    background-color: rgb(19, 43, 114);
+                  }
                 }
-              }
-            }
-          }
-          .state {
-            @include flexDisplay(space-between, flex, column);
-            border-radius: 10px;
-            border: 1px solid rgb(221, 221, 221);
-            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
-            width: 48%;
-            height: 100%;
-            padding: 5px;
-
-            h3 {
-              padding: 0 0 10px 0;
-              i {
-                padding: 5px 5px;
-              }
-            }
-            p {
-              font-weight: 500;
-              padding: 0 5px;
-              @include flexDisplay(space-between, center, row);
-
-              span {
-                font-size: 15px;
-                color: #c50000f8;
               }
             }
           }

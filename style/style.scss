@@ -418,9 +418,7 @@ body {
           padding: 10px;
           border-radius: 10px;
           background-color: whitesmoke;
-          // position: sticky;
-          // top: 0;
-          // z-index: 2;
+
           .top-spec-name {
             width: 100%;
 
@@ -598,11 +596,10 @@ body {
             border: 1px solid rgb(221, 221, 221);
             box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
             width: 100%;
-            padding: 5px;
+            padding: 5px 10px;
             div {
               @include flexDisplay(space-between, flex, row);
               h3 {
-                // padding: 0 0 10px 0;
                 i {
                   padding: 5px 5px;
                 }
@@ -623,6 +620,69 @@ body {
               width: 100%;
               height: 45px;
               margin-top: 10px;
+              button {
+                color: whitesmoke;
+                font-size: 15px;
+                font-weight: 500;
+                border-radius: 5px;
+                background-color: royalblue;
+                border: 1px solid rgb(221, 221, 221);
+                box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+                width: 100%;
+                height: 100%;
+
+                &:hover {
+                  background-color: rgb(19, 43, 114);
+                }
+              }
+            }
+          }
+        } 
+
+        .form-con {
+          border-radius: 10px;
+          border: 1px solid rgb(221, 221, 221);
+          box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+          padding: 10px;
+          background-color: whitesmoke;
+          position: absolute;
+          width: 93%;
+          z-index: 3;
+          bottom: 10px;
+          transition: all .5s ease;
+          transform: scale(0);
+
+          &.ope {
+            transform: scale(1);
+          }
+
+          form {
+            @include flexDisplay(space-between, center, column);
+
+            label {
+              margin-right: auto;
+            }
+            select {
+              width: 100%;
+              height: 35px;
+              border-radius: 10px;
+              border: 1px solid rgb(221, 221, 221);
+              box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+            }
+            input {
+              width: 100%;
+              height: 35px;
+              padding: 0 10px;
+              border-radius: 10px;
+              border: 1px solid rgb(221, 221, 221);
+              box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+            }
+
+            .payment {
+              width: 100%;
+              height: 45px;
+              margin-top: 10px;
+
               a {
                 border-radius: 5px;
                 background-color: royalblue;

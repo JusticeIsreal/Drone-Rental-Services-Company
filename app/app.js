@@ -46,3 +46,11 @@ box3.addEventListener("click", () => {
   standard.classList.remove("drone-ani");
   regular.classList.remove("drone-ani");
 });
+// show form
+
+let orderBtn = document.querySelector('.select-drone');
+let formContainer = document.querySelector(".form-con");
+
+orderBtn.addEventListener('click', () => {
+  formContainer.classList.toggle('ope')
+})

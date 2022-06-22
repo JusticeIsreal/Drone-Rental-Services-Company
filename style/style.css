@@ -394,7 +394,7 @@ body {
   .app .sidebar-right .lower-card {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: row;
   }
 }
@@ -805,5 +805,9 @@ body {
   background-color: rgb(19, 43, 114);
 }
 .app .sidebar-right .lower-card .map {
-  border: 2px solid green;
+  width: 100%;
+  margin-top: 20px;
+}
+.app .sidebar-right .lower-card .map #chart_di {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

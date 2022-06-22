@@ -391,7 +391,7 @@ body {
         @include flexDisplay(space-between, center, row);
       }
       @include responsive(tablet) {
-        @include flexDisplay(space-between, center, row);
+        @include flexDisplay(space-between, flex-start, row);
       }
       .drone-spec {
         position: relative;
@@ -451,7 +451,6 @@ body {
           margin-top: 10px;
 
           #chart_div {
-            
             @include flexDisplay(space-around, center, row);
           }
           @include responsive(tablet) {
@@ -752,7 +751,12 @@ body {
       }
 
       .map {
-        border: 2px solid green;
+        width: 100%;
+        margin-top: 20px;
+
+        #chart_di {
+          width: 100%;
+        }
       }
     }
   }

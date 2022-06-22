@@ -268,10 +268,9 @@ body {
 }
 .app .sidebar-right .top-card {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: row;
-  padding: 0 10px;
+  flex-direction: column;
   margin-top: 40px;
   width: 80%;
   margin: 0 auto;
@@ -280,16 +279,23 @@ body {
 @media only screen and (min-width: 850px) {
   .app .sidebar-right .top-card {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    width: 48%;
+    width: 100%;
     padding: 0 20px;
     margin: 0 0;
     margin-top: 30px;
   }
 }
-.app .sidebar-right .top-card .top {
+.app .sidebar-right .top-card .cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+}
+.app .sidebar-right .top-card .cards .top {
   width: 20vw;
   height: 20vw;
   border-radius: 50%;
@@ -297,12 +303,12 @@ body {
   box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.138);
 }
 @media only screen and (min-width: 850px) {
-  .app .sidebar-right .top-card .top {
+  .app .sidebar-right .top-card .cards .top {
     width: 8vw;
     height: 8vw;
   }
 }
-.app .sidebar-right .top-card .top div {
+.app .sidebar-right .top-card .cards .top div {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -311,22 +317,22 @@ body {
   height: 100%;
   transition: all 10s ease;
 }
-.app .sidebar-right .top-card .top div h2 {
+.app .sidebar-right .top-card .cards .top div h2 {
   font-weight: 900;
   font-size: 12px;
   padding-top: 5px;
   transform: scale(0.7);
   transition: all 0.5s ease;
 }
-.app .sidebar-right .top-card .top div h2.grade-txt {
+.app .sidebar-right .top-card .cards .top div h2.grade-txt {
   margin-top: 18%;
   transform: scale(1.8);
 }
-.app .sidebar-right .top-card .top div img {
+.app .sidebar-right .top-card .cards .top div img {
   width: 100%;
   transition: all 10s ease;
 }
-.app .sidebar-right .top-card .top div img.drone-ani {
+.app .sidebar-right .top-card .cards .top div img.drone-ani {
   -webkit-animation: bounce 3s linear infinite;
           animation: bounce 3s linear infinite;
   z-index: 5;
@@ -353,14 +359,37 @@ body {
     transform: scale(1.3) translateY(0);
   }
 }
-.app .sidebar-right .top-card .top:nth-child(1) {
+.app .sidebar-right .top-card .cards .top:nth-child(1) {
   background-image: linear-gradient(to top, #ffa600, #ffb002, #ffb908, #ffc310, #ffcc19);
 }
-.app .sidebar-right .top-card .top:nth-child(2) {
+.app .sidebar-right .top-card .cards .top:nth-child(2) {
   background-image: linear-gradient(to top, #9cff00, #84ff37, #6aff52, #4cff69, #19ff7d);
 }
-.app .sidebar-right .top-card .top:nth-child(3) {
+.app .sidebar-right .top-card .cards .top:nth-child(3) {
   background-image: linear-gradient(to top, #444444, #4d4d4d, #575757, #616161, #6b6b6b);
+}
+.app .sidebar-right .top-card .total-flight {
+  border-radius: 10px;
+  border: 1px solid rgb(221, 221, 221);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+  font-size: 10px;
+}
+@media only screen and (min-width: 850px) {
+  .app .sidebar-right .top-card .total-flight {
+    order: 2;
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    font-size: 15px;
+    width: 50%;
+  }
 }
 .app .sidebar-right .lower-card {
   display: flex;
@@ -416,7 +445,7 @@ body {
 .app .sidebar-right .lower-card .drone-spec img {
   width: 170px;
   position: absolute;
-  top: 170px;
+  top: 185px;
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -461,7 +490,11 @@ body {
   width: 100%;
 }
 .app .sidebar-right .lower-card .drone-spec .spec-top .top-spec-name h4 {
-  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 45%;
   margin-left: auto;
 }
 .app .sidebar-right .lower-card .drone-spec .spec-top .top-spec-name h4 span {
@@ -473,9 +506,17 @@ body {
 }
 .app .sidebar-right .lower-card .drone-spec .drone-details #chart_div {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
+  padding: 0 0 0 15%;
+}
+@media only screen and (min-width: 850px) {
+  .app .sidebar-right .lower-card .drone-spec .drone-details #chart_div {
+    margin-top: 20px;
+    padding: 0 0 0 20%;
+    width: 100%;
+  }
 }
 @media only screen and (min-width: 850px) {
   .app .sidebar-right .lower-card .drone-spec .drone-details {

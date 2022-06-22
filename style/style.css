@@ -410,7 +410,7 @@ body {
 }
 @media only screen and (min-width: 850px) {
   .app .sidebar-right .lower-card .drone-spec {
-    width: 500px;
+    width: 450px;
   }
 }
 .app .sidebar-right .lower-card .drone-spec img {
@@ -805,9 +805,29 @@ body {
   background-color: rgb(19, 43, 114);
 }
 .app .sidebar-right .lower-card .map {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   margin-top: 20px;
+  margin-right: auto;
+  border-radius: 10px;
+  border: 1px solid rgb(221, 221, 221);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
 }
-.app .sidebar-right .lower-card .map #chart_di {
+@media only screen and (min-width: 850px) {
+  .app .sidebar-right .lower-card .map {
+    width: 50%;
+    margin-top: 0;
+    padding: 10px 0;
+    border-radius: 10px;
+    border: 1px solid rgb(221, 221, 221);
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+  }
+}
+.app .sidebar-right .lower-card .map #curve_chart {
   width: 100%;
+}
+@media only screen and (min-width: 850px) {
+  .app .sidebar-right .lower-card .map #curve_chart {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */

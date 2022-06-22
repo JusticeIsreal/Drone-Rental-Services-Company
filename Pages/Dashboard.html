@@ -22,16 +22,17 @@
             >
           </li>
           <li>
-            <a href="/pages/wallet.html"
-              ><i class="bx bx-wallet"></i>
-              <h3>Wallet</h3></a
-            >
-          </li>
-          <li>
             <a href="/pages/Transaction.html"
               ><i class="bx bx-chart"></i>
               <h3>Transactions</h3>
             </a>
+          </li>
+
+          <li>
+            <a href="/pages/wallet.html"
+              ><i class="bx bx-wallet"></i>
+              <h3>Wallet</h3></a
+            >
           </li>
           <li>
             <a href="/pages/notification.html"
@@ -76,67 +77,79 @@
           </div>
         </div>
         <main class="top-card">
-          <div class="top card1">
-            <div class="box1">
-              <h2 class="regular-txt">REGULAR</h2>
-              <img
-                class="regular drone"
-                src="/img/drone2-removebg-preview.png"
-                alt=""
-              />
+          <div class="total-flight">
+            <div class="flight-time">
+              <p>Total Flying Time</p>
+              <h3>00:00:00</h3>
+              <p>Last 1 year : 01:01:22</p>
+            </div>
+            <div class="flight-records">
+              <p>Total Flights</p>
+              <h3>0</h3>
+              <p>Last 1 year : 01:01:22</p>
             </div>
           </div>
-          <div class="top card2">
-            <div class="box2">
-              <h2 class="standard-txt">STANDARD</h2>
-              <img
-                class="standard drone"
-                src="/img/drone1-removebg-preview.png"
-                alt=""
-              />
+          <div class="cards">
+            <div class="top card1">
+              <div class="box1">
+                <h2 class="regular-txt">REGULAR</h2>
+                <img
+                  class="regular drone"
+                  src="/img/drone2-removebg-preview.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="top card2">
+              <div class="box2">
+                <h2 class="standard-txt">STANDARD</h2>
+                <img
+                  class="standard drone"
+                  src="/img/drone1-removebg-preview.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="top card3">
+              <div class="box3">
+                <h2 class="premium-txt">PREMIUM</h2>
+                <img
+                  class="premium drone"
+                  src="/img/drone8-removebg-preview.png"
+                  alt=""
+                />
+              </div>
             </div>
           </div>
-          <div class="top card3">
-            <div class="box3">
-              <h2 class="premium-txt">PREMIUM</h2>
-              <img
-                class="premium drone"
-                src="/img/drone8-removebg-preview.png"
-                alt=""
-              />
-            </div>
-          </div>
+        
         </main>
 
         <main class="lower-card">
+          <div class="chat">
+            <a href=""> <i class="bx bxl-whatsapp"></i></a>
+          </div>
           <div class="drone-spec">
             <div class="spec-top">
               <div class="top-spec-name">
-                <h3>SkyNet Speed <i class="bx bxs-cloud-lightning"></i></h3>  
+                <h3>SkyNet Speed <i class="bx bxs-cloud-lightning"></i></h3>
                 <p>Date</p>
-                <h4>Class : <span>REGULAR</span></h4>
-              </div>
-              <div class="select-drone">
-                <a href=""
-                  ><button>
-                    <i class="bx bx-money-withdraw"></i>ORDER NOW
-                  </button></a
-                >
+                <h4>Class :<span>REGULAR</span></h4>
               </div>
             </div>
+            <!-- img -->
             <img src="/img/drone1-removebg-preview.png" alt="" />
             <div class="drone-details">
-              <div></div>
               <div class="spin">
-                <!-- <div class="spin spinner2"></div> -->
+                <div class="spin spinner2"></div>
               </div>
+              <div id="chart_div"></div>
             </div>
             <div class="all-draft">
               <div class="name-battery-con">
                 <div class="name-con">
                   <h3>JBlaze Air drone: <span>025</span></h3>
                   <h6>Weight model : <span>Heavy Weight</span></h6>
-                  <h4>5000 mAh : <span>3 hrs total flight time</span></h4>
+                  <h4>5000 mAh : <span>3 hrs flight time</span></h4>
                   <h4>Weight limit : <span>500g</span></h4>
                   <h5>Flight time of 2 hrs remaining</h5>
                 </div>
@@ -157,7 +170,7 @@
                 <p>MD <span>Thermal</span></p>
               </div>
               <div class="time-spec">
-                <h3><i class="bx bx-time"></i>Camera type</h3>
+                <h3><i class="bx bx-time"></i>Flight time</h3>
                 <p>TIME <span>30 min</span></p>
                 <p>TMP <span>5 deg-C</span></p>
                 <p>VLT <span>36.1 V</span></p>
@@ -165,21 +178,67 @@
             </div>
 
             <div class="pay-state">
-              <div class="pay">
-                <h3><i class="bx bxs-plane-take-off"></i>Select Drone</h3>
-                <a href=""><button>SELECT</button></a>
-              </div>
               <div class="state">
-                <h3><i class="bx bx-timer"></i>STATE</h3>
-                <p><span>LOADING</span></p>
+                <div>
+                  <h3>
+                    <i class="bx bx-timer"></i>STATE
+                    <i class="bx bxs-plane-take-off"></i>
+                  </h3>
+                  <p>
+                    <b><span>LOADING ...</span></b>
+                  </p>
+                </div>
+
+                <div class="select-drone">
+                  <button class="order-btn">
+                    <i class="bx bx-money-withdraw"></i>ORDER NOW
+                  </button>
+                </div>
               </div>
             </div>
+
+            <main class="form-con">
+              <i class="bx bx-x"></i>
+              <form action="">
+                <label for="select">
+                  <i class="bx bx-plus-medical"></i>Merchant</label
+                >
+                <select name="select" id="">
+                  <option value="">Select a merchant</option>
+                  <option value="AZ Phamercy">AZ Phamercy</option>
+                  <option value="Shalom Medics">Shalom Medics</option>
+                  <option value="Zoe Chemist">Zoe Chemist</option>
+                  <option value="Redditon Care">Redditon Care</option>
+                  <option value="Hoac Phamercy">Hoac Phamercy</option>
+                  <option value="Angelical Angels">Angelical Angels</option>
+                </select>
+
+                <label for="items"><i class="bx bxs-file"></i> Items</label>
+                <input placeholder="Enter Item" type="text" />
+                <label for="code"
+                  ><i class="bx bxs-pin"></i> Release code</label
+                >
+                <input placeholder="Enter Release code" type="tel" />
+
+                <div class="payment">
+                  <a href=""
+                    ><button>
+                      <i class="bx bx-money-withdraw"></i> Confirm payment
+                    </button></a
+                  >
+                </div>
+              </form>
+            </main>
           </div>
-          <div class="map"></div>
+          <div class="map"><div id="curve_chart"></div></div>
         </main>
       </section>
     </div>
 
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
     <script src="/app/app.js"></script>
   </body>
 </html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drone Rental Services</title>
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <!-- bootstrap cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="/style/login.css" />
+  </head>
+  <body>
+    <section class="contact" id="contact">
+      <a href="/pages/dashboard.html">..... Dashboard</a>
+      <div class="form-div">
+        <!-- lOGIN FORM -->
+        <form name="contact" id="loginForm">
+          <img
+            class="fas fa-paper-plane"
+            src="/img/drone2-removebg-preview.png"
+            alt=""
+          />
+          <div class="drone-shadow"></div>
+          <!-- EMAIL -->
+          <div class="input-group">
+            <label>Email Id</label>
+            <input
+              type="email"
+              placeholder="Enter Email"
+              id="userloginemail"
+              onkeyup="validateloginemail()"
+            />
+            <span id="loginemail-error"></span>
+            <i class="fa-solid fa-circle-check" id="loginemail-check"></i>
+          </div>
+
+          <!-- LOGIN PASSWORD -->
+          <div class="input-group">
+            <label>Password</label>
+            <input
+              type="password"
+              placeholder="Enter Password"
+              id="loginpassword"
+              onkeyup="validateLoginPassword()"
+            />
+            <span id="loginpassword-error"></span>
+            <i class="fa-solid fa-circle-check" id="loginpassword-check"></i>
+          </div>
+
+          <a href="" onclick="return validateLoginForm()" class="link-btn">
+            <button>LOGIN</button></a
+          >
+
+          <p class="LogInLink">
+            If you dont have an account
+            <a id="logInLinkreg" href="#"><b>CLICK HERE</b> </a> to register
+          </p>
+        </form>
+        <!-- LOGIN FORM ENDS -->
+
+        <!-- REGISTRATION FORM -->
+        <form name="contact" id="form">
+          <!-- NAME  -->
+          <div class="input-group">
+            <label>First and LastName</label>
+            <input
+              type="text"
+              placeholder="Enter Name"
+              id="username"
+              onkeyup="validatename()"
+            />
+            <span id="name-error"></span>
+            <i class="fa-solid fa-circle-check" id="name-check"></i>
+          </div>
+
+          <!-- GENDER -->
+          <div class="input-group">
+            <label>Gender</label>
+            <div class="gender">
+              <div class="gender-container">
+                <p>Male</p>
+                <input
+                  type="radio"
+                  name="gender"
+                  value="male"
+                  id="gendermale"
+                  onkeyup="validategender()"
+                />
+              </div>
+
+              <div class="gender-container">
+                <p>Female</p>
+                <input
+                  type="radio"
+                  name="gender"
+                  value="female"
+                  id="genderfemale"
+                  onkeyup="validategender()"
+                />
+              </div>
+
+              <div class="gender-container">
+                <p>Non Binary</p>
+                <input
+                  type="radio"
+                  name="gender"
+                  value="binary"
+                  id="genderbinary"
+                  onkeyup="validategender()"
+                />
+              </div>
+
+              <span id="gender-error"></span>
+              <i
+                class="fa-solid fa-circle-check gender-icon"
+                id="gender-check"
+              ></i>
+            </div>
+          </div>
+
+          <!-- PHONE NO -->
+          <div class="input-group">
+            <label>Phone No.</label>
+            <input
+              type="tel"
+              placeholder="123 456 7890"
+              id="userphone"
+              onkeyup="validatephone()"
+            />
+            <span id="phone-error"></span>
+            <i class="fa-solid fa-circle-check" id="phone-check"></i>
+          </div>
+
+          <!-- EMAIL -->
+          <div class="input-group">
+            <label>Email Id</label>
+            <input
+              type="email"
+              placeholder="Enter Email"
+              id="useremail"
+              onkeyup="validateemail()"
+            />
+            <span id="email-error"></span>
+            <i class="fa-solid fa-circle-check" id="email-check"></i>
+          </div>
+
+          <!-- PHONE NO -->
+          <div class="input-group">
+            <label>Password</label>
+            <input
+              type="password"
+              placeholder="Enter Password"
+              id="userpassword"
+              onkeyup="validatepassword()"
+            />
+            <input
+              type="password"
+              placeholder="Confirm Password"
+              id="userpassword"
+              onkeyup="validatepassword()"
+            />
+            <span id="password-error"></span>
+            <i class="fa-solid fa-circle-check" id="password-check"></i>
+          </div>
+
+          <!-- LOCATION -->
+          <div class="input-group">
+            <label>Location</label>
+            <select
+              name="location"
+              id="userlocation"
+              onkeyup="validatelocation()"
+            >
+              <option value="">What's Your Location ?</option>
+              <option value="Lagos">Lagos</option>
+              <option value="Abuja">Abuja</option>
+              <option id="userlocation" value="Port Harcourt">
+                Port Harcourt
+              </option>
+            </select>
+            <span id="location-error"></span>
+            <i
+              class="fa-solid fa-circle-check location-icon"
+              id="location-check"
+            ></i>
+          </div>
+
+          <a href="" onclick="return validateform()" class="link-btn"
+            ><button>SUBMIT DETAILS</button>
+          </a>
+
+          <span id="error-fix"></span>
+          <p class="regLogInLink">
+            If you already have an account
+            <a id="regLogInLink" href="#"><b>CLICK HERE</b> </a> to logIn
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <script src="/app/login.js"></script>
+  </body>
+</html>

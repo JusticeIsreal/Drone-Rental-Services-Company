@@ -59,7 +59,7 @@ formContainerRemove.addEventListener("click", () => {
   formContainer.classList.toggle("ope");
 });
 
-// jkhjhjhkjhjkhjkl
+// jkhjhjhkj
 
 google.charts.load("current", { packages: ["gauge"] });
 google.charts.setOnLoadCallback(drawChart);

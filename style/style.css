@@ -272,9 +272,9 @@ body {
   align-items: center;
   flex-direction: column;
   margin-top: 40px;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
-  padding: 10px 10px;
+  padding: 5px 10px;
 }
 @media only screen and (min-width: 850px) {
   .app .sidebar-right .top-card {
@@ -294,6 +294,12 @@ body {
   align-items: center;
   flex-direction: row;
   gap: 20px;
+  width: 100%;
+}
+@media only screen and (min-width: 850px) {
+  .app .sidebar-right .top-card .cards {
+    width: 45%;
+  }
 }
 .app .sidebar-right .top-card .cards .top {
   width: 20vw;
@@ -376,10 +382,30 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  margin-bottom: 20px;
-  padding: 10px;
+  margin-bottom: 10px;
+  padding: 0 10px;
   width: 100%;
-  font-size: 10px;
+  height: 110px;
+}
+@media only screen and (min-width: 850px) {
+  .app .sidebar-right .top-card .total-flight {
+    height: 120px;
+  }
+}
+.app .sidebar-right .top-card .total-flight div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 90%;
+  width: 100%;
+  padding: 0;
+}
+.app .sidebar-right .top-card .total-flight .flight-records {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: column;
 }
 @media only screen and (min-width: 850px) {
   .app .sidebar-right .top-card .total-flight {
@@ -396,7 +422,7 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  margin-top: 20px;
+  margin-top: 0px;
   flex-wrap: wrap;
   padding: 20px 10px;
   position: relative;

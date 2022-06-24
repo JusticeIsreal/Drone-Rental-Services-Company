@@ -401,11 +401,16 @@ body {
   width: 100%;
   padding: 0;
 }
-.app .sidebar-right .top-card .total-flight .flight-records {
+.app .sidebar-right .top-card .total-flight div h3 {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  flex-direction: column;
+  align-items: center;
+  flex-direction: row;
+  border-bottom: 1px solid rgb(221, 221, 221);
+  width: 100%;
+}
+.app .sidebar-right .top-card .total-flight div h3 span {
+  color: rgba(197, 0, 0, 0.9725490196);
 }
 @media only screen and (min-width: 850px) {
   .app .sidebar-right .top-card .total-flight {
@@ -604,7 +609,6 @@ body {
   border: 1px solid rgb(221, 221, 221);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
   padding: 10px;
-  margin-top: 20px;
 }
 .app .sidebar-right .lower-card .drone-spec .name-battery-con .name-con {
   padding-right: 10px;
@@ -871,17 +875,18 @@ body {
 .app .sidebar-right .lower-card .drone-spec .form-con form .payment a button:hover {
   background-color: rgb(19, 43, 114);
 }
-.app .sidebar-right .lower-card .map {
+.app .sidebar-right .lower-card .graph {
   width: 90%;
   margin: 0 auto;
   margin-top: 20px;
   margin-right: auto;
+  padding: 10px 0;
   border-radius: 10px;
   border: 1px solid rgb(221, 221, 221);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
 }
 @media only screen and (min-width: 850px) {
-  .app .sidebar-right .lower-card .map {
+  .app .sidebar-right .lower-card .graph {
     width: 50%;
     margin-top: 0;
     padding: 10px 0;
@@ -890,11 +895,45 @@ body {
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
   }
 }
-.app .sidebar-right .lower-card .map #curve_chart {
+.app .sidebar-right .lower-card .graph #curve_chart {
   width: 100%;
 }
 @media only screen and (min-width: 850px) {
-  .app .sidebar-right .lower-card .map #curve_chart {
+  .app .sidebar-right .lower-card .graph #curve_chart {
     width: 100%;
   }
+}
+.app .sidebar-right .lower-card .graph .map {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15px;
+}
+.app .sidebar-right .lower-card .graph .map .map-file {
+  width: 95%;
+  border-radius: 10px;
+}
+.app .sidebar-right .lower-card .graph .trip-record {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 10px 5px;
+  border-radius: 10px;
+  border: 1px solid rgb(221, 221, 221);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+}
+.app .sidebar-right .lower-card .graph .trip-record h3 span {
+  color: rgba(197, 0, 0, 0.9725490196);
+}
+.app .sidebar-right .lower-card .graph .trip-record .range {
+  border: 2px solid rgb(221, 221, 221);
+  border-radius: 10px;
+  height: 15px;
+  padding: 1px 5px;
+}
+.app .sidebar-right .lower-card .graph .trip-record .range div {
+  height: 100%;
+  background-color: green;
+  width: 50%;
 }/*# sourceMappingURL=style.css.map */

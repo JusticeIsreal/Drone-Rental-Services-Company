@@ -274,7 +274,6 @@ body {
       width: 100%;
       margin: 0 auto;
       padding: 5px 10px;
-    
 
       @include responsive(tablet) {
         @include flexDisplay(space-between, center, row);
@@ -391,7 +390,6 @@ body {
         padding: 0 10px;
         width: 100%;
         height: 110px;
-        
 
         @include responsive(tablet) {
           height: 120px;
@@ -399,14 +397,19 @@ body {
 
         div {
           @include flexDisplay(space-between, flex-start, column);
-         
           height: 90%;
           width: 100%;
-
           padding: 0;
-        }
-        .flight-records{
-           @include flexDisplay(space-between, flex-end, column);
+
+          h3 {
+            @include flexDisplay(space-between, center, row);
+            border-bottom: 1px solid rgb(221, 221, 221);
+            width: 100%;
+
+            span {
+              color: #c50000f8;
+            }
+          }
         }
 
         @include responsive(tablet) {
@@ -426,7 +429,6 @@ body {
       flex-wrap: wrap;
       padding: 20px 10px;
       position: relative;
-      
 
       .chat {
         z-index: 20;
@@ -449,6 +451,7 @@ body {
         position: relative;
         width: 100%;
         padding: 0 20px 10px 10px;
+
         @include responsive(bigphone) {
           width: 50%;
         }
@@ -556,7 +559,7 @@ body {
           border: 1px solid rgb(221, 221, 221);
           box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
           padding: 10px;
-          margin-top: 20px;
+
           .name-con {
             padding-right: 10px;
             h3 {
@@ -809,11 +812,12 @@ body {
         }
       }
 
-      .map {
+      .graph {
         width: 90%;
         margin: 0 auto;
         margin-top: 20px;
         margin-right: auto;
+        padding: 10px 0;
         border-radius: 10px;
         border: 1px solid rgb(221, 221, 221);
         box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
@@ -835,7 +839,43 @@ body {
             width: 100%;
           }
         }
+        .map {
+          @include flexDisplay(space-between, center, column);
+          margin-top: 15px;
+          .map-file {
+            width: 95%;
+            border-radius: 10px;
+          }
+        }
+        .trip-record {
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 20px;
+        padding: 10px 5px;
+        border-radius: 10px;
+        border: 1px solid rgb(221, 221, 221);
+        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+        h3{
+
+          span{
+             color: #c50000f8;
+          }
+        }
+
+        .range{
+         border: 2px solid rgb(221, 221, 221);
+          border-radius: 10px;
+          height: 15px;
+          padding: 1px 5px;
+          div{
+            height: 100%;
+            background-color: green;
+            width: 50%;
+          }
+        }
       }
+      }
+      
     }
   }
 }

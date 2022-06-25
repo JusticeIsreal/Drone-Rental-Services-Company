@@ -63,6 +63,7 @@
         </ul>
       </nav>
 
+      <!-- side section  of the page -->
       <section class="sidebar-right">
         <div class="navbarTop">
           <h3>Dashboard</h3>
@@ -79,14 +80,9 @@
         <main class="top-card">
           <div class="total-flight">
             <div class="flight-time">
-              <p>Total Flying Time</p>
-              <h3>00:00:00</h3>
-              <p>Last 1 year : 01:01:22</p>
-            </div>
-            <div class="flight-records">
-              <p>Total Flights</p>
-              <h3>0</h3>
-              <p>Last 1 year : 01:01:22</p>
+              <h3>Total Flying Time <span>00:00:00</span></h3>
+              <h3>Total Flights <span>0</span></h3>
+              <h3>Last 1 year : 01:01:22</h3>
             </div>
           </div>
           <div class="cards">
@@ -121,7 +117,6 @@
               </div>
             </div>
           </div>
-        
         </main>
 
         <main class="lower-card">
@@ -148,7 +143,7 @@
               <div class="name-battery-con">
                 <div class="name-con">
                   <h3>JBlaze Air drone: <span>025</span></h3>
-                  <h6>Weight model : <span>Heavy Weight</span></h6>
+                  <h4>Weight model : <span>Heavy Weight</span></h4>
                   <h4>5000 mAh : <span>3 hrs flight time</span></h4>
                   <h4>Weight limit : <span>500g</span></h4>
                   <h5>Flight time of 2 hrs remaining</h5>
@@ -215,6 +210,11 @@
 
                 <label for="items"><i class="bx bxs-file"></i> Items</label>
                 <input placeholder="Enter Item" type="text" />
+                <label for="address"
+                  ><i class="bx bxs-building-house"></i> Delievery
+                  Address</label
+                >
+                <input placeholder="Enter Address" type="text" />
                 <label for="code"
                   ><i class="bx bxs-pin"></i> Release code</label
                 >
@@ -230,7 +230,57 @@
               </form>
             </main>
           </div>
-          <div class="map"><div id="curve_chart"></div></div>
+          <div class="graph">
+            <div id="curve_chart"></div>
+            <div class="map">
+              <iframe
+                class="map-file"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127223.13130164081!2d6.934755434508275!3d4.817577930296659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069cea39f2c48e3%3A0x53562bdd7d8832db!2sPort%20Harcourt!5e0!3m2!1sen!2sng!4v1656026328022!5m2!1sen!2sng"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+            <div class="trip-record">
+              <h3>Membership : <span>Premium</span></h3>
+              <div class="range"><div></div></div>
+              <h3 class="history">History</h3>
+              <div class="records">
+                <h4>
+                  15/05/2022
+                  <span>15 Odili road, port harcourt housing estate</span>
+                  <p>SUCCESSFUL</p>
+                </h4>
+                <h4>
+                  10/05/2022 <span>Onne road, FOT annex 4, behind atlas</span>
+                  <p>SUCCESSFUL</p>
+                </h4>
+                <h4>
+                  01/05/2022
+                  <span>Spar plaza, azikiwe road, port harcourt</span>
+                  <p>SUCCESSFUL</p>
+                </h4>
+                <h4>
+                  26/04/2022
+                  <span>42 ilamoye street , aguda surulere , lagos</span>
+                  <p>SUCCESSFUL</p>
+                </h4>
+                <h4>
+                  15/04/2022
+                  <span>Spar plaza, azikiwe road, port harcourt</span>
+                  <p>SUCCESSFUL</p>
+                </h4>
+                <h4>
+                  5/03/2022 <span>Onne road, FOT annex 4, behind atlas</span>
+                  <p>SUCCESSFUL</p>
+                </h4>
+              </div>
+            </div>
+          </div>
         </main>
       </section>
     </div>

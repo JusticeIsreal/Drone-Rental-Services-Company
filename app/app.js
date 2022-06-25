@@ -59,7 +59,8 @@ formContainerRemove.addEventListener("click", () => {
   formContainer.classList.toggle("ope");
 });
 
-// jkhjhjhkj
+// drone gauge.
+
 
 google.charts.load("current", { packages: ["gauge"] });
 google.charts.setOnLoadCallback(drawChart);

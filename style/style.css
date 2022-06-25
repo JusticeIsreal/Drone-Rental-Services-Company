@@ -14,19 +14,18 @@
 }
 
 *::-webkit-scrollbar-track {
-  background-color: transparent;
+  background-color: whitesmoke;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: var(--blue);
+  background-color: royalblue;
 }
 
 body {
-  height: 100;
+  height: 100%;
   width: 100%;
   min-height: 100vh;
-  background-color: black;
-  color: whitesmoke;
+  background-color: rgba(5, 5, 5, 0.904);
 }
 
 .app {
@@ -40,7 +39,6 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  background-color: #fff;
   width: 42%;
   max-width: 42%;
   min-width: 42%;
@@ -52,6 +50,7 @@ body {
   position: fixed;
   transition: 0.5s ease;
   margin-left: -100vw;
+  background-image: linear-gradient(to top, #444444, #4d4d4d, #575757, #616161, #6b6b6b);
 }
 @media only screen and (min-width: 850px) {
   .app nav {
@@ -95,8 +94,8 @@ body {
   }
 }
 .app nav ul li.active {
-  background-color: rgb(238, 238, 238);
-  border: 1px solid rgb(221, 221, 221);
+  background-color: rgb(88, 88, 88);
+  border: 1px solid rgba(245, 245, 245, 0.144);
 }
 .app nav ul li.active::before {
   content: "";
@@ -110,16 +109,20 @@ body {
   background-color: royalblue;
 }
 .app nav ul li:hover {
-  background-color: rgb(214, 214, 214);
+  background-color: whitesmoke;
 }
 .app nav ul li a {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  color: rgb(88, 88, 88);
+  color: whitesmoke;
   width: 100%;
   height: 100%;
+}
+.app nav ul li a:hover {
+  color: #444444;
+  font-weight: 600;
 }
 .app nav ul li a h3 {
   font-weight: 400;
@@ -147,7 +150,7 @@ body {
 .app .sidebar-right {
   width: 100vw;
   min-height: 100vh;
-  background-color: rgb(253, 253, 253);
+  background-color: 0px 2px 15px rgba(0, 0, 0, 0.059);
 }
 @media only screen and (min-width: 850px) {
   .app .sidebar-right {
@@ -167,9 +170,9 @@ body {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background-color: rgba(253, 253, 253, 0);
-  border-bottom: 1px solid rgb(221, 221, 221);
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+  background: linear-gradient(to top, #444444, #4d4d4d, #575757, #616161, #6b6b6b);
+  border-bottom: 1px solid rgba(245, 245, 245, 0.144);
+  box-shadow: 0px 2px 15px rgba(255, 255, 255, 0.24);
   z-index: 10;
 }
 @media only screen and (min-width: 850px) {
@@ -180,6 +183,7 @@ body {
 }
 .app .sidebar-right .navbarTop h3 {
   font-size: 20px;
+  color: whitesmoke;
 }
 @media only screen and (min-width: 850px) {
   .app .sidebar-right .navbarTop h3 {
@@ -209,6 +213,7 @@ body {
 }
 .app .sidebar-right .navbarTop .search i {
   font-size: 22px;
+  color: #444444;
 }
 @media only screen and (min-width: 850px) {
   .app .sidebar-right .navbarTop .search {
@@ -245,7 +250,8 @@ body {
   position: absolute;
   font-size: 18px;
   border-radius: 100%;
-  background-color: whitesmoke;
+  color: whitesmoke;
+  background-color: linear-gradient(to top, #444444, #4d4d4d, #575757, #616161, #6b6b6b);
   width: 20px;
   height: 20px;
   right: 70px;
@@ -259,6 +265,7 @@ body {
 .app .sidebar-right .navbarTop .profile-img .bx-menu {
   font-size: 40px;
   transition: 0.3s linear;
+  color: whitesmoke;
 }
 .app .sidebar-right .navbarTop .profile-img .bx-menu.rotate {
   transform: rotate(-90deg);
@@ -309,7 +316,7 @@ body {
   height: 20vw;
   border-radius: 50%;
   position: relative;
-  box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.138);
+  box-shadow: 1px solid rgba(245, 245, 245, 0.144);
 }
 @media only screen and (min-width: 850px) {
   .app .sidebar-right .top-card .cards .top {
@@ -332,6 +339,7 @@ body {
   padding-top: 5px;
   transform: scale(0.7);
   transition: all 0.5s ease;
+  color: whitesmoke;
 }
 .app .sidebar-right .top-card .cards .top div h2.grade-txt {
   margin-top: 18%;
@@ -369,18 +377,19 @@ body {
   }
 }
 .app .sidebar-right .top-card .cards .top:nth-child(1) {
-  background-image: linear-gradient(to top, #ffa600, #ffb002, #ffb908, #ffc310, #ffcc19);
+  background: rgba(76, 94, 255, 0.4941176471);
 }
 .app .sidebar-right .top-card .cards .top:nth-child(2) {
-  background-image: linear-gradient(to top, #9cff00, #84ff37, #6aff52, #4cff69, #19ff7d);
+  background: rgba(76, 94, 255, 0.4941176471);
 }
 .app .sidebar-right .top-card .cards .top:nth-child(3) {
-  background-image: linear-gradient(to top, #444444, #4d4d4d, #575757, #616161, #6b6b6b);
+  background: rgba(76, 94, 255, 0.4941176471);
 }
 .app .sidebar-right .top-card .total-flight {
   border-radius: 10px;
-  border: 1px solid rgb(221, 221, 221);
+  border: 1px solid rgba(245, 245, 245, 0.144);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+  background: linear-gradient(to top, #444444, #4d4d4d, #575757, #616161, #6b6b6b);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -388,7 +397,8 @@ body {
   margin-bottom: 10px;
   padding: 0 10px;
   width: 100%;
-  height: 110px;
+  height: 120px;
+  margin-top: 20px;
 }
 @media only screen and (min-width: 850px) {
   .app .sidebar-right .top-card .total-flight {
@@ -400,18 +410,19 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
-  height: 90%;
+  height: 95%;
   width: 100%;
-  padding: 0;
+  color: whitesmoke;
 }
 .app .sidebar-right .top-card .total-flight div h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  border-bottom: 1px solid rgb(221, 221, 221);
+  border-bottom: 1px solid rgba(245, 245, 245, 0.144);
   width: 100%;
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 600;
 }
 @media only screen and (min-width: 850px) {
   .app .sidebar-right .top-card .total-flight div h3 {
@@ -419,7 +430,7 @@ body {
   }
 }
 .app .sidebar-right .top-card .total-flight div h3 span {
-  color: rgba(197, 0, 0, 0.9725490196);
+  color: royalblue;
 }
 @media only screen and (min-width: 850px) {
   .app .sidebar-right .top-card .total-flight {
@@ -450,6 +461,9 @@ body {
   position: fixed;
   right: 0;
   bottom: 0;
+}
+.app .sidebar-right .lower-card .chat i {
+  color: whitesmoke;
 }
 @media only screen and (min-width: 800px) {
   .app .sidebar-right .lower-card {
@@ -520,14 +534,15 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  border: 1px solid rgb(221, 221, 221);
+  border: 1px solid rgba(245, 245, 245, 0.144);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
   padding: 10px;
   border-radius: 10px;
-  background-color: whitesmoke;
+  background: linear-gradient(to top, #444444, #4d4d4d, #575757, #616161, #6b6b6b);
 }
 .app .sidebar-right .lower-card .drone-spec .spec-top .top-spec-name {
   width: 100%;
+  color: whitesmoke;
 }
 .app .sidebar-right .lower-card .drone-spec .spec-top .top-spec-name h4 {
   display: flex;
@@ -536,11 +551,13 @@ body {
   flex-direction: row;
   width: 45%;
   margin-left: auto;
-  font-size: 15px;
+  font-size: 14px;
+  font-weight: 600;
+  color: whitesmoke;
 }
 .app .sidebar-right .lower-card .drone-spec .spec-top .top-spec-name h4 span {
   font-size: 13px;
-  color: rgba(197, 0, 0, 0.9725490196);
+  color: rgba(76, 94, 255, 0.4941176471);
 }
 .app .sidebar-right .lower-card .drone-spec .drone-details {
   margin-top: 10px;
@@ -616,31 +633,35 @@ body {
   align-items: center;
   flex-direction: row;
   border-radius: 10px;
-  border: 1px solid rgb(221, 221, 221);
+  border: 1px solid rgba(245, 245, 245, 0.144);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
   padding: 10px;
+  background: linear-gradient(to top, #444444, #4d4d4d, #575757, #616161, #6b6b6b);
 }
 .app .sidebar-right .lower-card .drone-spec .name-battery-con .name-con {
   padding-right: 10px;
 }
 .app .sidebar-right .lower-card .drone-spec .name-battery-con .name-con h3 {
   text-transform: uppercase;
+  font-weight: 600;
+  color: whitesmoke;
 }
 .app .sidebar-right .lower-card .drone-spec .name-battery-con .name-con h4 {
-  font-size: 13px;
-  color: #272727;
+  font-size: 10px;
+  font-weight: 500;
+  color: whitesmoke;
 }
 .app .sidebar-right .lower-card .drone-spec .name-battery-con .name-con h5,
 .app .sidebar-right .lower-card .drone-spec .name-battery-con .name-con span {
   font-size: 12px;
-  color: rgba(197, 0, 0, 0.9725490196);
+  color: rgba(76, 94, 255, 0.4941176471);
 }
 .app .sidebar-right .lower-card .drone-spec .name-battery-con .battery-con {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  border: 2px solid rgb(161, 161, 161);
+  border: 1px solid rgba(245, 245, 245, 0.144);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
   height: 80px;
   width: 40px;
@@ -668,7 +689,7 @@ body {
   text-align: center;
   width: 100%;
   padding: 0 2px;
-  background-color: rgb(25, 214, 0);
+  background-color: royalblue;
   height: 70%;
 }
 .app .sidebar-right .lower-card .drone-spec .drone-camera-time {
@@ -685,15 +706,17 @@ body {
   align-items: flex;
   flex-direction: column;
   border-radius: 10px;
-  border: 1px solid rgb(221, 221, 221);
+  border: 1px solid rgba(245, 245, 245, 0.144);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
   width: 48%;
   height: 100%;
   padding: 5px;
+  background: linear-gradient(to top, #444444, #4d4d4d, #575757, #616161, #6b6b6b);
 }
 .app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec h3 {
   font-size: 18px;
   padding: 0 0 10px 0;
+  color: whitesmoke;
 }
 .app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec h3 i {
   padding: 5px 5px;
@@ -701,6 +724,7 @@ body {
 .app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec p {
   font-weight: 500;
   padding: 0 5px;
+  color: whitesmoke;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -708,7 +732,7 @@ body {
 }
 .app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec p span {
   font-size: 12px;
-  color: rgba(197, 0, 0, 0.9725490196);
+  color: rgba(76, 94, 255, 0.4941176471);
 }
 .app .sidebar-right .lower-card .drone-spec .drone-camera-time .time-spec {
   display: flex;
@@ -716,14 +740,16 @@ body {
   align-items: flex;
   flex-direction: column;
   border-radius: 10px;
-  border: 1px solid rgb(221, 221, 221);
+  border: 1px solid rgba(245, 245, 245, 0.144);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
   width: 48%;
   height: 100%;
   padding: 5px;
+  background: linear-gradient(to top, #444444, #4d4d4d, #575757, #616161, #6b6b6b);
 }
 .app .sidebar-right .lower-card .drone-spec .drone-camera-time .time-spec h3 {
   padding: 0 0 10px 0;
+  color: whitesmoke;
 }
 .app .sidebar-right .lower-card .drone-spec .drone-camera-time .time-spec h3 i {
   padding: 5px 5px;
@@ -731,6 +757,7 @@ body {
 .app .sidebar-right .lower-card .drone-spec .drone-camera-time .time-spec p {
   font-weight: 500;
   padding: 0 5px;
+  color: whitesmoke;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -738,7 +765,7 @@ body {
 }
 .app .sidebar-right .lower-card .drone-spec .drone-camera-time .time-spec p span {
   font-size: 12px;
-  color: rgba(197, 0, 0, 0.9725490196);
+  color: rgba(76, 94, 255, 0.4941176471);
 }
 .app .sidebar-right .lower-card .drone-spec .pay-state {
   display: flex;
@@ -753,16 +780,21 @@ body {
   align-items: flex;
   flex-direction: column;
   border-radius: 10px;
-  border: 1px solid rgb(221, 221, 221);
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+  border: 1px solid rgba(245, 245, 245, 0.144);
+  box-shadow: linear-gradient(to top, #444444, #4d4d4d, #575757, #616161, #6b6b6b);
   width: 100%;
   padding: 5px 10px;
+  margin-top: 10px;
+  background: linear-gradient(to top, #444444, #4d4d4d, #575757, #616161, #6b6b6b);
 }
 .app .sidebar-right .lower-card .drone-spec .pay-state .state div {
   display: flex;
   justify-content: space-between;
   align-items: flex;
   flex-direction: row;
+}
+.app .sidebar-right .lower-card .drone-spec .pay-state .state div h3 {
+  color: whitesmoke;
 }
 .app .sidebar-right .lower-card .drone-spec .pay-state .state div h3 i {
   padding: 5px 5px;
@@ -777,7 +809,7 @@ body {
 }
 .app .sidebar-right .lower-card .drone-spec .pay-state .state div p span {
   font-size: 15px;
-  color: rgba(197, 0, 0, 0.9725490196);
+  color: rgba(76, 94, 255, 0.4941176471);
 }
 .app .sidebar-right .lower-card .drone-spec .pay-state .state .select-drone {
   width: 100%;
@@ -787,9 +819,9 @@ body {
 .app .sidebar-right .lower-card .drone-spec .pay-state .state .select-drone button {
   color: whitesmoke;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   border-radius: 5px;
-  background-color: royalblue;
+  background-color: rgba(76, 94, 255, 0.4941176471);
   border: 1px solid rgb(221, 221, 221);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
   width: 100%;
@@ -838,14 +870,14 @@ body {
 }
 .app .sidebar-right .lower-card .drone-spec .form-con form label i {
   font-size: 15px;
-  color: rgba(197, 0, 0, 0.9725490196);
+  color: rgba(76, 94, 255, 0.4941176471);
   padding: 0 5px;
 }
 .app .sidebar-right .lower-card .drone-spec .form-con form select {
   width: 100%;
   height: 35px;
   border-radius: 10px;
-  border: 1px solid rgb(221, 221, 221);
+  border: 1px solid rgba(245, 245, 245, 0.144);
   margin-bottom: 10px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
 }
@@ -854,7 +886,7 @@ body {
   height: 35px;
   padding: 0 10px;
   border-radius: 10px;
-  border: 1px solid rgb(221, 221, 221);
+  border: 1px solid rgba(245, 245, 245, 0.144);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
   margin-bottom: 10px;
 }
@@ -865,8 +897,8 @@ body {
 }
 .app .sidebar-right .lower-card .drone-spec .form-con form .payment a {
   border-radius: 5px;
-  background-color: royalblue;
-  border: 1px solid rgb(221, 221, 221);
+  background-color: rgba(76, 94, 255, 0.4941176471);
+  border: 1px solid rgba(245, 245, 245, 0.144);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
   width: 100%;
   height: 100%;
@@ -892,7 +924,6 @@ body {
   margin-right: auto;
   padding: 10px 0;
   border-radius: 10px;
-  border: 1px solid rgb(221, 221, 221);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
 }
 @media only screen and (min-width: 800px) {
@@ -906,7 +937,7 @@ body {
     margin-top: 0;
     padding: 10px 0;
     border-radius: 10px;
-    border: 1px solid rgb(221, 221, 221);
+    border: 1px solid rgba(245, 245, 245, 0.144);
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
   }
 }
@@ -936,43 +967,46 @@ body {
   margin-top: 20px;
   padding: 10px 5px;
   border-radius: 10px;
-  border: 1px solid rgb(221, 221, 221);
+  border: 1px solid rgba(245, 245, 245, 0.144);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+  background: linear-gradient(to top, #444444, #4d4d4d, #575757, #616161, #6b6b6b);
+  color: whitesmoke;
 }
 .app .sidebar-right .lower-card .graph .trip-record h3 span {
-  color: rgba(197, 0, 0, 0.9725490196);
+  color: rgba(76, 94, 255, 0.4941176471);
 }
 .app .sidebar-right .lower-card .graph .trip-record .range {
-  border: 2px solid rgb(221, 221, 221);
+  border: 1px solid rgba(245, 245, 245, 0.144);
   border-radius: 10px;
   height: 15px;
   padding: 1px 5px;
 }
 .app .sidebar-right .lower-card .graph .trip-record .range div {
   height: 100%;
-  background-color: green;
+  background-color: rgba(76, 94, 255, 0.4941176471);
   width: 50%;
 }
 .app .sidebar-right .lower-card .graph .trip-record .history {
   margin-top: 20px;
+  color: whitesmoke;
 }
 .app .sidebar-right .lower-card .graph .trip-record .records {
   padding: 5px;
   height: 100px;
   overflow: scroll;
   border-radius: 10px;
-  border: 1px solid rgb(221, 221, 221);
+  border: 1px solid rgba(245, 245, 245, 0.144);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
 }
 .app .sidebar-right .lower-card .graph .trip-record .records::-webkit-scrollbar {
   height: 0.4rem;
-  width: 5px;
+  width: 1px;
 }
 .app .sidebar-right .lower-card .graph .trip-record .records::-webkit-scrollbar-track {
   background-color: whitesmoke;
 }
 .app .sidebar-right .lower-card .graph .trip-record .records::-webkit-scrollbar-thumb {
-  background-color: gray;
+  background-color: royalblue;
 }
 .app .sidebar-right .lower-card .graph .trip-record .records h4 {
   display: flex;
@@ -981,17 +1015,16 @@ body {
   flex-direction: row;
   font-weight: 300;
   font-size: 10px;
+  color: whitesmoke;
+  background: linear-gradient(to top, #444444, #4d4d4d, #575757, #616161, #6b6b6b);
 }
 .app .sidebar-right .lower-card .graph .trip-record .records h4 p {
   width: 30%;
-  color: green;
+  color: royalblue;
   font-weight: 400;
-}
-.app .sidebar-right .lower-card .graph .trip-record .records h4 p.pending {
-  color: red;
+  background: linear-gradient(to top, #444444, #4d4d4d, #575757, #616161, #6b6b6b);
 }
 .app .sidebar-right .lower-card .graph .trip-record .records h4 span {
   width: 50%;
-  overflow: scroll;
   padding-left: 5px;
 }/*# sourceMappingURL=style.css.map */

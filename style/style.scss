@@ -14,19 +14,33 @@
 }
 
 *::-webkit-scrollbar-track {
-  background-color: transparent;
+  background-color: whitesmoke;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: var(--blue);
+  background-color: royalblue;
 }
+$shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+$border: 1px solid rgba(245, 245, 245, 0.144);
+$cardsj-bg: linear-gradient(
+  to top,
+  #444444,
+  #4d4d4d,
+  #575757,
+  #616161,
+  #6b6b6b
+);
+$hover-Color: whitesmoke;
+$hover-Text-Color: #444444;
+$text-Color: whitesmoke;
+$special-text-Color: royalblue;
+$special-Color: #4c5eff7e;
 
 body {
-  height: 100;
+  height: 100%;
   width: 100%;
   min-height: 100vh;
-  background-color: black;
-  color: whitesmoke;
+  background-color: rgba(5, 5, 5, 0.904);
 }
 @mixin flexDisplay($justifyProp, $alignProp, $flexDirection) {
   display: flex;
@@ -62,8 +76,7 @@ body {
 
   nav {
     @include flexDisplay(space-between, center, column);
-  background-color: #fff;  
-  width: 42%;
+    width: 42%;
     max-width: 42%;
     min-width: 42%;
     height: 100vh;
@@ -74,6 +87,7 @@ body {
     position: fixed;
     transition: 0.5s ease;
     margin-left: -100vw;
+    background-image: $cardsj-bg;
 
     @include responsive(tablet) {
       position: relative;
@@ -112,8 +126,8 @@ body {
         }
 
         &.active {
-          background-color: rgb(238, 238, 238);
-          border: 1px solid rgb(221, 221, 221);
+          background-color: rgb(88, 88, 88);
+          border: $border;
 
           &::before {
             content: "";
@@ -124,22 +138,26 @@ body {
             width: 6px;
             height: 75%;
             border-radius: 10px;
-            background-color: royalblue;
+            background-color: $special-text-Color;
           }
         }
         &:hover {
-          background-color: rgb(214, 214, 214);
+          background-color: $hover-Color;
         }
 
         a {
           @include flexDisplay(flex-start, center, row);
-          color: rgb(88, 88, 88);
+          color: $text-Color;
           width: 100%;
           height: 100%;
-
+          &:hover {
+            color: $hover-Text-Color;
+            font-weight: 600;
+          }
           h3 {
             font-weight: 400;
             font-size: 12px;
+
             @include responsive(smallPhone) {
               font-size: 10px;
             }
@@ -163,10 +181,9 @@ body {
   .sidebar-right {
     width: 100vw;
     min-height: 100vh;
-    background-color: rgb(253, 253, 253);
+    background-color: $shadow;
 
     @include responsive(tablet) {
-      // @include flexDisplay(flex-start, flex-start, column);
       width: 100%;
       margin-right: auto;
       position: relative;
@@ -179,12 +196,10 @@ body {
       padding: 0 10px;
       position: sticky;
       top: 0;
-      background-color: rgba(253, 253, 253, 0);
-      border-bottom: 1px solid rgb(221, 221, 221);
-      box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+      background: $cardsj-bg;
+      border-bottom: $border;
+      box-shadow: 0px 2px 15px rgba(255, 255, 255, 0.24);
       z-index: 10;
-      
-
 
       @include responsive(tablet) {
         height: 70px;
@@ -193,7 +208,7 @@ body {
 
       h3 {
         font-size: 20px;
-
+        color: $text-Color;
         @include responsive(tablet) {
           font-size: 30px;
         }
@@ -201,7 +216,7 @@ body {
 
       .search {
         @include flexDisplay(center, center, row);
-        background-color: whitesmoke;
+        background-color: $text-Color;
         width: 400px;
         padding: 0 5px;
         height: 40px;
@@ -220,6 +235,7 @@ body {
 
         i {
           font-size: 22px;
+          color: $hover-Text-Color;
         }
 
         @include responsive(tablet) {
@@ -249,7 +265,8 @@ body {
           position: absolute;
           font-size: 18px;
           border-radius: 100%;
-          background-color: whitesmoke;
+          color: $text-Color;
+          background-color: $cardsj-bg;
           width: 20px;
           height: 20px;
           right: 70px;
@@ -262,9 +279,10 @@ body {
         .bx-menu {
           font-size: 40px;
           transition: 0.3s linear;
+          color: $text-Color;
           &.rotate {
             transform: rotate(-90deg);
-            color: royalblue;
+            color: $special-text-Color;
           }
           @include responsive(tablet) {
             display: none;
@@ -302,7 +320,7 @@ body {
           height: 20vw;
           border-radius: 50%;
           position: relative;
-          box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.138);
+          box-shadow: $border;
 
           @include responsive(tablet) {
             width: 8vw;
@@ -320,6 +338,7 @@ body {
               padding-top: 5px;
               transform: scale(0.7);
               transition: all 0.5s ease;
+              color: $text-Color;
 
               &.grade-txt {
                 margin-top: 18%;
@@ -351,48 +370,28 @@ body {
           }
 
           &:nth-child(1) {
-            background-image: linear-gradient(
-              to top,
-              #ffa600,
-              #ffb002,
-              #ffb908,
-              #ffc310,
-              #ffcc19
-            );
+            background: $special-Color;
           }
           &:nth-child(2) {
-            background-image: linear-gradient(
-              to top,
-              #9cff00,
-              #84ff37,
-              #6aff52,
-              #4cff69,
-              #19ff7d
-            );
+            background: $special-Color;
           }
           &:nth-child(3) {
-            background-image: linear-gradient(
-              to top,
-              #444444,
-              #4d4d4d,
-              #575757,
-              #616161,
-              #6b6b6b
-            );
+            background: $special-Color;
           }
         }
       }
 
       .total-flight {
         border-radius: 10px;
-        border: 1px solid rgb(221, 221, 221);
-        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+        border: $border;
+        box-shadow: $shadow;
+        background: $cardsj-bg;
         @include flexDisplay(space-between, center, row);
-
         margin-bottom: 10px;
         padding: 0 10px;
         width: 100%;
-        height: 110px;
+        height: 120px;
+        margin-top: 20px;
 
         @include responsive(tablet) {
           height: 120px;
@@ -400,21 +399,22 @@ body {
 
         div {
           @include flexDisplay(space-between, flex-start, column);
-          height: 90%;
+          height: 95%;
           width: 100%;
-          padding: 0;
+          color: $text-Color;
 
           h3 {
             @include flexDisplay(space-between, center, row);
-            border-bottom: 1px solid rgb(221, 221, 221);
+            border-bottom: $border;
             width: 100%;
-            font-size: 12px;
+            font-size: 13px;
+            font-weight: 600;
             @include responsive(tablet) {
               font-size: 15px;
             }
 
             span {
-              color: #c50000f8;
+              color: $special-text-Color;
             }
           }
         }
@@ -446,6 +446,10 @@ body {
         position: fixed;
         right: 0;
         bottom: 0;
+
+        i {
+          color: $text-Color;
+        }
       }
 
       @include responsive(bigphone) {
@@ -489,23 +493,27 @@ body {
         }
         .spec-top {
           @include flexDisplay(space-between, center, row);
-          border: 1px solid rgb(221, 221, 221);
-          box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+          border: $border;
+          box-shadow: $shadow;
           padding: 10px;
           border-radius: 10px;
-          background-color: whitesmoke;
+          background: $cardsj-bg;
 
           .top-spec-name {
             width: 100%;
+            color: $text-Color;
 
             h4 {
               @include flexDisplay(space-between, center, row);
               width: 45%;
               margin-left: auto;
-              font-size: 15px;
+              font-size: 14px;
+              font-weight: 600;
+              color: $text-Color;
+
               span {
                 font-size: 13px;
-                color: #c50000f8;
+                color: $special-Color;
               }
             }
           }
@@ -564,29 +572,34 @@ body {
         .name-battery-con {
           @include flexDisplay(space-between, center, row);
           border-radius: 10px;
-          border: 1px solid rgb(221, 221, 221);
-          box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+          border: $border;
+          box-shadow: $shadow;
           padding: 10px;
+          background: $cardsj-bg;
 
           .name-con {
             padding-right: 10px;
+
             h3 {
               text-transform: uppercase;
+              font-weight: 600;
+              color: $text-Color;
             }
             h4 {
-              font-size: 13px;
-              color: #272727;
+              font-size: 10px;
+              font-weight: 500;
+              color: $text-Color;
             }
             h5,
             span {
               font-size: 12px;
-              color: #c50000f8;
+              color: $special-Color;
             }
           }
           .battery-con {
             @include flexDisplay(space-between, center, column);
-            border: 2px solid rgb(161, 161, 161);
-            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+            border: $border;
+            box-shadow: $shadow;
             height: 80px;
             width: 40px;
             margin-top: auto;
@@ -611,7 +624,7 @@ body {
               text-align: center;
               width: 100%;
               padding: 0 2px;
-              background-color: rgb(25, 214, 0);
+              background-color: $special-text-Color;
               height: 70%;
             }
           }
@@ -625,14 +638,17 @@ body {
           .camera-spec {
             @include flexDisplay(space-between, flex, column);
             border-radius: 10px;
-            border: 1px solid rgb(221, 221, 221);
-            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+            border: $border;
+            box-shadow: $shadow;
             width: 48%;
             height: 100%;
             padding: 5px;
+            background: $cardsj-bg;
+
             h3 {
               font-size: 18px;
               padding: 0 0 10px 0;
+              color: $text-Color;
               i {
                 padding: 5px 5px;
               }
@@ -640,24 +656,27 @@ body {
             p {
               font-weight: 500;
               padding: 0 5px;
+              color: $text-Color;
               @include flexDisplay(space-between, center, row);
               span {
                 font-size: 12px;
-                color: #c50000f8;
+                color: $special-Color;
               }
             }
           }
           .time-spec {
             @include flexDisplay(space-between, flex, column);
             border-radius: 10px;
-            border: 1px solid rgb(221, 221, 221);
+            border: $border;
             box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
             width: 48%;
             height: 100%;
             padding: 5px;
+            background: $cardsj-bg;
 
             h3 {
               padding: 0 0 10px 0;
+              color: $text-Color;
               i {
                 padding: 5px 5px;
               }
@@ -665,11 +684,12 @@ body {
             p {
               font-weight: 500;
               padding: 0 5px;
+              color: $text-Color;
               @include flexDisplay(space-between, center, row);
 
               span {
                 font-size: 12px;
-                color: #c50000f8;
+                color: $special-Color;
               }
             }
           }
@@ -682,13 +702,16 @@ body {
           .state {
             @include flexDisplay(space-between, flex, column);
             border-radius: 10px;
-            border: 1px solid rgb(221, 221, 221);
-            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+            border: $border;
+            box-shadow: $cardsj-bg;
             width: 100%;
             padding: 5px 10px;
+            margin-top: 10px;
+            background: $cardsj-bg;
             div {
               @include flexDisplay(space-between, flex, row);
               h3 {
+                color: $text-Color;
                 i {
                   padding: 5px 5px;
                 }
@@ -696,11 +719,12 @@ body {
               p {
                 font-weight: 500;
                 padding: 0 5px;
+
                 @include flexDisplay(space-between, center, row);
 
                 span {
                   font-size: 15px;
-                  color: #c50000f8;
+                  color: $special-Color;
                 }
               }
             }
@@ -712,9 +736,9 @@ body {
               button {
                 color: whitesmoke;
                 font-size: 15px;
-                font-weight: 500;
+                font-weight: 600;
                 border-radius: 5px;
-                background-color: royalblue;
+                background-color: $special-Color;
                 border: 1px solid rgb(221, 221, 221);
                 box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
                 width: 100%;
@@ -765,7 +789,7 @@ body {
 
               i {
                 font-size: 15px;
-                color: #c50000f8;
+                color: $special-Color;
                 padding: 0 5px;
               }
             }
@@ -773,17 +797,17 @@ body {
               width: 100%;
               height: 35px;
               border-radius: 10px;
-              border: 1px solid rgb(221, 221, 221);
+              border: $border;
               margin-bottom: 10px;
-              box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+              box-shadow: $shadow;
             }
             input {
               width: 100%;
               height: 35px;
               padding: 0 10px;
               border-radius: 10px;
-              border: 1px solid rgb(221, 221, 221);
-              box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+              border: $border;
+              box-shadow: $shadow;
               margin-bottom: 10px;
             }
 
@@ -794,11 +818,12 @@ body {
 
               a {
                 border-radius: 5px;
-                background-color: royalblue;
-                border: 1px solid rgb(221, 221, 221);
-                box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+                background-color: $special-Color;
+                border: $border;
+                box-shadow: $shadow;
                 width: 100%;
                 height: 100%;
+
                 button {
                   color: whitesmoke;
                   font-size: 15px;
@@ -806,7 +831,7 @@ body {
                   border-radius: 5px;
                   background-color: royalblue;
                   border: 1px solid rgb(221, 221, 221);
-                  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+                  box-shadow: $shadow;
                   width: 100%;
                   height: 100%;
 
@@ -827,20 +852,19 @@ body {
         margin-right: auto;
         padding: 10px 0;
         border-radius: 10px;
-        border: 1px solid rgb(221, 221, 221);
-        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+        // border: $border;
+        box-shadow: $shadow;
 
         @include responsive(bigphone) {
           width: 50%;
         }
         @include responsive(tablet) {
           width: 50%;
-
           margin-top: 0;
           padding: 10px 0;
           border-radius: 10px;
-          border: 1px solid rgb(221, 221, 221);
-          box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+          border: $border;
+          box-shadow: $shadow;
         }
 
         #curve_chart {
@@ -865,39 +889,42 @@ body {
           margin-top: 20px;
           padding: 10px 5px;
           border-radius: 10px;
-          border: 1px solid rgb(221, 221, 221);
-          box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+          border: $border;
+          box-shadow: $shadow;
+          background: $cardsj-bg;
+          color: $text-Color;
           h3 {
             span {
-              color: #c50000f8;
+              color: $special-Color;
             }
           }
 
           .range {
-            border: 2px solid rgb(221, 221, 221);
+            border: $border;
             border-radius: 10px;
             height: 15px;
             padding: 1px 5px;
             div {
               height: 100%;
-              background-color: green;
+              background-color: $special-Color;
               width: 50%;
             }
           }
           .history {
             margin-top: 20px;
+            color: $text-Color;
           }
           .records {
             padding: 5px;
             height: 100px;
             overflow: scroll;
             border-radius: 10px;
-            border: 1px solid rgb(221, 221, 221);
-            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+            border: $border;
+            box-shadow: $shadow;
 
             &::-webkit-scrollbar {
               height: 0.4rem;
-              width: 5px;
+              width: 1px;
             }
 
             &::-webkit-scrollbar-track {
@@ -905,26 +932,25 @@ body {
             }
 
             &::-webkit-scrollbar-thumb {
-              background-color: gray;
+              background-color: $special-text-Color;
             }
             h4 {
               @include flexDisplay(space-between, center, row);
               font-weight: 300;
               font-size: 10px;
+              color: $text-Color;
+                 background: $cardsj-bg;
 
               p {
                 width: 30%;
-                color: green;
+                color: $special-text-Color;
                 font-weight: 400;
-
-                &.pending {
-                  color: red;
-                }
+                   background: $cardsj-bg;
               }
 
               span {
                 width: 50%;
-                overflow: scroll;
+                // overflow: scroll;
                 padding-left: 5px;
               }
             }

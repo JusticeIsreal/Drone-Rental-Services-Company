@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:wght@300&family=Source+Code+Pro:wght@300&display=swap");
 
 /* :root {
   --text: #666;
@@ -17,7 +17,9 @@
   box-sizing: border-box;
   outline: none;
   border: none;
-  text-decoration: none !important;
+  text-decoration: none;
+  list-style: none;
+  font-family: poppins;
 }
 
 *::-webkit-scrollbar {
@@ -44,23 +46,102 @@ body {
   height: 100;
   width: 100%;
   min-height: 100vh;
-  /* background-color: rgb(2, 0, 17); */
 }
+
 /* index page */
 .index-page-con {
+  width: 100vw;
+  height: 100vh;
   border: 2px solid red;
-  color: white;
-  display: flex;
+  overflow: hidden;
 }
 .index-page-con .index-header {
   width: 100%;
-  color: white;
+  height: 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  border-bottom: 1px solid gray;
 }
 .index-header img {
   width: 50px;
+}
+.index-header .navbar {
+  width: 100%;
+  position: absolute;
+  top: 5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .index-header .navbar {
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
+}
+.navbar ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid gray;
+}
+@media screen and (min-width: 768px) {
+  .navbar ul {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 600px;
+    border: none;
+  }
+}
+.navbar ul a {
+  padding: 5px 10px;
+  text-align: center;
+  color: gray;
+  background-color: whitesmoke;
+  width: 100%;
+  font-weight: 600;
+  font-size: 15px;
+  border-bottom: 1px solid gray;
+}
+.navbar ul a:hover {
+  background-color: gray;
+   color: whitesmoke;
+  
+}
+@media screen and (min-width: 768px) {
+  .navbar ul a {
+    padding: 5px 25px;
+    border: none;
+  }
+}
+.loginsignin {
+  margin-right: 100px;
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+}
+.loginsignin h3 {
+  text-align: center;
+  border: 2px solid gray;
+  width: 100px;
+  color: gray;
+  border-radius: 10px;
+  padding: 3px;
+  font-size: 15px;
+}
+.bx-menu{
+  font-size: 30px;
+}
+@media screen and (min-width: 768px) {
+ .bx-menu{
+  display: none;
+}
 }
 
 /* login page and registration page */

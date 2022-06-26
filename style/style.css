@@ -117,7 +117,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  color: rgb(75, 75, 75);
+  color: rgb(68, 68, 68);
   width: 100%;
   height: 100%;
 }
@@ -184,7 +184,7 @@ body {
 }
 .app .sidebar-right .navbarTop h3 {
   font-size: 20px;
-  color: rgb(75, 75, 75);
+  color: rgb(68, 68, 68);
 }
 @media only screen and (min-width: 850px) {
   .app .sidebar-right .navbarTop h3 {
@@ -251,7 +251,7 @@ body {
   position: absolute;
   font-size: 18px;
   border-radius: 100%;
-  color: rgb(75, 75, 75);
+  color: rgb(68, 68, 68);
   background-color: rgb(224, 223, 230);
   width: 20px;
   height: 20px;
@@ -266,7 +266,7 @@ body {
 .app .sidebar-right .navbarTop .profile-img .bx-menu {
   font-size: 40px;
   transition: 0.3s linear;
-  color: rgb(75, 75, 75);
+  color: rgb(68, 68, 68);
 }
 .app .sidebar-right .navbarTop .profile-img .bx-menu.rotate {
   transform: rotate(-90deg);
@@ -341,7 +341,7 @@ body {
   padding-top: 5px;
   transform: scale(0.7);
   transition: all 0.5s ease;
-  color: rgb(75, 75, 75);
+  color: rgb(68, 68, 68);
 }
 .app .sidebar-right .top-card .cards .top div h2.grade-txt {
   margin-top: 18%;
@@ -414,7 +414,7 @@ body {
   flex-direction: column;
   height: 95%;
   width: 100%;
-  color: rgb(75, 75, 75);
+  color: rgb(68, 68, 68);
 }
 .app .sidebar-right .top-card .total-flight div h3 {
   display: flex;
@@ -465,7 +465,7 @@ body {
   bottom: 0;
 }
 .app .sidebar-right .lower-card .chat i {
-  color: rgb(75, 75, 75);
+  color: rgb(68, 68, 68);
 }
 @media only screen and (min-width: 800px) {
   .app .sidebar-right .lower-card {
@@ -544,7 +544,7 @@ body {
 }
 .app .sidebar-right .lower-card .drone-spec .spec-top .top-spec-name {
   width: 100%;
-  color: rgb(75, 75, 75);
+  color: rgb(68, 68, 68);
 }
 .app .sidebar-right .lower-card .drone-spec .spec-top .top-spec-name h4 {
   display: flex;
@@ -555,7 +555,7 @@ body {
   margin-left: auto;
   font-size: 14px;
   font-weight: 600;
-  color: rgb(75, 75, 75);
+  color: rgb(68, 68, 68);
 }
 .app .sidebar-right .lower-card .drone-spec .spec-top .top-spec-name h4 span {
   font-size: 13px;
@@ -646,12 +646,12 @@ body {
 .app .sidebar-right .lower-card .drone-spec .name-battery-con .name-con h3 {
   text-transform: uppercase;
   font-weight: 600;
-  color: rgb(75, 75, 75);
+  color: rgb(68, 68, 68);
 }
 .app .sidebar-right .lower-card .drone-spec .name-battery-con .name-con h4 {
   font-size: 10px;
   font-weight: 500;
-  color: rgb(75, 75, 75);
+  color: rgb(68, 68, 68);
 }
 .app .sidebar-right .lower-card .drone-spec .name-battery-con .name-con h5,
 .app .sidebar-right .lower-card .drone-spec .name-battery-con .name-con span {
@@ -720,7 +720,7 @@ body {
 .app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec2 h3 {
   font-size: 18px;
   padding: 0 0 10px 0;
-  color: rgb(75, 75, 75);
+  color: rgb(68, 68, 68);
 }
 .app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec h3 i,
 .app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec2 h3 i {
@@ -730,7 +730,7 @@ body {
 .app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec2 p {
   font-weight: 500;
   padding: 10px 5px;
-  color: rgb(75, 75, 75);
+  color: rgb(68, 68, 68);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -768,7 +768,7 @@ body {
   flex-direction: row;
 }
 .app .sidebar-right .lower-card .drone-spec .pay-state .state div h3 {
-  color: rgb(75, 75, 75);
+  color: rgb(68, 68, 68);
 }
 .app .sidebar-right .lower-card .drone-spec .pay-state .state div h3 i {
   padding: 5px 5px;
@@ -943,7 +943,7 @@ body {
   border: 2px solid rgb(214, 214, 214);
   box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.096);
   background: rgb(224, 223, 230);
-  color: rgb(75, 75, 75);
+  color: rgb(68, 68, 68);
 }
 .app .sidebar-right .lower-card .graph .trip-record h3 span {
   color: #4c5eff;
@@ -961,7 +961,7 @@ body {
 }
 .app .sidebar-right .lower-card .graph .trip-record .history {
   margin-top: 20px;
-  color: rgb(75, 75, 75);
+  color: rgb(68, 68, 68);
 }
 .app .sidebar-right .lower-card .graph .trip-record .records {
   padding: 5px;
@@ -989,7 +989,7 @@ body {
   font-weight: 300;
   font-size: 10px;
   padding: 5px;
-  color: rgb(75, 75, 75);
+  color: rgb(68, 68, 68);
   background: rgb(224, 223, 230);
 }
 .app .sidebar-right .lower-card .graph .trip-record .records h4 p {
@@ -1007,7 +1007,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  color: rgb(75, 75, 75);
+  color: rgb(68, 68, 68);
   border: 2px solid rgb(214, 214, 214);
 }
 .app .sidebar-right footer span {

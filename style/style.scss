@@ -20,20 +20,24 @@
 *::-webkit-scrollbar-thumb {
   background-color: royalblue;
 }
-$shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
-$border: 1px solid rgba(245, 245, 245, 0.144);
+// $shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+$shadow: 0px 15px 15px rgba(0, 0, 0, 0.096);
+$border: 2px solid rgb(214, 214, 214);
+// $border: 1px solid rgba(245, 245, 245, 0.144);
 
-$cardsj-bg: linear-gradient(
-  to top,
-  #1b1b1b,
-  #1b1b1b,
-  #2b2b2b,
-  #252525,
-  #252525
-);
+// $cardsj-bg: linear-gradient(
+//   to top,
+//   #1b1b1b,
+//   #1b1b1b,
+//   #2b2b2b,
+//   #252525,
+//   #252525
+// );
+$cardsj-bg: rgb(224, 223, 230);
 $hover-Color: whitesmoke;
 $hover-Text-Color: #444444;
-$text-Color: whitesmoke;
+// $text-Color: whitesmoke;
+$text-Color: rgb(75, 75, 75);
 $special-text-Color: royalblue;
 $special-Color: #4c5eff;
 
@@ -41,7 +45,7 @@ body {
   height: 100%;
   width: 100%;
   min-height: 100vh;
-  background-color: rgb(2, 0, 17);
+  background-color: $cardsj-bg;
 }
 @mixin flexDisplay($justifyProp, $alignProp, $flexDirection) {
   display: flex;
@@ -88,7 +92,8 @@ body {
     position: fixed;
     transition: 0.5s ease;
     margin-left: -100vw;
-    background-image: $cardsj-bg;
+    background: $cardsj-bg;
+    border-right:2px solid rgb(201, 201, 201);
 
     @include responsive(tablet) {
       position: relative;
@@ -127,7 +132,7 @@ body {
         }
 
         &.active {
-          background-color: rgb(88, 88, 88);
+          background-color: whitesmoke;
           border: $border;
 
           &::before {
@@ -217,13 +222,13 @@ body {
 
       .search {
         @include flexDisplay(center, center, row);
-        background-color: $text-Color;
+        background-color: $cardsj-bg;
         width: 400px;
         padding: 0 5px;
         height: 40px;
         border-radius: 5px;
         border: 1px solid rgb(221, 221, 221);
-        box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
+        box-shadow:$shadow;
         display: none;
 
         input {
@@ -321,7 +326,9 @@ body {
           height: 20vw;
           border-radius: 50%;
           position: relative;
-          box-shadow: $border;
+          box-shadow: $shadow;
+          border: $border;
+          
 
           @include responsive(tablet) {
             width: 8vw;
@@ -473,7 +480,7 @@ body {
         img {
           width: 170px;
           position: absolute;
-          top: 150px;
+          top: 170px;
           margin-left: auto;
           margin-right: auto;
           left: 0;
@@ -599,7 +606,7 @@ body {
           }
           .battery-con {
             @include flexDisplay(space-between, center, column);
-            border: $border;
+            border: 2px solid rgb(128, 128, 128);
             box-shadow: $shadow;
             height: 80px;
             width: 40px;
@@ -666,35 +673,7 @@ body {
               }
             }
           }
-          // .time-spec {
-          //   @include flexDisplay(space-between, flex, column);
-          //   border-radius: 10px;
-          //   // border: $border;
-          //   box-shadow: $shadow;
-          //   width: 48%;
-          //   height: 100%;
-          //   padding: 5px;
-          //   background: $cardsj-bg;
-
-          //   h3 {
-          //     font-size: 18px;
-          //     padding: 0 0 10px 0;
-          //     color: $text-Color;
-          //     i {
-          //       padding: 5px 5px;
-          //     }
-          //   }
-          //   p {
-          //     font-weight: 500;
-          //     padding: 0 5px;
-          //     color: $text-Color;
-          //     @include flexDisplay(space-between, center, row);
-          //     span {
-          //       font-size: 12px;
-          //       color: $special-Color;
-          //     }
-          //   }
-          // }
+        
         }
 
         .pay-state {

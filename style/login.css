@@ -44,8 +44,26 @@ body {
   height: 100;
   width: 100%;
   min-height: 100vh;
+  /* background-color: rgb(2, 0, 17); */
+}
+/* index page */
+.index-page-con {
+  border: 2px solid red;
+  color: white;
+  display: flex;
+}
+.index-page-con .index-header {
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.index-header img {
+  width: 50px;
 }
 
+/* login page and registration page */
 .form-div {
   display: flex;
   justify-content: center;

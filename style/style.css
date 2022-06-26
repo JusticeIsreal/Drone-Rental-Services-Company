@@ -499,7 +499,7 @@ body {
 .app .sidebar-right .lower-card .drone-spec img {
   width: 170px;
   position: absolute;
-  top: 185px;
+  top: 150px;
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -700,7 +700,8 @@ body {
   margin-top: 10px;
   height: 180px;
 }
-.app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec {
+.app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec,
+.app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec2 {
   display: flex;
   justify-content: space-between;
   align-items: flex;
@@ -708,62 +709,33 @@ body {
   border-radius: 10px;
   border: 1px solid rgba(245, 245, 245, 0.144);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
-  width: 48%;
+  width: 100%;
   height: 100%;
   padding: 5px;
   background: linear-gradient(to top, #1b1b1b, #1b1b1b, #2b2b2b, #252525, #252525);
 }
-.app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec h3 {
+.app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec h3,
+.app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec2 h3 {
   font-size: 18px;
   padding: 0 0 10px 0;
   color: whitesmoke;
 }
-.app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec h3 i {
+.app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec h3 i,
+.app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec2 h3 i {
   padding: 5px 5px;
 }
-.app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec p {
+.app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec p,
+.app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec2 p {
   font-weight: 500;
-  padding: 0 5px;
+  padding: 10px 5px;
   color: whitesmoke;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
 }
-.app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec p span {
-  font-size: 12px;
-  color: #4c5eff;
-}
-.app .sidebar-right .lower-card .drone-spec .drone-camera-time .time-spec {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex;
-  flex-direction: column;
-  border-radius: 10px;
-  border: 1px solid rgba(245, 245, 245, 0.144);
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
-  width: 48%;
-  height: 100%;
-  padding: 5px;
-  background: linear-gradient(to top, #1b1b1b, #1b1b1b, #2b2b2b, #252525, #252525);
-}
-.app .sidebar-right .lower-card .drone-spec .drone-camera-time .time-spec h3 {
-  padding: 0 0 10px 0;
-  color: whitesmoke;
-}
-.app .sidebar-right .lower-card .drone-spec .drone-camera-time .time-spec h3 i {
-  padding: 5px 5px;
-}
-.app .sidebar-right .lower-card .drone-spec .drone-camera-time .time-spec p {
-  font-weight: 500;
-  padding: 0 5px;
-  color: whitesmoke;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-}
-.app .sidebar-right .lower-card .drone-spec .drone-camera-time .time-spec p span {
+.app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec p span,
+.app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec2 p span {
   font-size: 12px;
   color: #4c5eff;
 }

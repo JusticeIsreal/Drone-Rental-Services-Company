@@ -473,7 +473,7 @@ body {
         img {
           width: 170px;
           position: absolute;
-          top: 185px;
+          top: 150px;
           margin-left: auto;
           margin-right: auto;
           left: 0;
@@ -636,12 +636,13 @@ body {
           margin-top: 10px;
           height: 180px;
 
-          .camera-spec {
+          .camera-spec,
+          .camera-spec2 {
             @include flexDisplay(space-between, flex, column);
             border-radius: 10px;
             border: $border;
             box-shadow: $shadow;
-            width: 48%;
+            width: 100%;
             height: 100%;
             padding: 5px;
             background: $cardsj-bg;
@@ -656,7 +657,7 @@ body {
             }
             p {
               font-weight: 500;
-              padding: 0 5px;
+              padding: 10px 5px;
               color: $text-Color;
               @include flexDisplay(space-between, center, row);
               span {
@@ -665,35 +666,35 @@ body {
               }
             }
           }
-          .time-spec {
-            @include flexDisplay(space-between, flex, column);
-            border-radius: 10px;
-            border: $border;
-            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
-            width: 48%;
-            height: 100%;
-            padding: 5px;
-            background: $cardsj-bg;
+          // .time-spec {
+          //   @include flexDisplay(space-between, flex, column);
+          //   border-radius: 10px;
+          //   // border: $border;
+          //   box-shadow: $shadow;
+          //   width: 48%;
+          //   height: 100%;
+          //   padding: 5px;
+          //   background: $cardsj-bg;
 
-            h3 {
-              padding: 0 0 10px 0;
-              color: $text-Color;
-              i {
-                padding: 5px 5px;
-              }
-            }
-            p {
-              font-weight: 500;
-              padding: 0 5px;
-              color: $text-Color;
-              @include flexDisplay(space-between, center, row);
-
-              span {
-                font-size: 12px;
-                color: $special-Color;
-              }
-            }
-          }
+          //   h3 {
+          //     font-size: 18px;
+          //     padding: 0 0 10px 0;
+          //     color: $text-Color;
+          //     i {
+          //       padding: 5px 5px;
+          //     }
+          //   }
+          //   p {
+          //     font-weight: 500;
+          //     padding: 0 5px;
+          //     color: $text-Color;
+          //     @include flexDisplay(space-between, center, row);
+          //     span {
+          //       font-size: 12px;
+          //       color: $special-Color;
+          //     }
+          //   }
+          // }
         }
 
         .pay-state {
@@ -967,7 +968,6 @@ body {
       span {
         padding: 0 5px;
       }
-     
     }
   }
 }

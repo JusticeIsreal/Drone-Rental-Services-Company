@@ -22,25 +22,26 @@
 }
 $shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
 $border: 1px solid rgba(245, 245, 245, 0.144);
+
 $cardsj-bg: linear-gradient(
   to top,
-  #444444,
-  #4d4d4d,
-  #575757,
-  #616161,
-  #6b6b6b
+  #1b1b1b,
+  #1b1b1b,
+  #2b2b2b,
+  #252525,
+  #252525
 );
 $hover-Color: whitesmoke;
 $hover-Text-Color: #444444;
 $text-Color: whitesmoke;
 $special-text-Color: royalblue;
-$special-Color: #4c5eff7e;
+$special-Color: #4c5eff;
 
 body {
   height: 100%;
   width: 100%;
   min-height: 100vh;
-  background-color: rgba(5, 5, 5, 0.904);
+  background-color: rgb(2, 0, 17);
 }
 @mixin flexDisplay($justifyProp, $alignProp, $flexDirection) {
   display: flex;
@@ -370,13 +371,13 @@ body {
           }
 
           &:nth-child(1) {
-            background: $special-Color;
+            background: $cardsj-bg;
           }
           &:nth-child(2) {
-            background: $special-Color;
+            background: $cardsj-bg;
           }
           &:nth-child(3) {
-            background: $special-Color;
+            background: $cardsj-bg;
           }
         }
       }
@@ -863,7 +864,7 @@ body {
           margin-top: 0;
           padding: 10px 0;
           border-radius: 10px;
-          border: $border;
+          // border: $border;
           box-shadow: $shadow;
         }
 
@@ -878,13 +879,13 @@ body {
           @include flexDisplay(space-between, center, column);
           margin-top: 15px;
           .map-file {
-            width: 95%;
+            width: 100%;
             border-radius: 10px;
             height: 300px;
           }
         }
         .trip-record {
-          width: 95%;
+          width: 100%;
           margin: 0 auto;
           margin-top: 20px;
           padding: 10px 5px;
@@ -916,7 +917,7 @@ body {
           }
           .records {
             padding: 5px;
-            height: 100px;
+            height: 120px;
             overflow: scroll;
             border-radius: 10px;
             border: $border;
@@ -938,14 +939,15 @@ body {
               @include flexDisplay(space-between, center, row);
               font-weight: 300;
               font-size: 10px;
+              padding: 5px;
               color: $text-Color;
-                 background: $cardsj-bg;
+              background: $cardsj-bg;
 
               p {
                 width: 30%;
                 color: $special-text-Color;
                 font-weight: 400;
-                   background: $cardsj-bg;
+                background: $cardsj-bg;
               }
 
               span {
@@ -957,6 +959,15 @@ body {
           }
         }
       }
+    }
+    footer {
+      @include flexDisplay(center, center, row);
+      color: $text-Color;
+      border: $border;
+      span {
+        padding: 0 5px;
+      }
+     
     }
   }
 }

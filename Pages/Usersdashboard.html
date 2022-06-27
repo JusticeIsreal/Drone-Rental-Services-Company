@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style/style.css" />
+    <title></title>
+  </head>
+  <body>
+    <!-- BEGIINNING OF PROJECT  -->
+    <div class="app">
+      <!-- Side navbar -->
+      <nav class="sidebar-left">
+        <ul>
+          <li class="active">
+            <a href="/"
+              ><i class="bx bx-grid-alt"></i>
+              <h3 class="jj">Dashboard</h3></a
+            >
+          </li>
+          <li>
+            <a href="/pages/Transaction.html"
+              ><i class="bx bx-chart"></i>
+              <h3>Transactions</h3>
+            </a>
+          </li>
+          <li>
+            <a href="/pages/wallet.html"
+              ><i class="bx bx-wallet"></i>
+              <h3>Wallet</h3></a
+            >
+          </li>
+          <li>
+            <a href="/pages/notification.html"
+              ><i class="bx bx-bell"></i>
+              <h3>Notification</h3></a
+            >
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="/pages/report.html"
+              ><i class="bx bxs-report"></i>
+              <h3>Report</h3></a
+            >
+          </li>
+          <li>
+            <a href="/pages/settings.html"
+              ><i class="bx bxs-cog"></i>
+              <h3>Setting</h3></a
+            >
+          </li>
+          <li>
+            <a href="/pages/loginReg.html"
+              ><i class="bx bxs-exit"></i>
+              <h3>LogOut</h3></a
+            >
+          </li>
+        </ul>
+      </nav>
+      <!-- end of left side navbar -->
+
+      <!-- side section  of the page -->
+      <section class="sidebar-right">
+        <!-- top navbar -->
+        <div class="navbarTop">
+          <h3>Dashboard</h3>
+          <div class="search">
+            <i class="bx bx-search-alt-2"></i>
+            <input type="serach" placeholder="Search..." name="" id="" />
+          </div>
+          <div class="profile-img">
+            <a href=""><img src="/img/img1.png" alt="profile-img" /> </a>
+            <a class="notification-bell" href=""><i class="bx bx-bell">0</i></a>
+            <i class="bx bx-menu"></i>
+          </div>
+        </div>
+        <!-- top navbar end -->
+
+        <!-- dashboard body -->
+        <main class="top-card">
+          <!-- top table -->
+          <div class="total-flight">
+            <div class="flight-time">
+              <h3>Total Flying Time <span>00:00:00</span></h3>
+              <h3>Total Flights <span>0</span></h3>
+              <h3>Last 1 year : 01:01:22</h3>
+            </div>
+          </div>
+
+          <!-- drone category -->
+          <div class="cards">
+            <div class="top card1">
+              <div class="box1">
+                <h2 class="regular-txt">REGULAR</h2>
+                <img
+                  data-id="regular"
+                  class="regular drone"
+                  src="/img/drone2-removebg-preview.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="top card2">
+              <div class="box2">
+                <h2 class="standard-txt">STANDARD</h2>
+                <img
+                  data-id="standard"
+                  class="standard drone"
+                  src="/img/drone1-removebg-preview.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="top card3">
+              <div class="box3">
+                <h2 class="premium-txt">PREMIUM</h2>
+                <img
+                  data-id="premium"
+                  class="premium drone"
+                  src="/img/drone8-removebg-preview.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <!-- drone category end -->
+          </div>
+        </main>
+        <!-- top table ends -->
+
+        <!-- drone spec section -->
+        <main class="lower-card">
+          <div class="chat">
+            <a href="whatsaoo://send?text= Hello Justice, I need your assistance!&phone=+2349029356196"> <i class="bx bxl-whatsapp"></i></a>
+          </div>
+          <div class="drone-spec">
+            <div class="spec-top">
+              <div class="top-spec-name">
+                <h3>
+                  AJIS TECHNOLOGIES <i class="bx bxs-cloud-lightning"></i>
+                </h3>
+                <p>Date</p>
+                <h4>Class :<span id="class">....</span></h4>
+              </div>
+            </div>
+            <!-- drone display-->
+            <div class="spin-drone-con"></div>
+            <img class="spin-drone" src="" alt="" />
+            <!-- drone display -->
+
+            <!-- drone details section -->
+            <div class="drone-details">
+              <div class="spin">
+                <div class="spin spinner2"></div>
+              </div>
+
+              <!-- DRONE GUAGE METER -->
+              <div id="chart_div1"></div>
+              <div id="chart_div2"></div>
+            </div>
+            <div class="all-draft">
+              <div class="name-battery-con">
+                <div class="name-con">
+                  <h3>... : <span>...</span></h3>
+                  <h4>... : <span>...</span></h4>
+                  <h4>... : <span>...</span></h4>
+                  <h4>...: <span>...</span></h4>
+
+                  <h5>Flight time of 2 hrs remaining</h5>
+                </div>
+                <div class="battery-con">
+                  <div>
+                    <span>70%</span><i class="bx bxs-battery-charging"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="drone-camera-time">
+              <div class="camera-spec">
+                <h3><i class="bx bx-camera-movie"></i>Camera type</h3>
+                <p>MP <span>...</span></p>
+                <p>POV <span>...</span></p>
+                <p>RES <span>...</span></p>
+                <p>MD <span>...</span></p>
+              </div>
+              <div class="camera-spec2">
+                <h3><i class="bx bx-time"></i>Flight time</h3>
+                <p>TIME <span>...</span></p>
+                <p>TMP <span>...</span></p>
+                <p>VLT <span>...</span></p>
+              </div>
+            </div>
+
+            <div class="pay-state">
+              <div class="state">
+                <div>
+                  <h3>
+                    <i class="bx bx-timer"></i>STATE
+                    <i class="bx bxs-plane-take-off"></i>
+                  </h3>
+                  <p class="drone-state">
+                    <b><span>...</span></b>
+                  </p>
+                </div>
+
+                <div class="select-drone">
+                  <button class="order-btn">
+                    <i class="bx bx-money-withdraw"></i>ORDER NOW
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- payment form -->
+            <main class="form-con">
+              <i class="bx bx-x"></i>
+              <form action="">
+                <label for="select">
+                  <i class="bx bx-plus-medical"></i>Merchant</label
+                >
+                <select name="select" id="">
+                  <option value="">Select a merchant</option>
+                  <option value="AZ Phamercy">AZ Phamercy</option>
+                  <option value="Shalom Medics">Shalom Medics</option>
+                  <option value="Zoe Chemist">Zoe Chemist</option>
+                  <option value="Redditon Care">Redditon Care</option>
+                  <option value="Hoac Phamercy">Hoac Phamercy</option>
+                  <option value="Angelical Angels">Angelical Angels</option>
+                </select>
+
+                <label for="items"><i class="bx bxs-file"></i> Items</label>
+                <input placeholder="Enter Item" type="text" />
+                <label for="address"
+                  ><i class="bx bxs-building-house"></i> Delievery
+                  Address</label
+                >
+                <input placeholder="Enter Address" type="text" />
+                <label for="code"
+                  ><i class="bx bxs-pin"></i> Release code</label
+                >
+                <input placeholder="Enter Release code" type="tel" />
+
+                <div class="payment">
+                  <a href=""
+                    ><button>
+                      <i class="bx bx-money-withdraw"></i> Confirm payment
+                    </button></a
+                  >
+                </div>
+              </form>
+              <!-- payment form ends  -->
+            </main>
+          </div>
+
+          <!-- graph and map section -->
+          <div class="graph">
+            <div class="map">
+              <iframe
+                class="map-file"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127223.13130164081!2d6.934755434508275!3d4.817577930296659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069cea39f2c48e3%3A0x53562bdd7d8832db!2sPort%20Harcourt!5e0!3m2!1sen!2sng!4v1656026328022!5m2!1sen!2sng"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+            <h3>Statistics</h3>
+            <div id="curve_chart"></div>
+            <div class="trip-record">
+              <h3>Membership : <span>Premium</span></h3>
+              <div class="range"><div></div></div>
+              <h3 class="history">History</h3>
+              <div class="records">
+                <h4>
+                  15/05/2022
+                  <span>15 Odili road, port harcourt housing estate</span>
+                  <p>SUCCESSFUL</p>
+                </h4>
+                <h4>
+                  10/05/2022 <span>Onne road, FOT annex 4, behind atlas</span>
+                  <p>SUCCESSFUL</p>
+                </h4>
+                <h4>
+                  01/05/2022
+                  <span>Spar plaza, azikiwe road, port harcourt</span>
+                  <p>SUCCESSFUL</p>
+                </h4>
+                <h4>
+                  26/04/2022
+                  <span>42 ilamoye street , aguda surulere , lagos</span>
+                  <p>SUCCESSFUL</p>
+                </h4>
+                <h4>
+                  15/04/2022
+                  <span>Spar plaza, azikiwe road, port harcourt</span>
+                  <p>SUCCESSFUL</p>
+                </h4>
+                <h4>
+                  5/03/2022 <span>Onne road, FOT annex 4, behind atlas</span>
+                  <p>SUCCESSFUL</p>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </main>
+        <!-- end of section -->
+
+        <!-- footer sections -->
+        <footer>
+          <span> &copy 2022 by *Justice Isreal Agbonma*</span>
+        </footer>
+        <!-- footer section -->
+      </section>
+    </div>
+    <!-- END OF PROJECTS -->
+    <script
+      type="text/javascript"
+      src="https://www.gstatic.com/charts/loader.js"
+    ></script>
+    <script src="/app/app.js"></script>
+  </body>
+</html>

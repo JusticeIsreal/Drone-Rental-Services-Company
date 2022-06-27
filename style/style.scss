@@ -253,6 +253,7 @@ body {
 
       .profile-img {
         @include flexDisplay(space-between, center, row);
+        
 
         img {
           object-fit: cover;
@@ -296,7 +297,9 @@ body {
             display: none;
           }
         }
+        
       }
+      
     }
 
     // bootom right side
@@ -958,8 +961,8 @@ body {
       color: $text-Color;
       border: $border;
       width: 100%;
-      position: absolute;
-      bottom: 0;
+      
+      top: -100%;
       span {
         padding: 0 5px;
       }

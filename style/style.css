@@ -1027,6 +1027,9 @@ body {
   flex-direction: row;
   color: rgb(68, 68, 68);
   border: 2px solid rgb(214, 214, 214);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 .app .sidebar-right footer span {
   padding: 0 5px;

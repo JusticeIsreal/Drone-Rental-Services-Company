@@ -846,7 +846,6 @@ body {
           margin-top: 0;
           padding: 10px 0;
           border-radius: 10px;
-          // border: $border;
           box-shadow: $shadow;
         }
         h3 {
@@ -948,6 +947,9 @@ body {
       @include flexDisplay(center, center, row);
       color: $text-Color;
       border: $border;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
       span {
         padding: 0 5px;
       }

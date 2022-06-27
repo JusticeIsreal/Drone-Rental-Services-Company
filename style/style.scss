@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:wght@300&family=Source+Code+Pro:wght@300&display=swap");
 
+// global variables
 * {
   margin: 0;
   padding: 0;
@@ -65,9 +66,11 @@ body {
   }
 }
 
+// PROJECTS BEGINS
 .app {
   @include flexDisplay(space-between, center, row);
 
+  // left side bar
   nav {
     @include flexDisplay(space-between, center, column);
     width: 42%;
@@ -122,6 +125,7 @@ body {
           padding: 0 10px;
         }
 
+        // toggle feature for mobile view
         &.active {
           background-color: whitesmoke;
           border: $border;
@@ -175,6 +179,8 @@ body {
       }
     }
   }
+
+  // page right section
   .sidebar-right {
     width: 100vw;
     min-height: 100vh;
@@ -190,6 +196,7 @@ body {
       position: relative;
     }
 
+    // top nav section
     .navbarTop {
       @include flexDisplay(space-between, center, row);
       width: 100%;
@@ -292,6 +299,7 @@ body {
       }
     }
 
+    // bootom right side
     .top-card {
       @include flexDisplay(space-between, center, column);
       margin-top: 40px;
@@ -382,7 +390,7 @@ body {
           }
         }
       }
-
+      // right top table
       .total-flight {
         border-radius: 10px;
         border: $border;
@@ -431,7 +439,7 @@ body {
         }
       }
     }
-
+    // lower section
     .lower-card {
       @include flexDisplay(space-between, center, column);
       margin-top: 0px;
@@ -523,11 +531,11 @@ body {
             }
           }
         }
-
+        // drone details table
         .drone-details {
           margin-top: 10px;
           position: relative;
-
+          // drone guage rande meter
           #chart_div1 {
             @include flexDisplay(center, center, row);
             position: absolute;
@@ -545,7 +553,7 @@ body {
           @include responsive(tablet) {
             margin-top: 20px;
           }
-
+          // display spiner
           .spin {
             @include flexDisplay(center, center, row);
             box-sizing: border-box;
@@ -677,7 +685,7 @@ body {
             }
           }
         }
-
+        // payment form
         .pay-state {
           @include flexDisplay(space-between, center, row);
           height: 100px;
@@ -828,6 +836,7 @@ body {
         }
       }
 
+      // graph and map section
       .graph {
         width: 90%;
         margin: 0 auto;
@@ -943,6 +952,7 @@ body {
         }
       }
     }
+    // footer
     footer {
       @include flexDisplay(center, center, row);
       color: $text-Color;

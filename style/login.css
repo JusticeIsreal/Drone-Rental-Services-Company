@@ -52,9 +52,9 @@ body {
 .index-page-con {
   width: 100vw;
   height: 100vh;
-  border: 2px solid red;
   overflow: hidden;
 }
+/* top header container */
 .index-page-con .index-header {
   width: 100%;
   height: 5rem;
@@ -64,15 +64,30 @@ body {
   position: relative;
   border-bottom: 1px solid gray;
 }
+/* logo image */
 .index-header img {
-  width: 50px;
+  width: 70px;
+  animation: bounce 4s linear infinite;
 }
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+/* navbar for mobile */
 .index-header .navbar {
   width: 100%;
   position: absolute;
   top: 5rem;
 }
-
+/* nabar for tablet and above */
 @media screen and (min-width: 768px) {
   .index-header .navbar {
     width: 100%;
@@ -80,14 +95,16 @@ body {
     top: 0;
   }
 }
+/* nav ul */
 .navbar ul {
   width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  border: 1px solid gray;
 }
+
+/* ul for tablet and above */
 @media screen and (min-width: 768px) {
   .navbar ul {
     flex-direction: row;
@@ -99,6 +116,8 @@ body {
     border: none;
   }
 }
+
+/* nav llinks */
 .navbar ul a {
   padding: 5px 10px;
   text-align: center;
@@ -107,42 +126,168 @@ body {
   width: 100%;
   font-weight: 600;
   font-size: 15px;
-  border-bottom: 1px solid gray;
+  border: 1px solid gray;
+  transition: all 0.3s linear;
 }
+
+/* classes for mobile nave toggle */
+.left {
+  margin-left: -210vw;
+}
+.right {
+  margin-left: 210vw;
+}
+.left.active {
+  margin-left: 0;
+}
+.right.active {
+  margin-left: 0;
+}
+
 .navbar ul a:hover {
   background-color: gray;
-   color: whitesmoke;
-  
+  color: whitesmoke;
 }
+
+/* nav links for tablet and above */
 @media screen and (min-width: 768px) {
   .navbar ul a {
     padding: 5px 25px;
     border: none;
+    margin: 0 0;
   }
 }
+
+/* login and signin con */
 .loginsignin {
   margin-right: 100px;
   width: 120px;
   display: flex;
   justify-content: space-between;
+  gap: 10px;
+  z-index: 5;
 }
 .loginsignin h3 {
   text-align: center;
-  border: 2px solid gray;
+  border: 1px solid gray;
   width: 100px;
   color: gray;
   border-radius: 10px;
   padding: 3px;
   font-size: 15px;
 }
-.bx-menu{
+
+/* menu bar */
+.bx-menu {
   font-size: 30px;
+  transition: 0.3s linear;
+}
+.bx-menu.active {
+  transform: rotate(-90deg);
 }
 @media screen and (min-width: 768px) {
- .bx-menu{
-  display: none;
+  .bx-menu {
+    display: none;
+  }
 }
+.banner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: url(/img/image.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
+
+.billboard {
+
+  width: 100%;
+  height: 60%;
+  /* background-color: rgba(245, 245, 245, 0.575); */
+}
+.billboard .banner-txt {
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5px;
+}
+.banner-txt h3 {
+  font-size: 30px;
+}
+.underline {
+  width: 25%;
+  border-bottom: 5px solid gray;
+  animation: underline 4s linear infinite;
+}
+
+@keyframes underline  {
+  0% {
+    width: 10%;
+  }
+  50% {
+    width: 35%;
+  }
+  100% {
+    width: 10%;
+  }
+}
+.banner-txt h1 {
+  font-size: 40px;
+}
+.banner-txt a {
+  text-align: center;
+  font-size: 40px;
+  border-radius: 15px;
+  border: 2px solid red;
+  width: 150px;
+}
+.bannerimg {
+
+  width: 100%;
+  height: 40%;
+
+}
+.bannerimg img {
+
+  width: 100%;
+ 
+  animation: bannerdrone 10s linear infinite;
+}
+
+@keyframes bannerdrone {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .banner {
+    flex-direction: row;
+    display: flex;
+  }
+  .billboard {
+    width: 40%;
+    height: 100%;
+  }
+  .bannerimg {
+    width: 60%;
+    height: 100%;
+  }
+  .bannerimg img {
+    width: 100%;
+  }
+}
+/* jfklsjkd */
 
 /* login page and registration page */
 .form-div {

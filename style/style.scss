@@ -20,23 +20,12 @@
 *::-webkit-scrollbar-thumb {
   background-color: royalblue;
 }
-// $shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
-$shadow: 0px 15px 15px rgba(0, 0, 0, 0.096);
-$border: 2px solid rgb(214, 214, 214);
-// $border: 1px solid rgba(245, 245, 245, 0.144);
 
-// $cardsj-bg: linear-gradient(
-//   to top,
-//   #1b1b1b,
-//   #1b1b1b,
-//   #2b2b2b,
-//   #252525,
-//   #252525
-// );
+$shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.301);
+$border: 2px solid rgb(214, 214, 214);
 $cardsj-bg: rgb(224, 223, 230);
 $hover-Color: whitesmoke;
 $hover-Text-Color: #444444;
-// $text-Color: whitesmoke;
 $text-Color: rgb(68, 68, 68);
 $special-text-Color: royalblue;
 $special-Color: #4c5eff;
@@ -93,12 +82,14 @@ body {
     transition: 0.5s ease;
     margin-left: -100vw;
     background: $cardsj-bg;
-    border-right:2px solid rgb(201, 201, 201);
+    border-right: 2px solid rgb(201, 201, 201);
+    box-shadow: $shadow;
 
     @include responsive(tablet) {
       position: relative;
       position: sticky;
       margin-bottom: auto;
+      box-shadow: $shadow;
     }
 
     &.open {
@@ -188,6 +179,10 @@ body {
     width: 100vw;
     min-height: 100vh;
     background-color: $shadow;
+    background: url(/img/white.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 
     @include responsive(tablet) {
       width: 100%;
@@ -204,8 +199,8 @@ body {
       top: 0;
       background: $cardsj-bg;
       border-bottom: $border;
-      box-shadow: 0px 2px 15px rgba(255, 255, 255, 0.24);
       z-index: 10;
+      box-shadow: $shadow;
 
       @include responsive(tablet) {
         height: 70px;
@@ -228,7 +223,7 @@ body {
         height: 40px;
         border-radius: 5px;
         border: 1px solid rgb(221, 221, 221);
-        box-shadow:$shadow;
+        box-shadow: $shadow;
         display: none;
 
         input {
@@ -328,7 +323,6 @@ body {
           position: relative;
           box-shadow: $shadow;
           border: $border;
-          
 
           @include responsive(tablet) {
             width: 8vw;
@@ -346,7 +340,7 @@ body {
               padding-top: 5px;
               transform: scale(0.7);
               transition: all 0.5s ease;
-              color: $text-Color;
+              color: $special-Color;
 
               &.grade-txt {
                 margin-top: 18%;
@@ -509,7 +503,10 @@ body {
 
           .top-spec-name {
             width: 100%;
-            color: $text-Color;
+            color: $special-Color;
+            p {
+              color: $text-Color;
+            }
 
             h4 {
               @include flexDisplay(space-between, center, row);
@@ -673,7 +670,6 @@ body {
               }
             }
           }
-        
         }
 
         .pay-state {

@@ -127,8 +127,6 @@ displayData(detailsApi);
 // call drones
 let spinDroneCon = document.querySelector(".spin-drone-con");
 let droneCon = document.querySelectorAll(".drone");
-// let droneCon = document.querySelectorAll(".drone");
-// let droneCon = document.querySelectorAll(".drone");
 let spinDrone = document.querySelector(".spin-drone");
 
 droneCon.forEach(function (drone) {

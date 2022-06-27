@@ -180,9 +180,10 @@ body {
 }
 .loginsignin h3 {
   text-align: center;
-  border: 1px solid gray;
+  border: 1px solid var(--special-text-Color);
   width: 100px;
-  color: var(--text);
+  color:whitesmoke;
+  background: var(--special-text-Color);
   border-radius: 10px;
   padding: 3px;
   font-size: 15px;

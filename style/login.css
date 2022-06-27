@@ -1,14 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:wght@300&family=Source+Code+Pro:wght@300&display=swap");
 
-/* :root {
-  --text: #666;
-  --whitetext: white;
-  --bgColor:;
+:root {
+  --text: rgb(68, 68, 68);
+  --special-text-Color: royalblue;
+  --hover-Text-Color: #444444;
+  /* --bgColor:; */
+  --border: 2px solid rgb(214, 214, 214);
   --button: rgb(73, 73, 248);
-  --card: rgb(17, 17, 17);
-  --bordershadow: -8px 8px 30px rgba(73, 73, 248, 0.205);
+  --card: rgb(224, 223, 230);
+  --bordershadow: 0px 15px 15px rgba(0, 0, 0, 0.096);
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-} */
+  --hover-Text-Color: #444444;
+  --hover-Color: whitesmoke;
+}
 
 * {
   font-family: "Poppins", sans-serif;
@@ -62,10 +66,11 @@ body {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  border-bottom: 1px solid gray;
-  position: fixed;
+  border-bottom: var(--border);
+  position: sticky;
   z-index: 15;
-  background-color: whitesmoke;
+  background-color: var(--card);
+  box-shadow: var(--box-shadow);
 }
 /* logo image */
 .index-header img {
@@ -125,13 +130,14 @@ body {
 .navbar ul a {
   padding: 5px 10px;
   text-align: center;
-  color: gray;
-  background-color: whitesmoke;
+  color: var(--text);
+  background-color: var(--card);
   width: 100%;
   font-weight: 600;
   font-size: 15px;
-  border: 1px solid gray;
+  border: var(--border);
   transition: all 0.3s linear;
+  box-shadow: var(--box-shadow);
 }
 
 /* classes for mobile nave toggle */
@@ -149,8 +155,9 @@ body {
 }
 
 .navbar ul a:hover {
-  background-color: gray;
-  color: whitesmoke;
+  background-color: var(--hover-Color);
+  color: var(--hover-Text-Color);
+  border-radius: 10px;
 }
 
 /* nav links for tablet and above */
@@ -175,7 +182,7 @@ body {
   text-align: center;
   border: 1px solid gray;
   width: 100px;
-  color: gray;
+  color: var(--text);
   border-radius: 10px;
   padding: 3px;
   font-size: 15px;
@@ -219,7 +226,6 @@ body {
   width: 100%;
   height: 60%;
   z-index: 6;
-  /* background-color: rgba(245, 245, 245, 0.575); */
 }
 .billboard .banner-txt {
   height: 100%;
@@ -230,10 +236,11 @@ body {
 }
 .banner-txt h3 {
   font-size: 20px;
+  color: var(--text);
 }
 .underline {
   width: 25%;
-  border-bottom: 5px solid gray;
+  border-bottom: 5px solid var(--special-text-Color);
   animation: underline 10s linear infinite;
 }
 
@@ -251,14 +258,21 @@ body {
 .banner-txt h1 {
   font-size: 45px;
   font-weight: 900;
+  color: var(--special-text-Color);
 }
 .banner-txt a {
   text-align: center;
   font-size: 40px;
   border-radius: 15px;
-  border: 2px solid gray;
+  border: 2px solid var(--special-text-Color);
+  background: var(--special-text-Color);
   width: 150px;
+  color: whitesmoke;
 }
+.banner-txt a h3 {
+  color: whitesmoke;
+}
+
 .bannerimg {
   width: 100%;
   height: 40%;
@@ -292,7 +306,6 @@ body {
   text-align: center;
   bottom: 0;
   border: 2px solid red;
-  
 }
 @media screen and (min-width: 768px) {
   .banner {
@@ -307,9 +320,6 @@ body {
     width: 60%;
     height: 100%;
   }
-  .bannerimg img {
-    width: 100%;
-  }
 
   .billboard .banner-txt {
     z-index: 5;
@@ -323,11 +333,6 @@ body {
   }
   .banner-txt h3 {
     font-size: 30px;
-  }
-  .underline {
-    width: 25%;
-    border-bottom: 5px solid gray;
-    animation: underline 10s linear infinite;
   }
 
   @keyframes underline {
@@ -352,12 +357,10 @@ body {
     font-size: 15px;
   }
   .banner-txt a {
-    text-align: center;
     margin-top: 10px;
-    font-size: 40px;
-    border-radius: 15px;
-    border: 2px solid gray;
+    border: 2px solid var(--special-text-Color);
     width: 150px;
+    color: whitesmoke;
   }
   .bannerimg {
     width: 100%;
@@ -560,7 +563,7 @@ select {
   /* border-radius: 10px;
   padding: 8px;
   color: white; */
-  background-color: rgba(148, 148, 148, 0); 
+  background-color: rgba(148, 148, 148, 0);
   /* border: 1px solid rgb(221, 221, 221);  */
 }
 .link-btn:hover {

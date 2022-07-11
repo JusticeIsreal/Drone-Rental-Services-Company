@@ -54,6 +54,119 @@ body {
   border-right: 2px solid rgb(201, 201, 201);
   box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.301);
 }
+.app nav .profile {
+  position: relative;
+  width: 100%;
+  padding: 0 0 25px 0;
+  border-bottom: 1px solid royalblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.app nav .profile .profile-pic-con {
+  border: 2px solid royalblue;
+  position: relative;
+  border-radius: 100%;
+  padding: 0;
+  width: 120px;
+  height: 120px;
+}
+@media only screen and (min-width: 850px) {
+  .app nav .profile .profile-pic-con {
+    width: 250px;
+    height: 250px;
+  }
+}
+.app nav .profile .profile-pic-con i {
+  font-size: 25px;
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+  background-color: rgba(65, 105, 225, 0.54);
+  border-radius: 100%;
+  padding: 5px;
+}
+.app nav .profile .profile-pic-con i:hover {
+  background-color: rgba(65, 105, 225, 0.259);
+}
+.app nav .profile .profile-pic-con img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 115px;
+  height: 115px;
+  border-radius: 100%;
+}
+@media only screen and (min-width: 850px) {
+  .app nav .profile .profile-pic-con img {
+    width: 245px;
+    height: 245px;
+  }
+}
+.app nav .profile h4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(68, 68, 68);
+  font-size: 10px;
+  width: 98%;
+  padding-top: 5px;
+}
+@media only screen and (min-width: 850px) {
+  .app nav .profile h4 {
+    font-size: 15px;
+  }
+}
+.app nav .profile p,
+.app nav .profile span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(68, 68, 68);
+  font-size: 10px;
+  width: 98%;
+  padding-top: 5px;
+  letter-spacing: 1px;
+}
+@media only screen and (min-width: 850px) {
+  .app nav .profile p,
+.app nav .profile span {
+    font-size: 15px;
+  }
+}
+.app nav .profile b {
+  color: royalblue;
+}
+.app nav .profile .change-info {
+  position: absolute;
+  top: 100%;
+  display: block;
+  margin-top: 5px;
+  width: 100%;
+  padding: 5px;
+  overflow: hidden;
+  height: 0;
+}
+.app nav .profile .change-info.update {
+  height: 200px;
+}
+.app nav .profile .change-info form {
+  color: rgb(68, 68, 68);
+}
+.app nav .profile .change-info form input {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  padding: 0 4px;
+  height: 35px;
+  margin-bottom: 10px;
+}
+.app nav .profile .change-info form button {
+  margin-top: 10px;
+  padding: 5px 15px;
+}
 @media only screen and (min-width: 850px) {
   .app nav {
     position: relative;
@@ -122,6 +235,7 @@ body {
   color: rgb(68, 68, 68);
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 .app nav ul li a:hover {
   color: #444444;
@@ -151,6 +265,7 @@ body {
   }
 }
 .app .sidebar-right {
+  position: relative;
   width: 100vw;
   min-height: 100vh;
   background-color: 2px 2px 5px 2px rgba(0, 0, 0, 0.301);
@@ -158,6 +273,177 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+}
+.app .sidebar-right .setting-page {
+  overflow: hidden;
+  padding: 10px;
+  width: 100%;
+  transition: 0.5s linear;
+  height: 0;
+  visibility: collapse;
+  background-color: white;
+  z-index: 3;
+  position: absolute;
+  margin-top: 5rem;
+}
+.app .sidebar-right .setting-page.showsetting {
+  height: 90%;
+  visibility: visible;
+}
+.app .sidebar-right .setting-page .total-flight {
+  gap: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  position: relative;
+}
+.app .sidebar-right .setting-page .total-flight p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+@media only screen and (min-width: 850px) {
+  .app .sidebar-right .setting-page .total-flight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+.app .sidebar-right .setting-page .total-flight .wallet-con {
+  width: 100%;
+}
+@media only screen and (min-width: 850px) {
+  .app .sidebar-right .setting-page .total-flight .wallet-con {
+    width: 400px;
+  }
+}
+.app .sidebar-right .setting-page .total-flight .wallet-con .wallet {
+  padding: 10px;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  border: 2px solid rgb(214, 214, 214);
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.301);
+  width: 100%;
+  height: 220px;
+}
+@media only screen and (min-width: 850px) {
+  .app .sidebar-right .setting-page .total-flight .wallet-con .wallet {
+    width: 100%;
+    height: 220px;
+  }
+}
+.app .sidebar-right .setting-page .total-flight .wallet-con .wallet i {
+  font-size: 100px;
+  color: royalblue;
+}
+.app .sidebar-right .setting-page .total-flight .flight-time {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  border-radius: 10px;
+  border: 2px solid rgb(214, 214, 214);
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.301);
+  width: 100%;
+  height: 150px;
+}
+@media only screen and (min-width: 850px) {
+  .app .sidebar-right .setting-page .total-flight .flight-time {
+    width: 55%;
+    height: 220px;
+  }
+}
+.app .sidebar-right .setting-page .total-flight .flight-time h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  color: #444444;
+  border-bottom: 1px dashed royalblue;
+}
+.app .sidebar-right .setting-page .total-flight .flight-time h3 span {
+  color: royalblue;
+}
+.app .sidebar-right .setting-page .transaction {
+  margin-top: 50px;
+  color: rgb(68, 68, 68);
+}
+.app .sidebar-right .setting-page .transaction .chart {
+  color: royalblue;
+}
+.app .sidebar-right .setting-page .transaction .chart #curve_chart {
+  width: 100%;
+}
+.app .sidebar-right .setting-page .transaction .trip-record {
+  margin-top: 20px;
+}
+.app .sidebar-right .setting-page .transaction .trip-record h3 {
+  color: rgb(68, 68, 68);
+}
+.app .sidebar-right .setting-page .transaction .trip-record h3 span {
+  color: royalblue;
+}
+.app .sidebar-right .setting-page .transaction .trip-record .range {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  border: 2px solid rgb(214, 214, 214);
+  height: 15px;
+  width: 100%;
+  padding: 0;
+}
+.app .sidebar-right .setting-page .transaction .trip-record .range div {
+  height: 10px;
+  width: 70%;
+  background-color: #4c5eff;
+}
+.app .sidebar-right .setting-page .transaction .trip-record h3 {
+  margin-top: 20px;
+  color: royalblue;
+}
+.app .sidebar-right .setting-page .transaction .trip-record .records {
+  border: 2px solid rgb(214, 214, 214);
+  overflow: scroll;
+  height: 200px;
+  height: 40vh;
+  padding: 0 2px;
+}
+.app .sidebar-right .setting-page .transaction .trip-record .records h4 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  font-size: 10px;
+  padding: 10px 0;
+  color: .app .sidebar-right .setting-page .transaction .trip-record .records h4 rgb(68, 68, 68);
+  border-bottom: 1px dashed royalblue;
+}
+@media only screen and (min-width: 850px) {
+  .app .sidebar-right .setting-page .transaction .trip-record .records h4 {
+    font-size: 15px;
+  }
+}
+.app .sidebar-right .setting-page .transaction .trip-record .records h4 span {
+  font-size: 8px;
+}
+@media only screen and (min-width: 850px) {
+  .app .sidebar-right .setting-page .transaction .trip-record .records h4 span {
+    font-size: 15px;
+  }
+}
+.app .sidebar-right .setting-page .transaction .trip-record .records h4 p {
+  color: green;
 }
 @media only screen and (min-width: 850px) {
   .app .sidebar-right {
@@ -312,10 +598,12 @@ body {
   flex-direction: row;
   gap: 20px;
   width: 100%;
+  padding-top: 30px;
 }
 @media only screen and (min-width: 850px) {
   .app .sidebar-right .top-card .cards {
     width: 45%;
+    margin-left: 27.5%;
   }
 }
 .app .sidebar-right .top-card .cards .top {
@@ -360,7 +648,7 @@ body {
 .app .sidebar-right .top-card .cards .top div img.drone-ani {
   -webkit-animation: bounce 3s linear infinite;
           animation: bounce 3s linear infinite;
-  z-index: 5;
+  z-index: 2;
 }
 @-webkit-keyframes bounce {
   0% {
@@ -393,72 +681,12 @@ body {
 .app .sidebar-right .top-card .cards .top:nth-child(3) {
   background: rgb(224, 223, 230);
 }
-.app .sidebar-right .top-card .total-flight {
-  border-radius: 10px;
-  border: 2px solid rgb(214, 214, 214);
-  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.301);
-  background: rgb(224, 223, 230);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  margin-bottom: 10px;
-  padding: 0 10px;
-  width: 100%;
-  height: 120px;
-  margin-top: 20px;
-}
-@media only screen and (min-width: 850px) {
-  .app .sidebar-right .top-card .total-flight {
-    height: 120px;
-  }
-}
-.app .sidebar-right .top-card .total-flight div {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: column;
-  height: 95%;
-  width: 100%;
-  color: rgb(68, 68, 68);
-}
-.app .sidebar-right .top-card .total-flight div h3 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  border-bottom: 2px solid rgb(214, 214, 214);
-  width: 100%;
-  font-size: 13px;
-  font-weight: 600;
-}
-@media only screen and (min-width: 850px) {
-  .app .sidebar-right .top-card .total-flight div h3 {
-    font-size: 15px;
-  }
-}
-.app .sidebar-right .top-card .total-flight div h3 span {
-  color: royalblue;
-}
-@media only screen and (min-width: 850px) {
-  .app .sidebar-right .top-card .total-flight {
-    order: 2;
-    margin-top: 20px;
-    padding: 10px;
-    width: 100%;
-    font-size: 15px;
-    width: 50%;
-  }
-}
 .app .sidebar-right .lower-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
   margin-top: 0px;
-  flex-wrap: wrap;
   padding: 20px 10px;
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 .app .sidebar-right .lower-card .chat {
   z-index: 20;
@@ -473,45 +701,52 @@ body {
 .app .sidebar-right .lower-card .chat i {
   color: rgb(68, 68, 68);
 }
-@media only screen and (min-width: 800px) {
-  .app .sidebar-right .lower-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-  }
-}
-@media only screen and (min-width: 850px) {
-  .app .sidebar-right .lower-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: row;
-  }
-}
 .app .sidebar-right .lower-card .drone-spec {
   position: relative;
   width: 100%;
-  padding: 0 20px 10px 10px;
+  padding: 20px 20px 10px 10px;
 }
-@media only screen and (min-width: 800px) {
-  .app .sidebar-right .lower-card .drone-spec {
-    width: 50%;
-  }
+.app .sidebar-right .lower-card .drone-spec .spec-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  border: 2px solid rgb(214, 214, 214);
+  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.301);
+  padding: 10px;
+  border-radius: 10px;
+  height: 150px;
+  background: rgb(224, 223, 230);
 }
-@media only screen and (min-width: 850px) {
-  .app .sidebar-right .lower-card .drone-spec {
-    width: 50%;
-  }
+.app .sidebar-right .lower-card .drone-spec .spec-top .top-spec-name {
+  width: 100%;
+  color: #4c5eff;
 }
-.app .sidebar-right .lower-card .drone-spec img {
-  width: 170px;
-  position: absolute;
-  top: 170px;
+.app .sidebar-right .lower-card .drone-spec .spec-top .top-spec-name p {
+  color: rgb(68, 68, 68);
+}
+.app .sidebar-right .lower-card .drone-spec .spec-top .top-spec-name h4 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
   margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(68, 68, 68);
+}
+.app .sidebar-right .lower-card .drone-spec .spec-top .top-spec-name h4 span {
+  font-size: 14px;
+  color: #4c5eff;
+}
+.app .sidebar-right .lower-card .drone-spec .spin-drone-con {
+  margin-top: 20px;
+  padding: 10px;
+  position: relative;
+}
+.app .sidebar-right .lower-card .drone-spec .spin-drone-con img {
+  width: 40%;
+  margin-left: 30%;
   -webkit-animation: drone-display 5s linear infinite;
           animation: drone-display 5s linear infinite;
 }
@@ -537,42 +772,10 @@ body {
     transform: translateY(0);
   }
 }
-.app .sidebar-right .lower-card .drone-spec .spec-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  border: 2px solid rgb(214, 214, 214);
-  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.301);
-  padding: 10px;
-  border-radius: 10px;
-  background: rgb(224, 223, 230);
-}
-.app .sidebar-right .lower-card .drone-spec .spec-top .top-spec-name {
-  width: 100%;
-  color: #4c5eff;
-}
-.app .sidebar-right .lower-card .drone-spec .spec-top .top-spec-name p {
-  color: rgb(68, 68, 68);
-}
-.app .sidebar-right .lower-card .drone-spec .spec-top .top-spec-name h4 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  width: 45%;
-  margin-left: auto;
-  font-size: 14px;
-  font-weight: 600;
-  color: rgb(68, 68, 68);
-}
-.app .sidebar-right .lower-card .drone-spec .spec-top .top-spec-name h4 span {
-  font-size: 13px;
-  color: #4c5eff;
-}
 .app .sidebar-right .lower-card .drone-spec .drone-details {
-  margin-top: 10px;
+  margin-top: 20px;
   position: relative;
+  display: none;
 }
 .app .sidebar-right .lower-card .drone-spec .drone-details #chart_div1 {
   display: flex;
@@ -604,48 +807,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  box-sizing: border-box;
-  margin: 0 auto;
-  width: 210px;
-  height: 210px;
-  border: 8px solid rgba(0, 0, 0, 0);
-  border-bottom-color: rgba(76, 94, 255, 0.4941176471);
-  border-top-color: rgba(76, 94, 255, 0.4941176471);
-  border-radius: 50%;
-  -webkit-animation: spin 8s linear infinite;
-          animation: spin 8s linear infinite;
 }
-.app .sidebar-right .lower-card .drone-spec .drone-details .spin .spinner2 {
-  width: 185px;
-  height: 185px;
-  border-bottom-color: rgba(76, 94, 255, 0.2196078431);
-  border-top-color: rgba(76, 94, 255, 0.2196078431);
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-}
-@-webkit-keyframes spin {
-  0% {
-    transform: rotate(360deg);
-  }
-  50% {
-    transform: rotate(-360deg);
-  }
-  0% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes spin {
-  0% {
-    transform: rotate(360deg);
-  }
-  50% {
-    transform: rotate(-360deg);
-  }
-  0% {
-    transform: rotate(360deg);
-  }
-}
-.app .sidebar-right .lower-card .drone-spec .name-battery-con {
+.app .sidebar-right .lower-card .name-battery-con {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -655,26 +818,30 @@ body {
   box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.301);
   padding: 10px;
   background: rgb(224, 223, 230);
+  margin-top: 20px;
 }
-.app .sidebar-right .lower-card .drone-spec .name-battery-con .name-con {
+.app .sidebar-right .lower-card .name-battery-con .name-con {
   padding-right: 10px;
 }
-.app .sidebar-right .lower-card .drone-spec .name-battery-con .name-con h3 {
+.app .sidebar-right .lower-card .name-battery-con .name-con h3 {
   text-transform: uppercase;
   font-weight: 600;
   color: rgb(68, 68, 68);
+  padding: 4px;
 }
-.app .sidebar-right .lower-card .drone-spec .name-battery-con .name-con h4 {
-  font-size: 10px;
+.app .sidebar-right .lower-card .name-battery-con .name-con h4 {
+  font-size: 13px;
   font-weight: 500;
   color: rgb(68, 68, 68);
+  padding: 4px;
 }
-.app .sidebar-right .lower-card .drone-spec .name-battery-con .name-con h5,
-.app .sidebar-right .lower-card .drone-spec .name-battery-con .name-con span {
+.app .sidebar-right .lower-card .name-battery-con .name-con h5,
+.app .sidebar-right .lower-card .name-battery-con .name-con span {
   font-size: 12px;
   color: #4c5eff;
+  padding: 4px;
 }
-.app .sidebar-right .lower-card .drone-spec .name-battery-con .battery-con {
+.app .sidebar-right .lower-card .name-battery-con .battery-con {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -687,7 +854,7 @@ body {
   padding: 0 2px 2px 2px;
   position: relative;
 }
-.app .sidebar-right .lower-card .drone-spec .name-battery-con .battery-con::before {
+.app .sidebar-right .lower-card .name-battery-con .battery-con::before {
   content: "";
   position: absolute;
   width: 4px;
@@ -697,7 +864,7 @@ body {
   left: 0;
   top: -7px;
 }
-.app .sidebar-right .lower-card .drone-spec .name-battery-con .battery-con div {
+.app .sidebar-right .lower-card .name-battery-con .battery-con div {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -710,16 +877,17 @@ body {
   background-color: royalblue;
   height: 70%;
 }
-.app .sidebar-right .lower-card .drone-spec .drone-camera-time {
+.app .sidebar-right .lower-card .drone-camera-time {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  margin-top: 10px;
+  margin-top: 90px;
   height: 180px;
+  gap: 20px;
 }
-.app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec,
-.app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec2 {
+.app .sidebar-right .lower-card .drone-camera-time .camera-spec,
+.app .sidebar-right .lower-card .drone-camera-time .camera-spec2 {
   display: flex;
   justify-content: space-between;
   align-items: flex;
@@ -728,43 +896,54 @@ body {
   border: 2px solid rgb(214, 214, 214);
   box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.301);
   width: 100%;
-  height: 100%;
-  padding: 5px;
+  height: 280px;
   background: rgb(224, 223, 230);
 }
-.app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec h3,
-.app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec2 h3 {
+@media only screen and (min-width: 850px) {
+  .app .sidebar-right .lower-card .drone-camera-time .camera-spec,
+.app .sidebar-right .lower-card .drone-camera-time .camera-spec2 {
+    height: 220px;
+  }
+}
+.app .sidebar-right .lower-card .drone-camera-time .camera-spec .camera-spec,
+.app .sidebar-right .lower-card .drone-camera-time .camera-spec2 .camera-spec {
+  margin-top: 30px;
+}
+.app .sidebar-right .lower-card .drone-camera-time .camera-spec h3,
+.app .sidebar-right .lower-card .drone-camera-time .camera-spec2 h3 {
   font-size: 18px;
   padding: 0 0 10px 0;
   color: rgb(68, 68, 68);
 }
-.app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec h3 i,
-.app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec2 h3 i {
+.app .sidebar-right .lower-card .drone-camera-time .camera-spec h3 i,
+.app .sidebar-right .lower-card .drone-camera-time .camera-spec2 h3 i {
   padding: 5px 5px;
 }
-.app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec p,
-.app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec2 p {
+.app .sidebar-right .lower-card .drone-camera-time .camera-spec p,
+.app .sidebar-right .lower-card .drone-camera-time .camera-spec2 p {
   font-weight: 500;
   padding: 10px 5px;
   color: rgb(68, 68, 68);
+  border-bottom: 1px dashed royalblue;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
 }
-.app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec p span,
-.app .sidebar-right .lower-card .drone-spec .drone-camera-time .camera-spec2 p span {
+.app .sidebar-right .lower-card .drone-camera-time .camera-spec p span,
+.app .sidebar-right .lower-card .drone-camera-time .camera-spec2 p span {
   font-size: 12px;
   color: #4c5eff;
 }
-.app .sidebar-right .lower-card .drone-spec .pay-state {
+.app .sidebar-right .lower-card .pay-state {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   height: 100px;
+  margin-top: 90px;
 }
-.app .sidebar-right .lower-card .drone-spec .pay-state .state {
+.app .sidebar-right .lower-card .pay-state .state {
   display: flex;
   justify-content: space-between;
   align-items: flex;
@@ -777,19 +956,19 @@ body {
   margin-top: 10px;
   background: rgb(224, 223, 230);
 }
-.app .sidebar-right .lower-card .drone-spec .pay-state .state div {
+.app .sidebar-right .lower-card .pay-state .state div {
   display: flex;
   justify-content: space-between;
   align-items: flex;
   flex-direction: row;
 }
-.app .sidebar-right .lower-card .drone-spec .pay-state .state div h3 {
+.app .sidebar-right .lower-card .pay-state .state div h3 {
   color: rgb(68, 68, 68);
 }
-.app .sidebar-right .lower-card .drone-spec .pay-state .state div h3 i {
+.app .sidebar-right .lower-card .pay-state .state div h3 i {
   padding: 5px 5px;
 }
-.app .sidebar-right .lower-card .drone-spec .pay-state .state div p {
+.app .sidebar-right .lower-card .pay-state .state div p {
   font-weight: 500;
   padding: 0 5px;
   display: flex;
@@ -797,16 +976,16 @@ body {
   align-items: center;
   flex-direction: row;
 }
-.app .sidebar-right .lower-card .drone-spec .pay-state .state div p span {
+.app .sidebar-right .lower-card .pay-state .state div p span {
   font-size: 15px;
   color: #4c5eff;
 }
-.app .sidebar-right .lower-card .drone-spec .pay-state .state .select-drone {
+.app .sidebar-right .lower-card .pay-state .state .select-drone {
   width: 100%;
   height: 45px;
   margin-top: 10px;
 }
-.app .sidebar-right .lower-card .drone-spec .pay-state .state .select-drone button {
+.app .sidebar-right .lower-card .pay-state .state .select-drone button {
   color: whitesmoke;
   font-size: 15px;
   font-weight: 600;
@@ -817,75 +996,75 @@ body {
   width: 100%;
   height: 100%;
 }
-.app .sidebar-right .lower-card .drone-spec .pay-state .state .select-drone button:hover {
+.app .sidebar-right .lower-card .pay-state .state .select-drone button:hover {
   background-color: rgb(19, 43, 114);
 }
-.app .sidebar-right .lower-card .drone-spec .form-con {
+.app .sidebar-right .lower-card .form-con {
   border-radius: 10px;
   border: 1px solid rgb(221, 221, 221);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.059);
   padding: 10px;
   background-color: whitesmoke;
   position: absolute;
-  width: 93%;
+  width: 95%;
   z-index: 3;
   bottom: 10px;
   transition: 0.5s linear;
   transform: scale(0);
 }
 @media only screen and (min-width: 850px) {
-  .app .sidebar-right .lower-card .drone-spec .form-con {
-    width: 95%;
+  .app .sidebar-right .lower-card .form-con {
+    width: 98%;
   }
 }
-.app .sidebar-right .lower-card .drone-spec .form-con.ope {
+.app .sidebar-right .lower-card .form-con.ope {
   transition: 0.5s linear;
   transform: scale(1);
 }
-.app .sidebar-right .lower-card .drone-spec .form-con .bx-x {
+.app .sidebar-right .lower-card .form-con .bx-x {
   font-size: 50px;
-  margin-left: 85%;
+  margin-left: 90%;
 }
-.app .sidebar-right .lower-card .drone-spec .form-con .bx-x.hover {
+.app .sidebar-right .lower-card .form-con .bx-x.hover {
   color: gray;
 }
-.app .sidebar-right .lower-card .drone-spec .form-con form {
+.app .sidebar-right .lower-card .form-con form {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
 }
-.app .sidebar-right .lower-card .drone-spec .form-con form label {
+.app .sidebar-right .lower-card .form-con form label {
   margin-right: auto;
 }
-.app .sidebar-right .lower-card .drone-spec .form-con form label i {
+.app .sidebar-right .lower-card .form-con form label i {
   font-size: 15px;
   color: #4c5eff;
   padding: 0 5px;
 }
-.app .sidebar-right .lower-card .drone-spec .form-con form select {
+.app .sidebar-right .lower-card .form-con form select {
   width: 100%;
-  height: 35px;
+  height: 50px;
   border-radius: 10px;
   border: 2px solid rgb(214, 214, 214);
   margin-bottom: 10px;
   box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.301);
 }
-.app .sidebar-right .lower-card .drone-spec .form-con form input {
+.app .sidebar-right .lower-card .form-con form input {
   width: 100%;
-  height: 35px;
+  height: 50px;
   padding: 0 10px;
   border-radius: 10px;
   border: 2px solid rgb(214, 214, 214);
   box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.301);
   margin-bottom: 10px;
 }
-.app .sidebar-right .lower-card .drone-spec .form-con form .payment {
+.app .sidebar-right .lower-card .form-con form .payment {
   width: 100%;
   height: 45px;
-  margin-top: 10px;
+  margin-top: 40px;
 }
-.app .sidebar-right .lower-card .drone-spec .form-con form .payment a {
+.app .sidebar-right .lower-card .form-con form .payment a {
   border-radius: 5px;
   background-color: #4c5eff;
   border: 2px solid rgb(214, 214, 214);
@@ -893,7 +1072,7 @@ body {
   width: 100%;
   height: 100%;
 }
-.app .sidebar-right .lower-card .drone-spec .form-con form .payment a button {
+.app .sidebar-right .lower-card .form-con form .payment a button {
   color: whitesmoke;
   font-size: 15px;
   font-weight: 500;
@@ -903,122 +1082,10 @@ body {
   box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.301);
   width: 100%;
   height: 100%;
+  margin-bottom: 5px;
 }
-.app .sidebar-right .lower-card .drone-spec .form-con form .payment a button:hover {
+.app .sidebar-right .lower-card .form-con form .payment a button:hover {
   background-color: rgb(19, 43, 114);
-}
-.app .sidebar-right .lower-card .graph {
-  width: 90%;
-  margin: 0 auto;
-  margin-top: 20px;
-  margin-right: auto;
-  padding: 0;
-  border-radius: 10px;
-  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.301);
-}
-@media only screen and (min-width: 800px) {
-  .app .sidebar-right .lower-card .graph {
-    width: 50%;
-  }
-}
-@media only screen and (min-width: 850px) {
-  .app .sidebar-right .lower-card .graph {
-    width: 50%;
-    margin-top: 0;
-    padding: 10px 0;
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.301);
-  }
-}
-.app .sidebar-right .lower-card .graph h3 {
-  margin-top: 20px;
-}
-.app .sidebar-right .lower-card .graph #curve_chart {
-  width: 100%;
-}
-@media only screen and (min-width: 850px) {
-  .app .sidebar-right .lower-card .graph #curve_chart {
-    width: 100%;
-  }
-}
-.app .sidebar-right .lower-card .graph .map {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-}
-.app .sidebar-right .lower-card .graph .map .map-file {
-  width: 100%;
-  border-radius: 10px;
-  height: 300px;
-}
-.app .sidebar-right .lower-card .graph .trip-record {
-  width: 100%;
-  margin: 0 auto;
-  margin-top: 20px;
-  padding: 10px 5px;
-  border-radius: 10px;
-  border: 2px solid rgb(214, 214, 214);
-  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.301);
-  background: rgb(224, 223, 230);
-  color: rgb(68, 68, 68);
-}
-.app .sidebar-right .lower-card .graph .trip-record h3 span {
-  color: #4c5eff;
-}
-.app .sidebar-right .lower-card .graph .trip-record .range {
-  border: 2px solid rgb(214, 214, 214);
-  border-radius: 10px;
-  height: 15px;
-  padding: 1px 5px;
-}
-.app .sidebar-right .lower-card .graph .trip-record .range div {
-  height: 100%;
-  background-color: #4c5eff;
-  width: 50%;
-}
-.app .sidebar-right .lower-card .graph .trip-record .history {
-  margin-top: 20px;
-  color: rgb(68, 68, 68);
-}
-.app .sidebar-right .lower-card .graph .trip-record .records {
-  padding: 5px;
-  height: 120px;
-  overflow: scroll;
-  border-radius: 10px;
-  border: 2px solid rgb(214, 214, 214);
-  box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.301);
-}
-.app .sidebar-right .lower-card .graph .trip-record .records::-webkit-scrollbar {
-  height: 0.4rem;
-  width: 1px;
-}
-.app .sidebar-right .lower-card .graph .trip-record .records::-webkit-scrollbar-track {
-  background-color: whitesmoke;
-}
-.app .sidebar-right .lower-card .graph .trip-record .records::-webkit-scrollbar-thumb {
-  background-color: royalblue;
-}
-.app .sidebar-right .lower-card .graph .trip-record .records h4 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  font-weight: 300;
-  font-size: 10px;
-  padding: 5px;
-  color: rgb(68, 68, 68);
-  background: rgb(224, 223, 230);
-}
-.app .sidebar-right .lower-card .graph .trip-record .records h4 p {
-  width: 30%;
-  color: royalblue;
-  font-weight: 400;
-  background: rgb(224, 223, 230);
-}
-.app .sidebar-right .lower-card .graph .trip-record .records h4 span {
-  width: 50%;
-  padding-left: 5px;
 }
 .app .sidebar-right footer {
   display: flex;
@@ -1032,4 +1099,4 @@ body {
 }
 .app .sidebar-right footer span {
   padding: 0 5px;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=newstyle.css.map */

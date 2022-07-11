@@ -1,6 +1,5 @@
 // create API for the drone details
-const detailsApi = [
-  {
+const detailsApi = [{
     id: 1,
     droneName: "...",
     class: "...",
@@ -128,9 +127,11 @@ displayData(detailsApi);
 let spinDroneCon = document.querySelector(".spin-drone-con");
 let droneCon = document.querySelectorAll(".drone");
 let spinDrone = document.querySelector(".spin-drone");
+let guage = document.querySelector(" .drone-details")
 
 droneCon.forEach(function (drone) {
   drone.addEventListener("click", (e) => {
+    guage.style.display = "block"
     let src = e.currentTarget.src;
     let droneItem = e.currentTarget.dataset.id;
     if (droneItem == "regular") {
@@ -162,7 +163,30 @@ let menuBtn = document.querySelector(".bx-menu");
 menuBtn.addEventListener("click", () => {
   menuBtn.classList.toggle("rotate");
   sideNav.classList.toggle("open");
+ 
 });
+
+let profileChange = document.querySelector(".update-profile");
+let infoCon = document.querySelector(".change-info");
+
+profileChange.addEventListener("click", () => {
+  infoCon.classList.toggle("update");
+
+});
+
+let settingbtn = document.querySelector(".settingbtn")
+let settingpage = document.querySelector(".setting-page")
+let headhome =document.querySelector(".headhome")
+
+headhome.addEventListener('click', () => {
+  settingpage.classList.remove("showsetting")
+})
+settingbtn.addEventListener('click', () => {
+   sideNav.classList.remove("open");
+  settingpage.classList.toggle("showsetting")
+})
+
+
 
 // function for card effect
 let box1 = document.querySelector(".box1");
@@ -218,88 +242,90 @@ formContainerRemove.addEventListener("click", () => {
 
 // drone gauge.
 
-google.charts.load("current", { packages: ["gauge"] });
-google.charts.setOnLoadCallback(drawChart1);
+// google.charts.load("current", { packages: ["gauge"] });
+// google.charts.setOnLoadCallback(drawChart1);
 
-function drawChart1() {
-  var data = google.visualization.arrayToDataTable([
-    ["Label", "Value"],
-    ["CPU", 55],
-    
-  ]);
+// function drawChart1() {
+//   var data = google.visualization.arrayToDataTable([
+//     ["Label", "Value"],
+//     ["CPU", 55],
 
-  var options = {
-    width: 230,
-    height: 80,
-    redFrom: 90,
-    redTo: 100,
-    yellowFrom: 75,
-    yellowTo: 90,
-    minorTicks: 5,
-  };
+//   ]);
 
-  var chart = new google.visualization.Gauge(
-    document.getElementById("chart_div1")
-  );
+//   var options = {
+//     width: 230,
+//     height: 80,
+//     redFrom: 90,
+//     redTo: 100,
+//     yellowFrom: 75,
+//     yellowTo: 90,
+//     minorTicks: 5,
+//   };
 
-  chart.draw(data, options);
+//   var chart = new google.visualization.Gauge(
+//     document.getElementById("chart_div1")
+//   );
 
-  setInterval(function () {
-    data.setValue(0, 1, 40 + Math.round(60 * Math.random()));
-    chart.draw(data, options);
-  }, 3000);
-  setInterval(function () {
-    data.setValue(1, 1, 40 + Math.round(60 * Math.random()));
-    chart.draw(data, options);
-  }, 5000);
-  setInterval(function () {
-    data.setValue(2, 1, 60 + Math.round(20 * Math.random()));
-    chart.draw(data, options);
-  }, 2000);
-}
+//   chart.draw(data, options);
+
+//   setInterval(function () {
+//     data.setValue(0, 1, 40 + Math.round(60 * Math.random()));
+//     chart.draw(data, options);
+//   }, 3000);
+//   setInterval(function () {
+//     data.setValue(1, 1, 40 + Math.round(60 * Math.random()));
+//     chart.draw(data, options);
+//   }, 5000);
+//   setInterval(function () {
+//     data.setValue(2, 1, 60 + Math.round(20 * Math.random()));
+//     chart.draw(data, options);
+//   }, 2000);
+// }
 
 
-google.charts.load("current", { packages: ["gauge"] });
-google.charts.setOnLoadCallback(drawChart2);
+// google.charts.load("current", { packages: ["gauge"] });
+// google.charts.setOnLoadCallback(drawChart2);
 
-function drawChart2() {
-  var data = google.visualization.arrayToDataTable([
-    ["Label", "Value"],
-      ["Network", 68],
-  ]);
+// function drawChart2() {
+//   var data = google.visualization.arrayToDataTable([
+//     ["Label", "Value"],
+//       ["Network", 68],
+//   ]);
 
-  var options = {
-    width: 230,
-    height: 80,
-    redFrom: 90,
-    redTo: 100,
-    yellowFrom: 75,
-    yellowTo: 90,
-    minorTicks: 5,
-  };
+//   var options = {
+//     width: 230,
+//     height: 80,
+//     redFrom: 90,
+//     redTo: 100,
+//     yellowFrom: 75,
+//     yellowTo: 90,
+//     minorTicks: 5,
+//   };
 
-  var chart = new google.visualization.Gauge(
-    document.getElementById("chart_div2")
-  );
+//   var chart = new google.visualization.Gauge(
+//     document.getElementById("chart_div2")
+//   );
 
-  chart.draw(data, options);
+//   chart.draw(data, options);
 
-  setInterval(function () {
-    data.setValue(0, 1, 40 + Math.round(60 * Math.random()));
-    chart.draw(data, options);
-  }, 3000);
-  setInterval(function () {
-    data.setValue(1, 1, 40 + Math.round(60 * Math.random()));
-    chart.draw(data, options);
-  }, 5000);
-  setInterval(function () {
-    data.setValue(2, 1, 60 + Math.round(20 * Math.random()));
-    chart.draw(data, options);
-  }, 2000);
-}
+//   setInterval(function () {
+//     data.setValue(0, 1, 40 + Math.round(60 * Math.random()));
+//     chart.draw(data, options);
+//   }, 3000);
+//   setInterval(function () {
+//     data.setValue(1, 1, 40 + Math.round(60 * Math.random()));
+//     chart.draw(data, options);
+//   }, 5000);
+//   setInterval(function () {
+//     data.setValue(2, 1, 60 + Math.round(20 * Math.random()));
+//     chart.draw(data, options);
+//   }, 2000);
+// }
 
 //  bar chart
-google.charts.load("current", { packages: ["corechart"] });
+google.charts.load("current", {
+  packages: ["corechart"]
+});
 google.charts.setOnLoadCallback(drawCha);
 
 function drawCha() {
@@ -322,7 +348,9 @@ function drawCha() {
   var options = {
     title: "Drone Statistics",
     curveType: "function",
-    legend: { position: "bottom" },
+    legend: {
+      position: "bottom"
+    },
   };
 
   var chart = new google.visualization.LineChart(
